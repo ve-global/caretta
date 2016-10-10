@@ -1,5 +1,6 @@
-﻿module.exports = function (grunt) {
+﻿'use strict';
 
+module.exports = function (grunt) {
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     grunt.initConfig({
@@ -10,7 +11,7 @@
                 separator: ';'
             },
             dist: {
-                src: 'assets/js/**/*.spec.js'
+                src: 'assets/js/**/*.spec.js',
                 dest: 'assets/temp/js/scripts.concat.js'
             }
         },
@@ -31,10 +32,10 @@
                 src: 'assets/temp/js/scripts.es2015.js',
                 options: {
                     specs: [
-                        'assets/tests/spec/**/*.spec.js',
+                        'assets/tests/spec/**/*.spec.js'
                     ],
                     helpers: 'assets/tests/spec/**/*.helper.js',
-                    summary: true,
+                    summary: false,
                     junit: {
                         path: 'junit'
                     }
@@ -75,8 +76,9 @@
             temp: [
                 'assets/junit',
                 'assets/_tests',
-                'assets/.sass-cache',
-                'assets/temp'
+                '.sass-cache',
+                'assets/temp',
+                '.grunt'
             ]
         },
 
@@ -99,10 +101,8 @@
     grunt.registerTask('deploy', [
         'eslint',
         'scsslint',
-        'copy',
         'concat',
         'babel',
-        'jasmine',
         'uglify',
         'sass',
         'csso',

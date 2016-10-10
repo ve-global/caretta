@@ -1,0 +1,36 @@
+html {
+	height: 100%;
+	margin: 0;
+	width: 100%;
+}
+
+.caretta {
+    display: flex;
+    flex-direction: column;
+	height: 100%;
+	margin: 0;
+    width: 100%;
+
+    .left-side {
+    	flex: 0 0 256px;
+    	height: 100%;
+    	order: 0;
+    }
+
+    .right-side {
+    	flex: 1;
+    	height: 100%;
+    	order: 1;
+    }
+
+    .caretta-header { 
+	    flex: 0 64px;
+	    display: flex;
+	    z-index: 0;
+	}
+
+	main {
+	    flex: 1;
+	    display: flex;
+	}
+}

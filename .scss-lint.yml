@@ -1,0 +1,33 @@
+linters:
+  ColorVariable:
+    enabled: true
+  Comment:
+    enabled: false
+  HexLength:
+    enabled: true
+    style: long
+  HexNotation:
+    enabled: true
+    style: lowercase
+  IdSelector:
+    enabled: false
+  Indentation:
+    enabled: true
+    width: 4
+  NestingDepth:
+    enabled: true
+    max_depth: 8
+    ignore_parent_selectors: false
+  SelectorDepth:
+    enabled: true
+    max_depth: 8
+  SelectorFormat:
+    enabled: true
+    convention: '[a-zA-Z0-9\-]+'
+  StringQuotes:
+    enabled: true
+    style: single_quotes
+  UrlFormat:
+    enabled: false
+  QualifyingElement:
+    enabled: false
