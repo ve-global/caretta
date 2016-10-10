@@ -1,0 +1,50 @@
+Technologies to be used:
+	#1 ECMA6 (compiled through babel)	
+	#2 SCSS (BEM) http://getbem.com/
+	#3 Handlebars as a template engine http://handlebarsjs.com/
+	#4 grunt (webpack to be considered)
+	#5 NPM
+	#6 Jasmine
+	#7 Font families
+		a.	Roboto: https://fonts.google.com/specimen/Roboto
+		b.	Material Design Icons: http://zavoloklom.github.io/material-design-iconic-font/icons.html
+	#8. Reset.css http://meyerweb.com/eric/tools/css/reset/
+
+
+UI Components:
+	# Alpha Grid System
+		MVP: grid system (small, medium, large)
+		Phase 2: 
+			a. font size
+			b. burger menu
+
+	---------------------------------
+	#1 drop down
+	#2 main navigation (through json)
+	#3 modal
+	#4 tooltip
+	#5 accordion
+	#6 buttons (normal, active, hover)
+	#7 Forms
+		a. all input types
+		b. textarea
+		c. select
+		d. radio button
+		e. check box
+	#8 Tabs
+	#9 Breadcrumbs
+	#10 Typography
+	#11 Tables (grid, ctas, inline edit, filters, pagination)
+
+
+Principles:
+	#1 HTML5 valid
+	#2 CSS3 valid
+	#3 ES6 Modules
+	#4 Browser support: Edge, latest FF, latest Chrome
+
+---------------------------------------------------------------------------------------------------------
+
+Outuput Expected:
+Unminified: HTML5, CSS3, ECMA5
+
