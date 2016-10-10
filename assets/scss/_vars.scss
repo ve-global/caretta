@@ -1,80 +1,25 @@
 ﻿/***
-*   1. Colors
-*   2. Box Shadows
-*   3. Font Families
-*   4  Alert Windows Backgrounds
-*   5  Kendo Defaults
-*   6 Prompt Modal
+*
+*  1. Caretta Style Variables
+*       1.1 Font Families
+*       1.2 Colors
+*       	1.2.1 Box Shadows Colours
+*
 ***/
 
-/****************** 1. Colors ******************/
-$black: #000000;
-$black-light: #888888;
-$blue-light: #428bca;
-$blue-dark: #323f47;
-$blue-link: #337ab7;
-$blue-tab-header: #607d8b;
-$blue-tab: #2196f3;
-$blue-primary: #03a9f4;
-$green: #3da53a;
-$grey-blue: #273037;
-$grey-brown: #a6a6a6;
-$grey-bootstrap: #cccccc;
-$grey-light: #dddddd;
-$grey-dark: #333333;
-$grey-darker: #444444;
-$grey-header: #343f48;
-$grey-homepage-text: rgba(52, 63, 72, 0.64);
-$grey-light: #d5d6d8;
-$grey-lighter: #e3e3e3;
-$grey-normal: #999999;
-$grey-main-bg: #edecec;
-$grey-preloader-bg: rgba(255, 255, 255, .47);
-$grey-mild: #777777;
-$grey-separator: #eeeeee;
-$grey-tab: #7a7a7a;
-$grey-shadow: rgba(0, 0, 0, .176);
-$grey-no-data: #f4f4f4;
-$input-border-color: #c5c5c5;
-$orange-dark: #c09853;
-$placeholder: #aba9a9;
-$red-error: #9c1f59;
-$red-magenta: #B50000;
-$scollbar-color: #bcbcbc;
-$side-panel-head: #607d8b;
-$yellow-light: #fcfff4;
-$white: #ffffff;
-$white-dark: #ececec;
-$white-darker: #efefef;
-$white-darkest: #ecedef;
-$white-light-dark: #f5f5f5;
-$white-blue: #ecf9ff;
+/****************** 1. Caretta Style Variables ******************/
+	/****************** 1.1 Font Families ******************/
+	$material-iconic: 'Material-Design-Iconic-Font';
+	$roboto: 'Roboto', sans-serif;
 
-/****************** 2. Box Shadows ******************/
-$alert-success-shadow: after 0 0 5px rgba(76, 175, 80, .5);
-$alert-close-danger-shadow: 0 0 5px rgba(255, 193, 7, .5);
-$btn-shadow: after 0 2px 5px rgba(0, 0, 0, .16), 0 2px 10px rgba(0, 0, 0, .12);
-$filter-shadow: 0 6px 12px $grey-shadow;
-$homepage-text-shadow: 1px 4px 6px $white-darkest, 0 0 0 $black, 1px 4px 6px $white-darkest;
-$input-box-shadow: rgba(0, 0, 0, .3);
-$left-side-shadow: rgba(51, 51, 51, .38);
-$light-shadow: rgba(0, 0, 0, .1);
-$modal-shadow: 0 2px 5px rgba(0, 0, 0, .16), 0 2px 10px rgba(0, 0, 0, .12);
-$textbox-shadow: 0 1px 1px rgba(0, 0, 0, .075) inset;
+	/****************** 1.2 Colors ******************/
+		$grey-logo: #273037;
+	$grey-header: #343f48;
+	$grey-light: #edecec;
+	$grey-text: #333333;
+	$white: #ffffff;
 
-/****************** 3. Font Family ******************/
-$material-iconic: 'Material-Design-Iconic-Font';
-$roboto: 'Roboto', sans-serif;
 
-/****************** 4. Alert Messages Vars ******************/
-$alert-success-bg: rgba(76, 175, 80, .7);
-$alert-info-bg: rgba(255, 193, 7, .7);
-$alert-danger-bg: rgba(244, 67, 54, .7);
-$alert-warning-bg: #ffc107;
-$alert-close-danger-bg: rgba(255, 193, 7, .7);
-
-/****************** 5. Kendo Defaults ******************/
-$grey-editor-hover-bg: #ebebeb;
-
-/****************** 5. Prompt Modal ******************/
-$prompt-modal-overlay: rgba(0, 0, 0, .5);
+	/****************** 1.2.1 Box Shadows ******************/
+	$shadow-header: rgba(0, 0, 0, .3);
+	$shadow-main-navigation: rgba(51, 51, 51, .38);

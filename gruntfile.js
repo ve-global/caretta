@@ -55,7 +55,7 @@ module.exports = function (grunt) {
         },
 
         sass: {
-            dev: {
+            dist: {
                 files: {
                     'assets/temp/css/caretta.css': 'assets/scss/caretta.scss'
                 }
@@ -65,8 +65,8 @@ module.exports = function (grunt) {
         csso: {
             dynamic_mappings: {
                 expand: true,
-                cwd: 'assets/temp/TempPrefixes',
-                src: 'assets/temp/css/caretta.css',
+                cwd: 'assets/temp/css',
+                src: ['*.css', '!*.min.css'],
                 dest: 'public/css',
                 ext: '.min.css'
             }
@@ -99,11 +99,11 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('deploy', [
-        'eslint',
+        /*'eslint',
         'scsslint',
         'concat',
         'babel',
-        'uglify',
+        'uglify',*/
         'sass',
         'csso',
         'clean:temp'

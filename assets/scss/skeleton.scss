@@ -1,36 +1,118 @@
+/***
+*
+*  1. Caretta Skeleton Styles
+*       1.1 Caretta Main Header
+*           1.1.1 Caretta Logo
+*       1.2 Caretta Main Areaody
+*           1.2.1 Caretta Main Navigation
+*           1.2.1 Caretta Application Area
+*
+***/
+
+@import 'vars';
+
+/******************    1. Caretta Skeleton Styles  ******************/
 html {
-	height: 100%;
-	margin: 0;
+	font-family: $roboto;
+    height: 100%;
 	width: 100%;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 .caretta {
     display: flex;
     flex-direction: column;
 	height: 100%;
-	margin: 0;
     width: 100%;
 
     .left-side {
-    	flex: 0 0 256px;
-    	height: 100%;
+    	flex: 0 0 268px;
     	order: 0;
     }
 
     .right-side {
     	flex: 1;
-    	height: 100%;
     	order: 1;
     }
 
-    .caretta-header { 
+    /******************    1.1 Caretta Main Header  ******************/
+    .caretta-header {
+        background: $grey-header;
+        box-shadow: 0 1px 4px $shadow-header;
+        box-sizing: border-box;
 	    flex: 0 64px;
 	    display: flex;
-	    z-index: 0;
+        height: 70px;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+	    z-index: 2;
+
+        /******************    1.1.1 Caretta Logo  ******************/
+        .caretta-logo {
+            background-color: $grey-logo;
+            box-sizing: border-box;
+            height: 100%;
+            padding: 20px 0 0;
+            width: 100%;
+
+            a {
+                color: $white;
+                display: inline-block;
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 1;
+                padding: 0 10px 0 20px;
+
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
 	}
 
-	main {
-	    flex: 1;
-	    display: flex;
-	}
+
+    /******************    1.2 Caretta Main Area  ******************/
+    main {
+        flex: 1;
+        display: flex;
+
+        /******************    1.2.1 Caretta Main Navigation  ******************/
+        .main-navigation {
+            background: $white;
+            box-shadow: 0 0 10px $shadow-main-navigation;
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        /******************    1.2.1 Caretta Application Area  ******************/
+        .main-application {
+            background: $grey-light;
+            padding: 20px;
+            position: relative;
+        }
+    
+
+        .caretta-footer {
+            bottom: 20px;
+            color: $grey-text;
+            display: inline-block;
+            float: right;
+            font-size: 14px;
+            position: absolute;
+            right: 20px;
+            text-align: right;
+        }
+    }
+
+
+    
+
+	
 }
