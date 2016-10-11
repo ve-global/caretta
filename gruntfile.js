@@ -9,7 +9,7 @@ module.exports = function (grunt) {
             css: {
                 files: ['assets/scss/*.scss'],
                 tasks: ['sass:dist']
-            }       
+            }
         },
         concat: {
             options: {
@@ -104,11 +104,11 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('default', [
-        /*'eslint',
-        'scsslint',
+        'eslint',
+        'sasslint',
         'concat',
         'babel',
-        'uglify',*/
+        'uglify',
         'sass',
         'csso',
         'clean:temp'
