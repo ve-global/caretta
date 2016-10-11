@@ -87,7 +87,7 @@ module.exports = function (grunt) {
             ]
         },
 
-        scsslint: {
+        sasslint: {
             all: 'assets/scss/caretta.scss',
             options: {
                 bundleExec: false,
