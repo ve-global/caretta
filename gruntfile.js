@@ -11,8 +11,8 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src: 'assets/scripts/**/*.js',
-                dest: 'assets/temp/scripts/scripts.concat.js'
+                src: 'assets/js/**/*.js',
+                dest: 'assets/temp/js/scripts.concat.js'
             }
         },
 
@@ -22,14 +22,14 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'assets/temp/scripts/scripts.es2015.js': 'assets/temp/scripts/scripts.concat.js'
+                    'assets/temp/js/scripts.es2015.js': 'assets/temp/js/scripts.concat.js'
                 }
             }
         },
 
         jasmine: {
             pivotal: {
-                src: 'assets/temp/scripts/scripts.es2015.js',
+                src: 'assets/temp/js/scripts.es2015.js',
                 options: {
                     specs: [
                         'assets/tests/spec/**/*.spec.js'
@@ -49,8 +49,8 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'assets/temp/scripts/scripts.es2015.js',
-                dest: 'public/scripts/scripts.min.js'
+                src: 'assets/temp/js/scripts.es2015.js',
+                dest: 'public/js/scripts.min.js'
             }
         },
 
@@ -93,7 +93,7 @@ module.exports = function (grunt) {
         eslint: {
             target: [
                 'gruntfile.js',
-                'assets/scripts/**/*.js'
+                'assets/js/**/*.js'
             ]
         }
     });
