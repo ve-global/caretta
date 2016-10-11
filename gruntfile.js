@@ -5,7 +5,12 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
+        watch: {
+            css: {
+                files: ['assets/scss/*.scss'],
+                tasks: ['sass:dist']
+            }       
+        },
         concat: {
             options: {
                 separator: ';'
@@ -98,7 +103,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('deploy', [
+    grunt.registerTask('default', [
         /*'eslint',
         'scsslint',
         'concat',
