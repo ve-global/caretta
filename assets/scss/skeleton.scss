@@ -3,9 +3,12 @@
 *  1. Caretta Skeleton Styles
 *       1.1 Caretta Main Header
 *           1.1.1 Caretta Logo
-*       1.2 Caretta Main Areaody
+*       1.2 Caretta Main Area
 *           1.2.1 Caretta Main Navigation
 *           1.2.1 Caretta Application Area
+*  2. Caretta Standard Layouts
+*  3. Caretta Generics
+*       3.1 Coloration
 *
 ***/
 
@@ -36,6 +39,7 @@ html {
     .right-side {
     	flex: 1;
     	order: 1;
+        padding-top: 20px;
     }
 
     /******************    1.1 Caretta Main Header  ******************/
@@ -80,6 +84,7 @@ html {
     main {
         flex: 1;
         display: flex;
+        padding-top: 70px;
 
         /******************    1.2.1 Caretta Main Navigation  ******************/
         .main-navigation {
@@ -110,9 +115,40 @@ html {
             text-align: right;
         }
     }
+}
 
+/******************    2. Caretta Standard Layouts  ******************/
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
-    
+    >* {
+        box-sizing: border-box;
+        padding: 10px;
+    }
 
-	
+    .col-full {
+        width: 100%;
+    }
+
+    .col-half {
+        width: 49%;
+    }
+
+    .col-third {
+        width: 32%;
+    }
+
+    .col-quart {
+        width: 23%;
+    }
+}
+
+/******************    3. Caretta Generics  ******************/
+
+/******************    3.1. Coloration  ******************/
+.bg-white {
+    background: $white;
 }
