@@ -11,8 +11,8 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src: 'assets/js/**/*.spec.js',
-                dest: 'assets/temp/js/scripts.concat.js'
+                src: 'assets/scripts/**/*.js',
+                dest: 'assets/temp/scripts/scripts.concat.js'
             }
         },
 
@@ -22,14 +22,14 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'assets/temp/js/scripts.es2015.js': 'assets/temp/js/scripts.concat.js'
+                    'assets/temp/scripts/scripts.es2015.js': 'assets/temp/scripts/scripts.concat.js'
                 }
             }
         },
 
         jasmine: {
             pivotal: {
-                src: 'assets/temp/js/scripts.es2015.js',
+                src: 'assets/temp/scripts/scripts.es2015.js',
                 options: {
                     specs: [
                         'assets/tests/spec/**/*.spec.js'
@@ -48,9 +48,9 @@ module.exports = function (grunt) {
                 sourceMap: true,
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
-            buildBower: {
-                src: 'assets/temp/js/scripts.es2015.js',
-                dest: 'assets/temp/js/scripts.min.js'
+            build: {
+                src: 'assets/temp/scripts/scripts.es2015.js',
+                dest: 'public/scripts/scripts.min.js'
             }
         },
 
@@ -93,17 +93,17 @@ module.exports = function (grunt) {
         eslint: {
             target: [
                 'gruntfile.js',
-                'assets/js/**/*.js'
+                'assets/scripts/**/*.js'
             ]
         }
     });
 
     grunt.registerTask('deploy', [
-        /*'eslint',
-        'scsslint',
+        // 'eslint',
+        // 'scsslint',
         'concat',
         'babel',
-        'uglify',*/
+        'uglify',
         'sass',
         'csso',
         'clean:temp'

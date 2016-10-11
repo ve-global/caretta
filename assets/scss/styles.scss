@@ -1,0 +1,15 @@
+/***
+*
+*  Common styles
+*
+***/
+@import 'vars';
+
+.simple-dropdown {
+	padding: 20px 0 0 20px;
+
+	>a {
+		color: $white;
+		font-size: 14px;
+	}
+}
