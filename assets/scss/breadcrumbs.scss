@@ -1,0 +1,34 @@
+/***
+*
+*  Breadcrumbs style
+*
+***/
+
+@import 'vars';
+
+.breadcrumb {
+	border-bottom: 1px solid $breadcrumb-border;
+	display: block;
+    list-style: none;
+    margin-bottom: 18px;
+	padding: 8px 20px;
+	width: 100%;
+
+	li {
+    	display: inline-block;
+
+    	a {
+    		color: $breadcrumb-color;
+    	}
+
+    	&.active {
+    		color: $breadcrumb-active;
+    	}
+	}
+
+	>li+li:before {
+    	color: $breadcrumb-color;
+		content: "/\00a0";
+    	padding: 0 5px;
+	}
+}

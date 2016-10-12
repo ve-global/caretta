@@ -100,10 +100,21 @@ module.exports = function (grunt) {
                 'gruntfile.js',
                 'assets/js/**/*.js'
             ]
+        },
+
+        copy: {
+            materialFonts: {
+                expand: true,
+                flatten: true,
+                src: 'assets/fonts/Material-Design-Iconic-Font/**',
+                dest: 'public/fonts/',
+                filter: 'isFile'
+            }
         }
     });
 
     grunt.registerTask('default', [
+        'copy',
         'eslint',
         'sasslint',
         'concat',
