@@ -8,6 +8,7 @@ var Caretta = Caretta || {};
 Caretta.Tabs = (function() {
 
     var toggleActiveTab = function (event) {
+        event.preventDefault();
         var actives = document.querySelectorAll('.active');
         
         for (var i = 0; i < actives.length; i++){
