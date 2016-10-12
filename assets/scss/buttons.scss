@@ -1,0 +1,87 @@
+/***
+*
+*  1. Generic buttons
+*  2. Button sizes
+*  3. Button disabled
+*  4. Button block
+*  5. Button icon
+*
+***/
+
+@import 'vars';
+
+.btn {
+    border: 0;
+    border-radius: 2px;
+    box-shadow: $shadow-btn;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/******************    1. Generic buttons  ******************/
+.btn-default {
+	background-color: $white;
+	color: $grey-text;
+}
+
+.btn-primary {
+    background-color: $btn-primary;
+}
+
+.btn-cancel {
+	background-color: $btn-cancel;
+}
+
+.btn-success {
+	background-color: $green;
+}
+
+.btn-danger {
+	background-color: $red;
+}
+
+/******************    2. Button sizes  ******************/
+
+.btn-large {
+    font-size: 17px;
+    line-height: 1.3333333;
+	padding: 10px 16px;
+}
+
+/******************    3. Button disabled  ******************/
+
+.btn[disabled] {
+	cursor: not-allowed;
+    opacity: 0.65;
+}
+
+/******************    4. Button block  ******************/
+
+.btn-block {
+	display: block;
+    width: 100%;
+}
+
+/******************    5. Button icon  ******************/
+
+.btn {
+
+	i {
+	    display: inline-block;
+		font-size: 15px;
+	    line-height: 100%;
+	    margin-right: 5px;
+	    margin-top: 2px;
+	    vertical-align: top;
+	}
+}
