@@ -6,10 +6,17 @@
 @import 'vars';
 
 .simple-dropdown {
-	padding: 25px 0 0 20px;
+	padding: 25px;
 
 	>a {
 		color: $white;
 		font-size: 14px;
+	}
+}
+
+.customer-dropdown {
+
+	.dropdown-content {
+		width: 350px;
 	}
 }

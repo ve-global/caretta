@@ -36,8 +36,17 @@ Caretta.Dropdown = (function () {
 
 	/**
 	* Toggle dropdown parent class
+	* e {object} 		- event
 	*/
 	ToggleDropdown = (e) => {
+		let simpleDropdowns = document.getElementsByClassName('simple-dropdown');
+
+        for(let i=0; i<simpleDropdowns.length; i++) {
+        	if(simpleDropdowns[i] !== FindAncestor(e.target, 'simple-dropdown')) {
+        		simpleDropdowns[i].classList.remove('open');
+        	}
+		}
+
 		if(e.target.parentElement.classList.contains('open')) {
 			e.target.parentElement.classList.remove('open');
 		} else {

@@ -22,5 +22,8 @@
     "babel-preset-es2015": "^6.16.0",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0"
+  },
+  "scripts": {
+    "customers": "cd assets/api/customers.europe && node server.js"
   }
 }
