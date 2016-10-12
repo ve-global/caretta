@@ -13,11 +13,14 @@
 ***/
 
 @import 'vars';
+@import 'material-iconic';
 
 /******************    1. Caretta Skeleton Styles  ******************/
 html {
 	font-family: $roboto;
+    font-size: 13px;
     height: 100%;
+        line-height: 1.4;
 	width: 100%;
 
     a {
