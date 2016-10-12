@@ -5,7 +5,12 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
+        watch: {
+            css: {
+                files: ['assets/scss/*.scss'],
+                tasks: ['sass:dist']
+            }
+        },
         concat: {
             options: {
                 separator: ';'
@@ -82,7 +87,7 @@ module.exports = function (grunt) {
             ]
         },
 
-        scsslint: {
+        sasslint: {
             all: 'assets/scss/caretta.scss',
             options: {
                 bundleExec: false,
@@ -98,9 +103,9 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('deploy', [
-        // 'eslint',
-        // 'scsslint',
+    grunt.registerTask('default', [
+        'eslint',
+        'sasslint',
         'concat',
         'babel',
         'uglify',

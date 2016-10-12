@@ -1,0 +1,58 @@
+/***
+*
+*  1. Caretta List Styles
+*       1.1 Unordered Lists
+*       1.2 Unordered Lists
+*
+***/
+
+@import 'vars';
+
+/******************   1. Caretta List Styles  ******************/
+
+ul,
+ol {
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 9px;
+    padding-left: 20px;
+    li {
+        box-sizing: border-box;
+        clear: both;
+        color: $grey-text;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}
+/******************   1.1 Unordered Lists  ******************/
+
+ul {
+    list-style: disc;
+    &.square {
+        list-style: square;
+    }
+    &.arrow {
+        li {
+            list-style: none;
+            &::before {
+                content: "\f2fb";
+                font-family: $material-iconic;
+                margin: 0 10px 0 -20px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+/******************   1.2 Ordered Lists  ******************/
+
+ol {
+    list-style: decimal;
+
+    &.romans {
+        list-style: lower-roman;
+    }
+
+    &.alpha {
+        list-style: lower-alpha;
+    }
+}

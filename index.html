@@ -1,80 +1,254 @@
+
+
 <!DOCTYPE html>
 <html lang="en-gb">
-<head>
-	<meta charset="utf-8" />
-	<title>Caretta Framework</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=greek,latin-ext,vietnamese" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="public/css/caretta.min.css" rel="stylesheet" type="text/css" />
-</head>
-<body class="caretta">
-
-	<header class="caretta-header">
-		<aside class="left-side">
-			<div class="caretta-logo">
-				<a href="#" title="VeConfig">Ve<span>Config</span></a>
-			</div>
-		</aside>
-		<div class="server-dropdown">
-			<div class="simple-dropdown">
-				<a href="#" data-toggle="dropdown">Simple Dropdown</a>
-				<ul class="dropdown-content">
-			      	<li><a href="#">Line 1</a></li>
-			      	<li><a href="#">Line 2</a></li>
-			      	<li><a href="#">Line 3</a></li>
-			    </ul>
-			</div>
-		</div>
-		<div class="customer-dropdown">
-			<div class="simple-dropdown">
-				<a href="#" data-toggle="dropdown">Customer Dropdown</a>
-				<div class="dropdown-content">
-					<h2 class="dropdown-header">All Customers</h2>
-					<ul id="customersList"></ul>
-			    </div>
-			</div>
-		</div>
-	</header>
-	
-	<main>
-		<nav class="main-navigation left-side">
-
-		</nav>
-		<header></header>
-		<section class="main-application right-side">
-			<div class="row">
-				<div class="col-full bg-white">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-half bg-white">
-				</div>
-				<div class="col-half bg-white">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-third bg-white">
-				</div>
-				<div class="col-third bg-white">
-				</div>
-				<div class="col-third bg-white">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-quart bg-white">
-				</div>
-				<div class="col-quart bg-white">
-				</div>
-				<div class="col-quart bg-white">
-				</div>
-				<div class="col-quart bg-white">
-				</div>
-			</div>
-			<footer class="caretta-footer"> &copy; <span class="current-year">2016</span> - Ve Interactive</footer>
-		</section>
-		
-		
-	</main>
-	<script src="public/js/scripts.min.js"></script>
-</body>
+   <head>
+      <meta charset="utf-8" />
+      <title>Caretta Framework</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=greek,latin-ext,vietnamese" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="public/css/caretta.min.css" rel="stylesheet" type="text/css" />
+   </head>
+   <body class="caretta">
+      <header class="caretta-header">
+         <aside class="left-side">
+            <div class="caretta-logo">
+               <a href="#" title="VeConfig">Ve<span>Config</span></a>
+            </div>
+         </aside>
+         <div class="server-dropdown">
+            <div class="simple-dropdown">
+               <a href="#" data-toggle="dropdown">Simple Dropdown</a>
+               <ul class="dropdown-content">
+                     <li><a href="#">Line 1</a></li>
+                     <li><a href="#">Line 2</a></li>
+                     <li><a href="#">Line 3</a></li>
+                </ul>
+            </div>
+         </div>
+         <div class="customer-dropdown">
+            <div class="simple-dropdown">
+               <a href="#" data-toggle="dropdown">Customer Dropdown</a>
+               <div class="dropdown-content">
+                  <h2 class="dropdown-header">All Customers</h2>
+                  <ul id="customersList"></ul>
+                </div>
+            </div>
+         </div>
+      </header>
+      <main>
+         <nav class="main-navigation left-side">
+         </nav>
+         <header></header>
+         <section class="main-application right-side">
+            <!-- Grid System -->
+            <div class="row">
+               <div class="col-full bg-white">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-half bg-white">
+               </div>
+               <div class="col-half bg-white">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-third bg-white">
+               </div>
+               <div class="col-third bg-white">
+               </div>
+               <div class="col-third bg-white">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-quart bg-white">
+               </div>
+               <div class="col-quart bg-white">
+               </div>
+               <div class="col-quart bg-white">
+               </div>
+               <div class="col-quart bg-white">
+               </div>
+            </div>
+            <!-- /Grid System -->
+            <hr>
+            <!-- Typography -->
+            <div id="typography">
+               <h1>This is heading 1</h1>
+               <h2>This is heading 2</h2>
+               <h3>This is heading 3</h3>
+               <h4>This is heading 4</h4>
+               <h5>This is heading 5</h5>
+               <h6>This is heading 6</h6>
+               <p>Stylized implementation of HTML's 'abbr' element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a 'title' attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover and to users of assistive technologies.</p>
+               <p class="text-left">Left aligned text.</p>
+               <p class="text-center">Center aligned text.</p>
+               <p class="text-right">Right aligned text.</p>
+               <p class="text-justify">Justified text.</p>
+               <p class="text-lowercase">Lowercased text.</p>
+               <p class="text-uppercase">Uppercased text.</p>
+               <p class="text-capitalize">Capitalized text.</p>
+            </div>
+            <!--Typography -->
+            <hr>
+            <!--Lists -->
+            <div class="row">
+               <div class="col-third bg-white">
+                  <ul>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-third bg-white">
+                  <ul class="square">
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-third bg-white">
+                  <ul class="arrow">
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                     <li>item of unordered list
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-third bg-white">
+                  <ol>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                  </ol>
+               </div>
+               <div class="col-third bg-white">
+                  <ol class="romans">
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                  </ol>
+               </div>
+               <div class="col-third bg-white">
+                  <ol class="alpha">
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                     <li>item of ordered list
+                     </li>
+                  </ol>
+               </div>
+            </div>
+            <!--/Lists -->
+            <hr>
+            <!-- Links -->
+            <a href="#" title="This is a link">This is a link</a>
+            <!-- /Links -->
+            <hr>
+            <!-- Errors -->
+            <p class="error" >This is an error message</p>
+            <p class="warning" >This is a warning message</p>
+            <!-- /Errors -->
+            <hr>
+            <!-- Alerts -->
+            <div class="row">
+               <div class="alert alert-success alert-dismissible" role="alert">Well done! You successfully read this important alert message.
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+               </div>
+            </div>
+            <div class="row">
+               <div class="alert alert-info alert-dismissible" role="alert">Well done! You successfully read this important alert message.
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+               </div>
+            </div>
+            <div class="row">
+               <div class="alert alert-error alert-dismissible" role="alert">Well done! You successfully read this important alert message.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+            </div>
+            <div class="row">
+               <div class="alert alert-warning alert-dismissible" role="alert">Well done! You successfully read this important alert message.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+            </div>
+            <!-- /Alerts -->
+            <hr>
+            <footer class="caretta-footer"> &copy; <span class="current-year">2016</span> - Ve Interactive</footer>
+         </section>
+      </main>
+      <script src="/public/js/scripts.min.js"></script>
+   </body>
 </html>
