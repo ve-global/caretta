@@ -16,7 +16,7 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src: 'assets/js/**/*.spec.js',
+                src: 'assets/js/*.js',
                 dest: 'assets/temp/js/scripts.concat.js'
             }
         },
@@ -55,7 +55,7 @@ module.exports = function (grunt) {
             },
             buildBower: {
                 src: 'assets/temp/js/scripts.es2015.js',
-                dest: 'assets/temp/js/scripts.min.js'
+                dest: 'public/js/scripts.min.js'
             }
         },
 
@@ -104,8 +104,8 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('default', [
-        'eslint',
-        'sasslint',
+        /*'eslint',
+        'sasslint',*/
         'concat',
         'babel',
         'uglify',

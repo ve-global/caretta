@@ -8,62 +8,13 @@
 
 @import 'vars';
 /******************    1. Caretta Tabs  ******************/
-
-/******************    1.1 Tabs Menu  ******************/
-.tabs-menu {
-    height: 30px;
-    float: left;
-    clear: both;
-
-    li {
-	    height: 30px;
-	    line-height: 30px;
-	    float: left;
-	    margin-right: 10px;
-	    background-color: #ccc;
-	    border-top: 1px solid #d4d4d1;
-	    border-right: 1px solid #d4d4d1;
-	    border-left: 1px solid #d4d4d1;
-
-	    &.current {
-		    position: relative;
-		    background-color: #fff;
-		    border-bottom: 1px solid #fff;
-		    z-index: 5;
-
-		    a {
-			    color: #2e7da3;
-			}
-		}
-
-		a {
-		    padding: 10px;
-		    text-transform: uppercase;
-		    color: #fff;
-		    text-decoration: none; 
-		}
-
-	}
+.tabs-container {
+  margin: 10px 0 20px 0;
+  width: 100%;
+  /******************    1.1 Tabs Menu  ******************/
+  .tabs-nav {
+    clear: none;
+    display: inline-block;
+    vartical-align: top;
+  }
 }
-
-.tab {
-    border: 1px solid #d4d4d1;
-    background-color: #fff;
-    float: left;
-    margin-bottom: 20px;
-    width: auto;
-
-    .tab-content {
-	    width: 660px;
-	    padding: 20px;
-	    display: none;
-
-	    &:first-child {
-		 display: block;   
-		}
-
-	}
-}
-
-
-
