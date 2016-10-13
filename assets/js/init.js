@@ -1,7 +1,6 @@
 var init = function () {
-	console.log('loaded');
 	Caretta.Tabs.initTabs();
-	
+	Caretta.Accordions.initAccordions();         
 	Caretta.Modals.InitModals();
 	Caretta.Modals.InitCloseModals();
 }
