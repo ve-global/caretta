@@ -1,9 +1,6 @@
 var init = function () {
-	console.log('loaded');
 	Caretta.Tabs.initTabs();
-	
-
-          
+	Caretta.Accordions.initAccordions();         
 }
 
 window.onload = init;
