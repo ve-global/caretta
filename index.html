@@ -22,6 +22,7 @@
          </nav>
          <section class="main-application right-side">
             <!-- Grid System -->
+            <h5>Grid system</h5>
             <div class="row flex-space">
                <div class="col-full bg-white">
                </div>
@@ -53,6 +54,7 @@
             <!-- /Grid System -->
             <hr>
             <!-- Typography -->
+            <h5>Headings</h5>
             <div id="typography">
                <h1>This is heading 1</h1>
                <h2>This is heading 2</h2>
@@ -72,6 +74,7 @@
             <!--Typography -->
             <hr>
             <!--Lists -->
+            <h5>Lists</h5>
             <div class="row flex-space">
                <div class="col-third bg-white">
                   <ul>
@@ -199,15 +202,18 @@
             <!--/Lists -->
             <hr>
             <!-- Links -->
+            <h5>Links</h5>
             <a href="#" title="This is a link">This is a link</a>
             <!-- /Links -->
             <hr>
             <!-- Errors -->
+            <h5>Errors</h5>
             <p class="error" >This is an error message</p>
             <p class="warning" >This is a warning message</p>
             <!-- /Errors -->
             <hr>
             <!-- Alerts -->
+            <h5>Alerts</h5>
             <div class="row">
                <div class="alert alert-success alert-dismissible" role="alert">Well done! You successfully read this important alert message.
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
@@ -231,6 +237,7 @@
             <!-- /Alerts -->
             <hr>
             <!-- Tabs -->
+            <h5>Tabs</h5>
             <div id="tabs-container" class="tabs-container bg-white">
                <ul id="nav-tab" class="tabs-nav">
                   <li class="active"><a href="#tab1">Tab 1</a></li>
@@ -257,38 +264,40 @@
             <!-- /Tabs -->
             <hr>
             <!-- Buttons -->
-            <h5>Generic buttons</h5>
-            <div class="row">
-               <button class="btn btn-default">Default</button>
-               <button class="btn btn-primary">Primary</button>
-               <button class="btn btn-cancel">Cancel</button>
-               <button class="btn btn-success">Success</button>
-               <button class="btn btn-danger">Danger</button>
-            </div>
-            <h5>Button sizes</h5>
-            <div class="row flex-center">
-               <button class="btn btn-primary btn-large">Large</button>
-               <button class="btn btn-primary">Default</button>
-            </div>
-            <h5>Disabled buttons</h5>
-            <div class="row">
-               <button class="btn btn-default" disabled="disabled">Default</button>
-               <button class="btn btn-primary" disabled="disabled">Primary</button>
-               <button class="btn btn-cancel" disabled="disabled">Cancel</button>
-               <button class="btn btn-success" disabled="disabled">Success</button>
-               <button class="btn btn-danger" disabled="disabled">Danger</button>
-            </div>
-            <h5>Button icons</h5>
-            <div class="row">
-               <button class="btn btn-primary"><i class="zmdi zmdi-search"></i>Search</button>
-               <button class="btn btn-primary"><i class="zmdi zmdi-more-vert"></i>More</button>
-               <button class="btn btn-primary"><i class="zmdi zmdi-arrow-back"></i>Back</button>
-               <button class="btn btn-primary"><i class="zmdi zmdi-menu"></i>Menu</button>
-            </div>
-            <h5>Block buttons</h5>
-            <div class="row">
-               <button class="btn btn-default btn-block">Default</button>
-               <button class="btn btn-primary btn-block">Primary</button>
+            <div class="btn-demo">
+               <h5>Generic buttons</h5>
+               <div class="row">
+                  <button class="btn btn-default">Default</button>
+                  <button class="btn btn-primary">Primary</button>
+                  <button class="btn btn-cancel">Cancel</button>
+                  <button class="btn btn-success">Success</button>
+                  <button class="btn btn-danger">Danger</button>
+               </div>
+               <h5>Button sizes</h5>
+               <div class="row flex-center">
+                  <button class="btn btn-primary btn-large">Large</button>
+                  <button class="btn btn-primary">Default</button>
+               </div>
+               <h5>Disabled buttons</h5>
+               <div class="row">
+                  <button class="btn btn-default" disabled="disabled">Default</button>
+                  <button class="btn btn-primary" disabled="disabled">Primary</button>
+                  <button class="btn btn-cancel" disabled="disabled">Cancel</button>
+                  <button class="btn btn-success" disabled="disabled">Success</button>
+                  <button class="btn btn-danger" disabled="disabled">Danger</button>
+               </div>
+               <h5>Button icons</h5>
+               <div class="row">
+                  <button class="btn btn-primary"><i class="zmdi zmdi-search"></i>Search</button>
+                  <button class="btn btn-primary"><i class="zmdi zmdi-more-vert"></i>More</button>
+                  <button class="btn btn-primary"><i class="zmdi zmdi-arrow-back"></i>Back</button>
+                  <button class="btn btn-primary"><i class="zmdi zmdi-menu"></i>Menu</button>
+               </div>
+               <h5>Block buttons</h5>
+               <div class="row">
+                  <button class="btn btn-default btn-block">Default</button>
+                  <button class="btn btn-primary btn-block">Primary</button>
+               </div>
             </div>
             <!-- /Buttons -->
             <hr>
@@ -341,9 +350,48 @@
             </div>
             <!-- /Tooltips -->
             <hr>
+            <!-- Modals -->
+            <h5>Modals</h5>
+            <div class="row btn-demo">
+               <button class="btn btn-primary" data-toggle="modal" data-modal="modal">Open modal</button>
+               <button class="btn btn-primary" data-toggle="modal" data-modal="modalLarge">Open large modal</button>
+            </div>
+            <!-- /Modals -->
+            <hr>
             <footer class="caretta-footer"> &copy; <span class="current-year">2016</span> - Ve Interactive</footer>
          </section>
       </main>
+
+      <!-- Modals -->
+      <div id="modal" class="modal" role="dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer text-right">
+              <button class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+      <div id="modalLarge" class="modal modal-lg" role="dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer text-right">
+              <button class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+      <!-- /Modals -->
       <script src="public/js/scripts.min.js"></script>
    </body>
 </html>
