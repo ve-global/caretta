@@ -1,0 +1,36 @@
+/***
+*
+*  Common styles for demo page
+*
+***/
+@import 'vars';
+
+.simple-dropdown {
+	padding: 25px;
+
+	>a {
+		color: $white;
+		font-size: 14px;
+	}
+}
+
+.customer-dropdown {
+
+	.dropdown-content {
+		width: 350px;
+	}
+}
+
+.btn-demo {
+	.btn {
+		margin-right: 15px;
+	}
+}
+
+.tooltip {
+	margin-right: 15px;
+
+	.btn {
+		margin-right: 0;
+	}
+}

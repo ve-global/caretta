@@ -1,0 +1,70 @@
+/***
+*
+*  1. Simple dropdown (alike Server dropdown)
+*
+***/
+
+@import 'vars';
+
+/******************    1. Simple dropdown  ******************/
+.simple-dropdown {
+	position: relative;
+
+	.dropdown-content {
+	    background-color: $white;
+	    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	    display: none;
+	    float: left;
+	    font-size: 14px;
+	    left: 0;
+	    list-style: none;
+	    margin: 2px 0 0;
+	    max-height: 460px;
+	    min-width: 160px;
+	    overflow-y: scroll;
+	    padding: 5px 0;
+		position: absolute;
+	    text-align: left;
+	    top: 95%;
+	    z-index: 1000;
+
+	    a {
+	    	box-sizing: border-box;
+		    color: $grey-text;
+		    display: inline-block;
+		    font-size: 13px;
+		    line-height: 1;
+		    overflow-x: hidden;
+		    padding: 12px 20px;
+		    width: 100%;
+
+		    &:hover {
+		    	background-color: $light-blue;
+		    }
+	    }
+
+	    ul {
+	    	list-style: none;
+	    	padding: 0;
+	    }
+
+	    .dropdown-header {
+		    border-bottom: 1px solid $grey-text;
+	    	color: $grey-text;
+		    font-size: 13px;
+		    font-weight: 400;
+		    margin: 10px 0px 5px;
+		    padding-bottom: 5px;
+		    text-align: center;
+		    text-transform: uppercase;
+		    width: 100%;
+	    }
+	}
+
+	&.open {
+
+		.dropdown-content {
+			display: block;
+		}
+	}
+}

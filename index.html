@@ -16,6 +16,29 @@
                <a href="#" title="VeConfig">Ve<span>Config</span></a>
             </div>
          </aside>
+         <div class="server-dropdown">
+            <div class="simple-dropdown">
+               <a href="#" data-toggle="dropdown">Simple Dropdown</a>
+               <ul class="dropdown-content">
+                  <li><a href="#">Line 1</a></li>
+                  <li><a href="#">Line 2</a></li>
+                  <li><a href="#">Line 3</a></li>
+                </ul>
+            </div>
+         </div>
+         <div class="customer-dropdown">
+            <div class="simple-dropdown">
+               <a href="#" data-toggle="dropdown">Customer Dropdown</a>
+               <div class="dropdown-content">
+                  <h2 class="dropdown-header">All Customers</h2>
+                  <ul id="customersList">
+                     <li><a href="#">Customer 1</a></li>
+                     <li><a href="#">Customer 2</a></li>
+                     <li><a href="#">Customer 3</a></li>
+                  </ul>
+                </div>
+            </div>
+         </div>
       </header>
       <main>
          <nav class="main-navigation left-side">
@@ -305,9 +328,9 @@
             <h5>Breadcrumbs</h5>
             <div class="row">
                <ul class="breadcrumb">
-                   <li><a href="#">Displays</a></li>
-                   <li><a href="#">Instance</a></li>
-                   <li class="active">New Instance</li>
+                  <li><a href="#">Displays</a></li>
+                  <li><a href="#">Instance</a></li>
+                  <li class="active">New Instance</li>
                </ul>
             </div>
             <!-- /Breadcrumbs -->
@@ -350,6 +373,74 @@
             </div>
             <!-- /Tooltips -->
             <hr>
+            <!-- Accordion -->
+            <div class="row flex-space">
+               <div class="col-half bg-white">
+                  <div class="accordionWrapper">
+                     <div class="accordionItem open">
+                        <h2 class="accordionItemHeading">
+                           <span>Section 1</span>
+                        </h2>
+                        <div class="accordionItemContent">
+                           <p>Pellentesque, sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in aliquam. Tincidunt lobortis feugiat vivamus at sweincidunt egetarcu dictum varius duis at consectetur lorem.</p>
+                        </div>
+                     </div>
+                     <div class="accordionItem">
+                        <h2 class="accordionItemHeading">
+                           <span>Section 2</span>
+                        </h2>
+                        <div class="accordionItemContent">
+                           <ul>
+                              <li>Pellentesque, sit amet venenatis urna c</li>
+                              <li>Tincidunt lobortis feugiat vivamu</li>
+                              <li>varius duis at consectetur lorem</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="accordionItem">
+                        <h2 class="accordionItemHeading">
+                           <span>Section 3</span>
+                        </h2>
+                        <div class="accordionItemContent">
+                           <p>ellentesque, sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in aliquam. Tincidunt lobortis feugiat.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-half bg-white">
+                  <div class="accordionWrapper oneVisible">
+                     <div class="accordionItem open">
+                        <h2 class="accordionItemHeading">
+                           <span>Section 1</span>
+                        </h2>
+                        <div class="accordionItemContent">
+                           <p>Pellentesque, sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in aliquam. Tincidunt lobortis feugiat vivamus at sweincidunt egetarcu dictum varius duis at consectetur lorem.</p>
+                        </div>
+                     </div>
+                     <div class="accordionItem">
+                        <h2 class="accordionItemHeading">
+                           <span>Section 2</span>
+                        </h2>
+                        <div class="accordionItemContent">
+                           <ul>
+                              <li>Pellentesque, sit amet venenatis urna c</li>
+                              <li>Tincidunt lobortis feugiat vivamu</li>
+                              <li>varius duis at consectetur lorem</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="accordionItem">
+                        <h2 class="accordionItemHeading">
+                           <span>Section 3</span>
+                        </h2>
+                        <div class="accordionItemContent">
+                           <p>ellentesque, sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in aliquam. Tincidunt lobortis feugiat.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- /Accordion -->
             <!-- Modals -->
             <h5>Modals</h5>
             <div class="row btn-demo">
@@ -453,4 +544,3 @@
       <script src="public/js/scripts.min.js"></script>
    </body>
 </html>
-
