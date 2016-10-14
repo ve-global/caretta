@@ -16,6 +16,14 @@ var swagger  = require('swagger-server'),
 server.parse('Navigation.yaml');
 server.enable('case sensitive routing');
 
+server.dataStore.save(
+  new Resource('/navigation/1', {id: 1, title: 'Settings', link: '/settings', icon: 'zmdi-settings'}),
+  new Resource('/navigation/2', {id: 2, title: 'Promocodes', link: '/promocodes', icon: 'zmdi-card-giftcard'}),
+  new Resource('/navigation/3', {id: 3, title: 'Panels', link: '/panels', icon: 'zmdi-image'}),
+  new Resource('/navigation/4', {id: 4, title: 'Ads', link: '/ads', icon: 'zmdi-book-image'}),
+  new Resource('/navigation/5', {id: 5, title: 'VeContact', link: '/contact', icon: 'zmdi-email-open'})
+);
+
 // Start listening on port 8001
 server.listen(8001, function() {
   console.log('The Swagger Navigation is now running at http://localhost:8001');
