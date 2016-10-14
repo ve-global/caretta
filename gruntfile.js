@@ -53,7 +53,7 @@ module.exports = function (grunt) {
                 sourceMap: true,
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
-            build: {
+            buildBower: {
                 src: 'assets/temp/js/scripts.es2015.js',
                 dest: 'public/js/scripts.min.js'
             }
