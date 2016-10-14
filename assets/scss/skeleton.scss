@@ -34,14 +34,7 @@ html {
 	height: 100%;
     width: 100%;
 
-    .left-side {
-    	flex: 0 0 268px;
-    	order: 0;
-    }
-
     .right-side {
-    	flex: 1;
-    	order: 1;
         padding-top: 20px;
     }
 
@@ -85,8 +78,6 @@ html {
 
     /******************    1.2 Caretta Main Area  ******************/
     main {
-        flex: 1;
-        display: flex;
         padding-top: 70px;
 
         /******************    1.2.1 Caretta Main Navigation  ******************/
@@ -95,17 +86,19 @@ html {
             box-shadow: 0 0 10px $shadow-main-navigation;
             box-sizing: border-box;
             display: inline-block;
+            height: 100%;
             padding: 20px;
+            position: fixed;
             z-index: 1;
+            width: 268px;
         }
 
         /******************    1.2.1 Caretta Application Area  ******************/
         .main-application {
             background: $grey-light;
-            padding: 20px;
+            padding: 20px 20px 40px 288px;
             position: relative;
         }
-    
 
         .caretta-footer {
             bottom: 20px;
@@ -122,10 +115,22 @@ html {
 
 /******************    2. Caretta Standard Layouts  ******************/
 .row {
+    align-items: flex-start;
     display: flex;
-    justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    &.flex-space {
+        justify-content: space-between;
+    }
+
+    &.flex-stretch {
+        align-items: stretch;
+    }
+
+    &.flex-center {
+        align-items: center;
+    }
 
     >* {
         box-sizing: border-box;
