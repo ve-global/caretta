@@ -8,6 +8,8 @@ var init = () => {
 
 	Caretta.Dropdown.CloseDropdowns();
 	Caretta.Dropdown.SetupSimpleDropdowns();
+
+	Caretta.Navigation.GetNavigation();
 }
 
 window.onload = init;
