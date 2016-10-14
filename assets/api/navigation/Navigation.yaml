@@ -1,0 +1,107 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Swagger Navigation
+  description: A sample API that demonstrates Swagger Server features
+
+host: navigation.swagger.io:8001
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+definitions:
+  navItem:
+    type: object
+    required:
+      - title
+      - link
+      - icon
+    properties:
+      id:
+        type: integer
+        format: int3
+        primary: true
+        autoincrement: true
+      title:
+        type: string
+        minLength: 3
+      link:
+        type: string
+      icon:
+        type: string
+
+parameters:
+  navItemId:
+    name: navItemId
+    in: path
+    description: Id of the nav item
+    required: true
+    type: string
+
+paths:
+  /navigation:
+    get:
+      description: Returns the navigation
+      operationId: getNavigation
+      responses:
+        200:
+          description: Returns the navigation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/navItem"
+          headers:
+            last-modified:
+              type: string
+              description: The date/time that a pet was last modified
+
+    post:
+      description: Creates a new navItem
+      operationId: addNavItem
+      parameters:
+        - name: navItem
+          in: body
+          description: The item to add to the navigation
+          required: true
+          schema:
+            $ref: "#/definitions/navItem"
+      responses:
+        201:
+          description: Returns the newly-added pet
+          schema:
+            $ref: "#/definitions/navItem"
+          headers:
+            Location:
+              type: string
+              description: The URL of the newly-added pet
+
+  /customers/{navItemId}:
+    parameters:
+      - $ref: "#/parameters/navItemId"
+
+    get:
+      description: Returns a nav item by id
+      operationId: findNavItemById
+      responses:
+        default:
+          description: Returns the navItem data
+          schema:
+            $ref: "#/definitions/navItem"
+          headers:
+            last-modified:
+              type: string
+              description: The date/time that the pet was last modified
+
+  /:
+    get:
+      produces:
+        - text/html
+      responses:
+        default:
+          description: The Swagger Navigation homepage :)
+          schema:
+            type: file
+            default:
+              $ref: index.html
