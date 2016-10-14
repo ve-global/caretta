@@ -43,6 +43,11 @@
 		    }
 	    }
 
+	    ul {
+	    	list-style: none;
+	    	padding: 0;
+	    }
+
 	    .dropdown-header {
 		    border-bottom: 1px solid $grey-text;
 	    	color: $grey-text;

@@ -1,6 +1,6 @@
 /***
 *
-*  Common styles
+*  Common styles for demo page
 *
 ***/
 @import 'vars';
@@ -18,5 +18,19 @@
 
 	.dropdown-content {
 		width: 350px;
+	}
+}
+
+.btn-demo {
+	.btn {
+		margin-right: 15px;
+	}
+}
+
+.tooltip {
+	margin-right: 15px;
+
+	.btn {
+		margin-right: 0;
 	}
 }
