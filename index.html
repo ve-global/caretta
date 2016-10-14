@@ -39,20 +39,20 @@
       <main>
          <nav class="main-navigation left-side">
          </nav>
-         <header></header>
          <section class="main-application right-side">
             <!-- Grid System -->
-            <div class="row">
+            <h5>Grid system</h5>
+            <div class="row flex-space">
                <div class="col-full bg-white">
                </div>
             </div>
-            <div class="row">
+            <div class="row flex-space">
                <div class="col-half bg-white">
                </div>
                <div class="col-half bg-white">
                </div>
             </div>
-            <div class="row">
+            <div class="row flex-space">
                <div class="col-third bg-white">
                </div>
                <div class="col-third bg-white">
@@ -60,7 +60,7 @@
                <div class="col-third bg-white">
                </div>
             </div>
-            <div class="row">
+            <div class="row flex-space">
                <div class="col-quart bg-white">
                </div>
                <div class="col-quart bg-white">
@@ -73,6 +73,7 @@
             <!-- /Grid System -->
             <hr>
             <!-- Typography -->
+            <h5>Headings</h5>
             <div id="typography">
                <h1>This is heading 1</h1>
                <h2>This is heading 2</h2>
@@ -92,7 +93,8 @@
             <!--Typography -->
             <hr>
             <!--Lists -->
-            <div class="row">
+            <h5>Lists</h5>
+            <div class="row flex-space">
                <div class="col-third bg-white">
                   <ul>
                      <li>item of unordered list
@@ -154,7 +156,7 @@
                   </ul>
                </div>
             </div>
-            <div class="row">
+            <div class="row flex-space">
                <div class="col-third bg-white">
                   <ol>
                      <li>item of ordered list
@@ -219,15 +221,18 @@
             <!--/Lists -->
             <hr>
             <!-- Links -->
+            <h5>Links</h5>
             <a href="#" title="This is a link">This is a link</a>
             <!-- /Links -->
             <hr>
             <!-- Errors -->
+            <h5>Errors</h5>
             <p class="error" >This is an error message</p>
             <p class="warning" >This is a warning message</p>
             <!-- /Errors -->
             <hr>
             <!-- Alerts -->
+            <h5>Alerts</h5>
             <div class="row">
                <div class="alert alert-success alert-dismissible" role="alert">Well done! You successfully read this important alert message.
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
@@ -239,16 +244,241 @@
                </div>
             </div>
             <div class="row">
-               <div class="alert alert-error alert-dismissible" role="alert">Well done! You successfully read this important alert message.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+               <div class="alert alert-error alert-dismissible" role="alert">Well done! You successfully read this important alert message.
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+               </div>
             </div>
             <div class="row">
-               <div class="alert alert-warning alert-dismissible" role="alert">Well done! You successfully read this important alert message.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+               <div class="alert alert-warning alert-dismissible" role="alert">Well done! You successfully read this important alert message.
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+               </div>
             </div>
             <!-- /Alerts -->
+            <hr>
+            <!-- Tabs -->
+            <h5>Tabs</h5>
+            <div id="tabs-container" class="tabs-container bg-white">
+               <ul id="nav-tab" class="tabs-nav">
+                  <li class="active"><a href="#tab1">Tab 1</a></li>
+                  <li><a href="#tab2">Tab 2</a></li>
+                  <li><a href="#tab3">Tab 3</a></li>
+                  <li><a href="#tab4">Tab 4</a></li>
+               </ul>
+               <!-- Tab panes -->
+               <div class="tab-content">
+                  <div class="tab-pane active" id="tab1">
+                     <p>Pellentesque, sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in aliquam. Tincidunt lobortis feugiat vivamus at sweincidunt egetarcu dictum varius duis at consectetur lorem.</p>
+                  </div>
+                  <div class="tab-pane" id="tab2">
+                     <p>Pellentesque, sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in aliquam. Tincidunt lobortis feugiat vivamus at sweincidunt egetarcu dictum varius duis at consectetur lorem. Vitae elementum curabitur sodales nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egesta elementum pharetra convallis posuere morbi leo urna, at elementum eu, facilisis sed odio morbi quis commodo odio. In cursus lorem ipsum turpis massa tincidunt dui ut. nunc sed velit dignissim sodales ut eu sem integer suremlco.</p>
+                  </div>
+                  <div class="tab-pane" id="tab3">
+                     <p>Pellentesque, facilisis sed odio morbi quis commodo odio. In cursus lorem ipsum turpis massa tincidunt dui ut. nunc sed velit dignissim sodales ut eu sem integer suremlco.</p>
+                  </div>
+                  <div class="tab-pane" id="tab4">
+                     <p>Pellentesque, sit amet veneu, facilisis sed odio morbi quis commodo odio. In cursus lorem ipsum turpis massa tincidunt dui ut. nunc sed velit dignissim sodales ut eu sem integer suremlco.</p>
+                  </div>
+               </div>
+            </div>
+            <!-- /Tabs -->
+            <hr>
+            <!-- Buttons -->
+            <div class="btn-demo">
+               <h5>Generic buttons</h5>
+               <div class="row">
+                  <button class="btn btn-default">Default</button>
+                  <button class="btn btn-primary">Primary</button>
+                  <button class="btn btn-cancel">Cancel</button>
+                  <button class="btn btn-success">Success</button>
+                  <button class="btn btn-danger">Danger</button>
+               </div>
+               <h5>Button sizes</h5>
+               <div class="row flex-center">
+                  <button class="btn btn-primary btn-large">Large</button>
+                  <button class="btn btn-primary">Default</button>
+               </div>
+               <h5>Disabled buttons</h5>
+               <div class="row">
+                  <button class="btn btn-default" disabled="disabled">Default</button>
+                  <button class="btn btn-primary" disabled="disabled">Primary</button>
+                  <button class="btn btn-cancel" disabled="disabled">Cancel</button>
+                  <button class="btn btn-success" disabled="disabled">Success</button>
+                  <button class="btn btn-danger" disabled="disabled">Danger</button>
+               </div>
+               <h5>Button icons</h5>
+               <div class="row">
+                  <button class="btn btn-primary"><i class="zmdi zmdi-search"></i>Search</button>
+                  <button class="btn btn-primary"><i class="zmdi zmdi-more-vert"></i>More</button>
+                  <button class="btn btn-primary"><i class="zmdi zmdi-arrow-back"></i>Back</button>
+                  <button class="btn btn-primary"><i class="zmdi zmdi-menu"></i>Menu</button>
+               </div>
+               <h5>Block buttons</h5>
+               <div class="row">
+                  <button class="btn btn-default btn-block">Default</button>
+                  <button class="btn btn-primary btn-block">Primary</button>
+               </div>
+            </div>
+            <!-- /Buttons -->
+            <hr>
+            <!-- Breadcrumbs -->
+            <h5>Breadcrumbs</h5>
+            <div class="row">
+               <ul class="breadcrumb">
+                  <li><a href="#">Displays</a></li>
+                  <li><a href="#">Instance</a></li>
+                  <li class="active">New Instance</li>
+               </ul>
+            </div>
+            <!-- /Breadcrumbs -->
+            <hr>
+            <!-- Tooltips -->
+            <h5>Tooltips</h5>
+            <div class="row">
+               <div class="tooltip">
+                  <button class="btn btn-default" data-toggle="tooltip">Tooltip Hover</button>
+                  <p class="tooltip-content">This is the <b>tooltip</b> content</p>
+               </div>
+               <div class="tooltip">
+                  <button class="btn btn-default" data-toggle="tooltip">Top Tooltip Hover</button>
+                  <p class="tooltip-content top">This is the <b>tooltip</b> content</p>
+               </div>
+               <div class="tooltip">
+                  <button class="btn btn-default" data-toggle="tooltip">Right Tooltip Hover</button>
+                  <p class="tooltip-content right">This is the <b>tooltip</b> content</p>
+               </div>
+               <div class="tooltip">
+                  <button class="btn btn-default" data-toggle="tooltip">Left Tooltip Hover</button>
+                  <p class="tooltip-content left">This is the <b>tooltip</b> content</p>
+               </div>
+               <div class="tooltip">
+                  <button class="btn btn-default" data-toggle="tooltip-click">Tooltip Click</button>
+                  <p class="tooltip-content">This is the <b>tooltip</b> content</p>
+               </div>
+               <div class="tooltip">
+                  <button class="btn btn-default" data-toggle="tooltip-click">Top Tooltip Hover</button>
+                  <p class="tooltip-content top">This is the <b>tooltip</b> content</p>
+               </div>
+               <div class="tooltip">
+                  <button class="btn btn-default" data-toggle="tooltip-click">Right Tooltip Hover</button>
+                  <p class="tooltip-content right">This is the <b>tooltip</b> content</p>
+               </div>
+               <div class="tooltip">
+                  <button class="btn btn-default" data-toggle="tooltip-click">Left Tooltip Hover</button>
+                  <p class="tooltip-content left">This is the <b>tooltip</b> content</p>
+               </div>
+            </div>
+            <!-- /Tooltips -->
+            <hr>
+            <!-- Accordion -->
+            <div class="row flex-space">
+               <div class="col-half bg-white">
+                  <div class="accordionWrapper">
+                     <div class="accordionItem open">
+                        <h2 class="accordionItemHeading">
+                           <span>Section 1</span>
+                        </h2>
+                        <div class="accordionItemContent">
+                           <p>Pellentesque, sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in aliquam. Tincidunt lobortis feugiat vivamus at sweincidunt egetarcu dictum varius duis at consectetur lorem.</p>
+                        </div>
+                     </div>
+                     <div class="accordionItem">
+                        <h2 class="accordionItemHeading">
+                           <span>Section 2</span>
+                        </h2>
+                        <div class="accordionItemContent">
+                           <ul>
+                              <li>Pellentesque, sit amet venenatis urna c</li>
+                              <li>Tincidunt lobortis feugiat vivamu</li>
+                              <li>varius duis at consectetur lorem</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="accordionItem">
+                        <h2 class="accordionItemHeading">
+                           <span>Section 3</span>
+                        </h2>
+                        <div class="accordionItemContent">
+                           <p>ellentesque, sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in aliquam. Tincidunt lobortis feugiat.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-half bg-white">
+                  <div class="accordionWrapper oneVisible">
+                     <div class="accordionItem open">
+                        <h2 class="accordionItemHeading">
+                           <span>Section 1</span>
+                        </h2>
+                        <div class="accordionItemContent">
+                           <p>Pellentesque, sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in aliquam. Tincidunt lobortis feugiat vivamus at sweincidunt egetarcu dictum varius duis at consectetur lorem.</p>
+                        </div>
+                     </div>
+                     <div class="accordionItem">
+                        <h2 class="accordionItemHeading">
+                           <span>Section 2</span>
+                        </h2>
+                        <div class="accordionItemContent">
+                           <ul>
+                              <li>Pellentesque, sit amet venenatis urna c</li>
+                              <li>Tincidunt lobortis feugiat vivamu</li>
+                              <li>varius duis at consectetur lorem</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="accordionItem">
+                        <h2 class="accordionItemHeading">
+                           <span>Section 3</span>
+                        </h2>
+                        <div class="accordionItemContent">
+                           <p>ellentesque, sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in aliquam. Tincidunt lobortis feugiat.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- /Accordion -->
+            <!-- Modals -->
+            <h5>Modals</h5>
+            <div class="row btn-demo">
+               <button class="btn btn-primary" data-toggle="modal" data-modal="modal">Open modal</button>
+               <button class="btn btn-primary" data-toggle="modal" data-modal="modalLarge">Open large modal</button>
+            </div>
+            <!-- /Modals -->
             <hr>
             <footer class="caretta-footer"> &copy; <span class="current-year">2016</span> - Ve Interactive</footer>
          </section>
       </main>
-      <script src="/public/js/scripts.min.js"></script>
+
+      <!-- Modals -->
+      <div id="modal" class="modal" role="dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer text-right">
+              <button class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+      <div id="modalLarge" class="modal modal-lg" role="dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer text-right">
+              <button class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+      <!-- /Modals -->
+      <script src="public/js/scripts.min.js"></script>
    </body>
 </html>

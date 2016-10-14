@@ -1,0 +1,85 @@
+/***
+*
+*  1. Tooltips
+*
+***/
+
+@import 'vars';
+
+.tooltip {
+	position: relative;
+
+	.tooltip-content {
+	    background: $white;
+	    border-radius: 3px;
+	    box-shadow: $shadow-btn;
+	    display: none;
+	    margin-bottom: 0;
+	    margin-top: 10px;
+	    min-width: 160px;
+	  	padding: 5px;
+	  	position: absolute;
+	  	z-index: 9;
+
+	  	&:before {
+	  		content: "";
+			height: 0; 
+			border-bottom: 5px solid $white;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			left: 50%;
+			position: absolute;
+			top: -5px;
+	  		width: 0; 
+	  	}
+
+	  	&.top {
+	  		bottom: 100%;
+
+	  		&:before {
+	  			bottom: -5px;
+	  			border-bottom: 0;
+	  			border-left: 5px solid transparent;
+  				border-right: 5px solid transparent;
+  				border-top: 5px solid $white;
+  				top: auto;
+	  		}
+	  	}
+
+	  	&.left {
+	  		margin-top: 0;
+	  		right: 100%;
+	  		top: 20%;
+
+	  		&:before {
+  				border-bottom: 5px solid transparent;
+  				border-left: 5px solid $white;
+  				border-top: 5px solid transparent;
+    			left: auto;
+    			margin-top: -3px;
+	  			right: -10px;
+  				top: 50%;
+	  		}
+	  	}
+
+	  	&.right {
+	  		margin-top: 0;
+	  		left: 100%;
+	  		top: 20%;
+
+	  		&:before {
+  				border-bottom: 5px solid transparent;
+  				border-right: 5px solid $white;
+  				border-top: 5px solid transparent;
+    			margin-top: -3px;
+	  			left: -10px;
+  				top: 50%;
+	  		}
+	  	}
+	}
+
+	button[data-toggle="tooltip"]:hover + .tooltip-content,
+	button[data-toggle="tooltip-click"]:focus + .tooltip-content {
+	  	display: block;
+	}
+}
