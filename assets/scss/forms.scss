@@ -1,0 +1,39 @@
+/***
+*
+*  Caretta Form Fields Style
+*
+***/
+
+@import 'vars';
+
+input[type="text"] {
+	background-color: $grey-input;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: none;
+    font-size: 13px;
+    height: 40px;
+    min-width: 180px;
+    padding: 0 10px 0 15px;
+}
+
+input[type="email"] {
+	@extend input[type="text"];
+}
+
+input[type="password"] {
+	@extend input[type="text"];
+}
+
+select {
+	@extend input[type="text"];
+}
+
+textarea {
+	background-color: $grey-input;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: none;
+    font-size: 13px;
+    padding: 10px 15px;
+}
