@@ -109,6 +109,13 @@ module.exports = function (grunt) {
                 src: 'assets/fonts/Material-Design-Iconic-Font/**',
                 dest: 'public/fonts/',
                 filter: 'isFile'
+            },
+            favicons: {
+                expand: true,
+                flatten: true,
+                src: 'assets/images/favicons/**',
+                dest: 'public/images/',
+                filter: 'isFile'
             }
         }
     });
