@@ -1,0 +1,72 @@
+/***
+*
+*  1. Caretta Modals
+*  2. Modals helpers
+*
+***/
+
+@import 'vars';
+
+/******************    1. Caretta Modals  ******************/
+
+.modal {
+	background: $white;
+	border-radius: 3px;
+	box-shadow: $shadow-btn;
+	box-sizing: border-box;
+	display: none;
+	position: fixed;
+	left: 50%;
+	margin-left: -300px;
+	top: 10%;
+	width: 600px;
+	z-index: 99;
+
+	&.open {
+		display: block;
+	}
+
+	.modal-content {
+		position: relative;
+
+		.modal-header {
+			border-bottom: 1px solid $grey-light;
+			padding: 10px;
+		}
+
+		.modal-body {
+			padding: 10px;
+		}
+	 
+		.modal-footer {
+			border-top: 1px solid $grey-light;
+			padding: 10px;
+		}
+
+		.close {
+		    background: none;
+			border: none;
+		    cursor: pointer;
+		    font-size: 14px;
+		    padding: 0;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+	}
+
+	&.modal-lg {
+		margin-left: -450px;
+		width: 900px;
+	}
+}
+
+/******************    1. Caretta Modals  ******************/
+
+#body-overlay {
+	background: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	z-index: 9;
+}

@@ -5,13 +5,18 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
+        watch: {
+            css: {
+                files: ['assets/scss/*.scss'],
+                tasks: ['sass:dist']
+            }
+        },
         concat: {
             options: {
                 separator: ';'
             },
             dist: {
-                src: 'assets/js/**/*.spec.js',
+                src: 'assets/js/*.js',
                 dest: 'assets/temp/js/scripts.concat.js'
             }
         },
@@ -50,7 +55,7 @@ module.exports = function (grunt) {
             },
             buildBower: {
                 src: 'assets/temp/js/scripts.es2015.js',
-                dest: 'assets/temp/js/scripts.min.js'
+                dest: 'public/js/scripts.min.js'
             }
         },
 
@@ -82,7 +87,7 @@ module.exports = function (grunt) {
             ]
         },
 
-        scsslint: {
+        sasslint: {
             all: 'assets/scss/caretta.scss',
             options: {
                 bundleExec: false,
@@ -95,15 +100,33 @@ module.exports = function (grunt) {
                 'gruntfile.js',
                 'assets/js/**/*.js'
             ]
+        },
+
+        copy: {
+            materialFonts: {
+                expand: true,
+                flatten: true,
+                src: 'assets/fonts/Material-Design-Iconic-Font/**',
+                dest: 'public/fonts/',
+                filter: 'isFile'
+            },
+            favicons: {
+                expand: true,
+                flatten: true,
+                src: 'assets/images/favicons/**',
+                dest: 'public/images/',
+                filter: 'isFile'
+            }
         }
     });
 
-    grunt.registerTask('deploy', [
-        /*'eslint',
-        'scsslint',
+    grunt.registerTask('default', [
+        'copy',
+        //'eslint',
+        //'sasslint',
         'concat',
         'babel',
-        'uglify',*/
+        'uglify',
         'sass',
         'csso',
         'clean:temp'
