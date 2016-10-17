@@ -144,7 +144,7 @@ module.exports = function (grunt) {
         'assemble',
         'copy',
         //'eslint',
-        //'sasslint',
+        'sasslint',
         'concat',
         'babel',
         'uglify',
