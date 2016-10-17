@@ -1,15 +1,22 @@
-var init = () => {
-	Caretta.Tabs.initTabs();
+/**
+ *   Attaches event listeners
+ *   Date: 17/10/2016
+ *	Caretta Framework
+ */
+'use strict';
 
-	Caretta.Accordions.initAccordions();
+var Caretta;
 
-	Caretta.Modals.InitModals();
-	Caretta.Modals.InitCloseModals();
+Caretta = Caretta || {};
 
-	Caretta.Dropdown.CloseDropdowns();
-	Caretta.Dropdown.SetupSimpleDropdowns();
+Caretta.Init = () => {
+    Caretta.Tabs.initTabs();
+    Caretta.Accordions.initAccordions();
+    Caretta.Modals.initModals();
+    Caretta.Modals.initCloseModals();
+    Caretta.Dropdown.closeDropdowns();
+    Caretta.Dropdown.setupSimpleDropdowns();
+    Caretta.Navigation.getNavigation();
+};
 
-	Caretta.Navigation.GetNavigation();
-}
-
-window.onload = init;
+window.onload = Caretta.Init;

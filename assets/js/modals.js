@@ -3,63 +3,65 @@
  *  Date: 13/10/2016
  *  Caretta Framework
  */
+'use strict';
 
-var Caretta = Caretta || {};
+var Caretta;
 
-Caretta.Modals = (function() {
+Caretta = Caretta || {};
 
-	/**
-	* Open modal
-	* e {object} 		- event
-	*/
-    let TriggerModal = (e) => {
-        e.preventDefault();
-        let modalId = e.target.getAttribute('data-modal'),
-        	overlay = document.createElement('DIV');
-        
-        overlay.id = 'body-overlay';
-        document.body.appendChild(overlay);
-        document.getElementById(modalId).classList.add('open');
-    },
+Caretta.Modals = (function () {
 
     /**
-	* Close current modal
-	* e {object} 		- event
-	*/
-    TriggerCloseModal = (e) => {
-        e.preventDefault();
-        let modal = Caretta.Helpers.FindAncestor(e.target, 'modal'),
-        	overlay = document.getElementById('body-overlay');
-        
-        document.body.removeChild(overlay);
-        modal.classList.remove('open');
-    },
+     * Open modal
+     * e {object}       - event
+     */
+    let triggerModal = (e) => {
+            e.preventDefault();
+            let modalId = e.target.getAttribute('data-modal'),
+                overlay = document.createElement('DIV');
 
-    /**
-	* Initialize click event for modals triggering
-	*/
-    InitModals = () => {
-        let modals = document.querySelectorAll('[data-toggle="modal"]');
-        
-        for (let i = 0; i < modals.length; i++){
-          	modals[i].addEventListener('click', TriggerModal);
-        }
-    },
+            overlay.id = 'body-overlay';
+            document.body.appendChild(overlay);
+            document.getElementById(modalId).classList.add('open');
+        },
 
-    /**
-	* Initialize click event for closing modals
-	*/
-    InitCloseModals = () => {
-    	let closeModals = document.querySelectorAll('[data-dismiss="modal"]');
-        
-        for (let i = 0; i < closeModals.length; i++){
-          	closeModals[i].addEventListener('click', TriggerCloseModal);
-        }
-    };
+        /**
+         * Close current modal
+         * e {object}       - event
+         */
+        triggerCloseModal = (e) => {
+            e.preventDefault();
+            let modal = Caretta.Helpers.findAncestor(e.target, 'modal'),
+                overlay = document.getElementById('body-overlay');
 
+            document.body.removeChild(overlay);
+            modal.classList.remove('open');
+        },
+
+        /**
+         * Initialize click event for modals triggering
+         */
+        initModals = () => {
+            let modals = document.querySelectorAll('[data-toggle="modal"]');
+
+            for (let i = 0; i < modals.length; i++) {
+                modals[i].addEventListener('click', triggerModal);
+            }
+        },
+
+        /**
+         * Initialize click event for closing modals
+         */
+        initCloseModals = () => {
+            let closeModals = document.querySelectorAll('[data-dismiss="modal"]');
+
+            for (let i = 0; i < closeModals.length; i++) {
+                closeModals[i].addEventListener('click', triggerCloseModal);
+            }
+        };
 
     return {
-        InitModals: InitModals,
-        InitCloseModals: InitCloseModals
+        initModals: initModals,
+        initCloseModals: initCloseModals
     };
 }());

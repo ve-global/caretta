@@ -3,8 +3,11 @@
 *   Date: 17/10/2016
 *	Caretta Framework
 */
+'use strict';
 
-var Caretta = Caretta || {};
+var Caretta;
+
+Caretta = Caretta || {};
 
 Caretta.Helpers = (function () {
 
@@ -13,12 +16,15 @@ Caretta.Helpers = (function () {
 	* el {object} 		- child element
 	* cls {string}		- parent class
 	*/
-	let FindAncestor = (el, cls) => {
-	    while ((el = el.parentElement) && !el.classList.contains(cls));
-	    return el;
-	};
+    let FindAncestor = (el, cls) => {
+        while (!el.classList.contains(cls)) {
+            el = el.parentElement;
+        }
 
-	return {
-		FindAncestor: FindAncestor
+        return el;
+    };
+
+    return {
+        FindAncestor: FindAncestor
     };
 }());
