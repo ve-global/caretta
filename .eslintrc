@@ -71,7 +71,7 @@
       }
     ],
     "max-depth": [ 2, 4 ],
-    "max-len": [ 2, 120 ],
+    "max-len": [ 2, 180 ],
     "max-params": [ 2, 10 ],
     "new-cap": 2,
     "newline-after-var": [ 2, "always" ],
