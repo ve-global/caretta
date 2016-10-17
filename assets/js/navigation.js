@@ -1,92 +1,95 @@
 /**
-*   Navigation Functions
-*   Date: 14/10/2016
-*	Caretta Framework
-*/
+ *   Navigation Functions
+ *   Date: 14/10/2016
+ *  Caretta Framework
+ */
+'use strict';
 
-var Caretta = Caretta || {};
+var Caretta;
+
+Caretta = Caretta || {};
 
 Caretta.Navigation = (function () {
 
-	/**
-	* Get navigation list from api
-	*/
-	let GetNavigation = () => {
-	    var xmlhttp = new XMLHttpRequest();
+    /**
+     * Toggle submenu parent class
+     * e {object}       - event
+     */
+    let toggleSubmenu = (e) => {
+            if (e.target.parentElement.classList.contains('open')) {
+                e.target.parentElement.classList.remove('open');
+            } else {
+                e.target.parentElement.classList.add('open');
+            }
+        },
 
-	    xmlhttp.onreadystatechange = function() {
-	        if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
-	           	if (xmlhttp.status == 200) {
-	               	UpdateNavigation(xmlhttp.response);
-	           	} else {
-	               	console.error('GetNavigation', xmlhttp.response);
-	           	}
-	        }
-	    };
+        /**
+         * Add click event to all submenus
+         */
+        setupSubmenus = () => {
+            let submenus = document.getElementsByClassName('trigger-submenu');
 
-	    xmlhttp.open("GET", "http://localhost:8001/navigation", true);
-	    xmlhttp.send();
-	},
+            for (let i = 0; i < submenus.length; i++) {
+                submenus[i].addEventListener('click', toggleSubmenu);
+            }
+        },
 
-	/**
-	* Populate navigation list
-	* response {string} 		- navigation items object
-	*/
-	UpdateNavigation = (response) => {
-		let navItems = JSON.parse(response),
-			navItemsList = document.getElementById('navigationList');
+        /**
+         * Populate navigation list
+         * response {string}        - navigation items object
+         */
+        updateNavigation = (response) => {
+            let navItems = JSON.parse(response),
+                navItemsList = document.getElementById('navigationList');
 
-		navItems.forEach((item, key) => {
-			let li = document.createElement('LI'),
-				subItems = item.subItems;
+            navItems.forEach((item) => {
+                let li = document.createElement('LI'),
+                    subItems = item.subItems;
 
-			if(subItems) {
-				let subUl = document.createElement('UL');
+                if (subItems) {
+                    let subUl = document.createElement('UL');
 
-				subUl.classList.add('sub-menu');
-				subItems.forEach((item, key) => {
-					let subLi = document.createElement('LI');
+                    subUl.classList.add('sub-menu');
+                    subItems.forEach((item) => {
+                        let subLi = document.createElement('LI');
 
-					subLi.innerHTML = '<a href="' + item.link + '"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
-					subUl.appendChild(subLi);
-				});
-				li.innerHTML = '<a href="#" class="trigger-submenu"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
-				li.classList.add('has-submenu');
-				li.appendChild(subUl);
-			} else {
-				li.innerHTML = '<a href="' + item.link + '"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
-			}
+                        subLi.innerHTML = '<a href="' + item.link + '"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
+                        subUl.appendChild(subLi);
+                    });
+                    li.innerHTML = '<a href="#" class="trigger-submenu"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
+                    li.classList.add('has-submenu');
+                    li.appendChild(subUl);
+                } else {
+                    li.innerHTML = '<a href="' + item.link + '"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
+                }
 
-			navItemsList.appendChild(li);
-		});
+                navItemsList.appendChild(li);
+            });
 
-		SetupSubmenus();
-	},
+            setupSubmenus();
+        },
 
-	/**
-	* Toggle submenu parent class
-	* e {object} 		- event
-	*/
-	ToggleSubmenu = (e) => {
-		if(e.target.parentElement.classList.contains('open')) {
-			e.target.parentElement.classList.remove('open');
-		} else {
-			e.target.parentElement.classList.add('open');
-		}
-	},
+        /**
+         * Get navigation list from api
+         */
+        getNavigation = () => {
+            var xmlhttp = new XMLHttpRequest();
 
-	/**
-	* Add click event to all submenus
-	*/
-	SetupSubmenus = () => {
-		let submenus = document.getElementsByClassName('trigger-submenu');
+            xmlhttp.onreadystatechange = () => {
+                if (xmlhttp.readyState === XMLHttpRequest.DONE) {
+                    if (xmlhttp.status === 200) {
+                        updateNavigation(xmlhttp.response);
+                    } else {
+                        console.error('GetNavigation', xmlhttp.response);
+                    }
+                }
+            };
 
-		for(let i=0; i<submenus.length; i++) {
-			submenus[i].addEventListener('click', ToggleSubmenu);
-		}
-	}
+            xmlhttp.open('GET', 'http://localhost:8001/navigation', true);
+            xmlhttp.send();
+        };
 
-	return {
-		GetNavigation: GetNavigation
+    return {
+        GetNavigation: getNavigation
     };
 }());
