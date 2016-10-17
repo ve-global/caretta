@@ -10,7 +10,6 @@ var Caretta;
 Caretta = Caretta || {};
 
 Caretta.Modals = (function () {
-
     /**
      *** HELPER FUNCTION ***
      * Get the parent with specific class
