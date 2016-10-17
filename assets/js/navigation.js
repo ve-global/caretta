@@ -37,12 +37,53 @@ Caretta.Navigation = (function () {
 			navItemsList = document.getElementById('navigationList');
 
 		navItems.forEach((item, key) => {
-			let li = document.createElement('LI');
-				
-			li.innerHTML = '<a href="' + item.link + '" target="_blank"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
+			let li = document.createElement('LI'),
+				subItems = item.subItems;
+
+			if(subItems) {
+				let subUl = document.createElement('UL');
+
+				subUl.classList.add('sub-menu');
+				subItems.forEach((item, key) => {
+					let subLi = document.createElement('LI');
+
+					subLi.innerHTML = '<a href="' + item.link + '"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
+					subUl.appendChild(subLi);
+				});
+				li.innerHTML = '<a href="#" class="trigger-submenu"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
+				li.classList.add('has-submenu');
+				li.appendChild(subUl);
+			} else {
+				li.innerHTML = '<a href="' + item.link + '"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
+			}
+
 			navItemsList.appendChild(li);
 		});
 
+		SetupSubmenus();
+	},
+
+	/**
+	* Toggle submenu parent class
+	* e {object} 		- event
+	*/
+	ToggleSubmenu = (e) => {
+		if(e.target.parentElement.classList.contains('open')) {
+			e.target.parentElement.classList.remove('open');
+		} else {
+			e.target.parentElement.classList.add('open');
+		}
+	},
+
+	/**
+	* Add click event to all submenus
+	*/
+	SetupSubmenus = () => {
+		let submenus = document.getElementsByClassName('trigger-submenu');
+
+		for(let i=0; i<submenus.length; i++) {
+			submenus[i].addEventListener('click', ToggleSubmenu);
+		}
 	}
 
 	return {

@@ -19,7 +19,7 @@ server.enable('case sensitive routing');
 server.dataStore.save(
   new Resource('/navigation/1', {id: 1, title: 'Settings', link: '/settings', icon: 'zmdi-settings'}),
   new Resource('/navigation/2', {id: 2, title: 'Promocodes', link: '/promocodes', icon: 'zmdi-card-giftcard'}),
-  new Resource('/navigation/3', {id: 3, title: 'Panels', link: '/panels', icon: 'zmdi-image'}),
+  new Resource('/navigation/3', {id: 3, title: 'Panels', link: '/panels', icon: 'zmdi-image', subItems: [{id: 6, title: 'Themes', link: '/themes', icon: ''}, {id: 7, title: 'Instances', link: '/instances', icon: ''}]}),
   new Resource('/navigation/4', {id: 4, title: 'Ads', link: '/ads', icon: 'zmdi-book-image'}),
   new Resource('/navigation/5', {id: 5, title: 'VeContact', link: '/contact', icon: 'zmdi-email-open'})
 );
