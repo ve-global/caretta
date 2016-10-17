@@ -26,6 +26,10 @@ input[type="password"] {
 	@extend input[type="text"];
 }
 
+input[type="number"] {
+    @extend input[type="text"];
+}
+
 select {
 	@extend input[type="text"];
 }
@@ -37,4 +41,33 @@ textarea {
     box-shadow: none;
     font-size: 13px;
     padding: 10px 15px;
+}
+
+input[type=checkbox] {
+    border: 1px solid $grey-tabs;
+    display: inline-block;
+    font-size: 15px;
+    height: 15px;
+    line-height: 15px;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    vertical-align: text-top;
+    width: 15px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 3px;
+}
+
+input[type=checkbox]:checked::after {
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    content: '';
+    height: 30%;
+    left: 15%;
+    position: absolute;
+    top: 5%;
+    width: 60%;
+  -webkit-box-shadow: -1px 1px 0 rgba(0,0,0,0.8);
+  -webkit-transform: rotate(-45deg);
 }

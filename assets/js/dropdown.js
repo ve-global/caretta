@@ -13,7 +13,7 @@ Caretta.Dropdown = (function () {
 	*/
 	let CloseDropdowns = () => {
 		document.onclick = function(e) {
-		    if(FindAncestor(e.target, 'simple-dropdown') === null) {
+		    if(Caretta.Helpers.FindAncestor(e.target, 'simple-dropdown') === null) {
 		        let simpleDropdowns = document.getElementsByClassName('simple-dropdown');
 
 		        for(let i=0; i<simpleDropdowns.length; i++) {
@@ -24,17 +24,6 @@ Caretta.Dropdown = (function () {
 	},
 
 	/**
-	*** HELPER FUNCTION ***
-	* Get the parent with specific class
-	* el {object} 		- child element
-	* cls {string}		- parent class
-	*/
-	FindAncestor = (el, cls) => {
-	    while ((el = el.parentElement) && !el.classList.contains(cls));
-	    return el;
-	},
-
-	/**
 	* Toggle dropdown parent class
 	* e {object} 		- event
 	*/
@@ -42,7 +31,7 @@ Caretta.Dropdown = (function () {
 		let simpleDropdowns = document.getElementsByClassName('simple-dropdown');
 
         for(let i=0; i<simpleDropdowns.length; i++) {
-        	if(simpleDropdowns[i] !== FindAncestor(e.target, 'simple-dropdown')) {
+        	if(simpleDropdowns[i] !== Caretta.Helpers.FindAncestor(e.target, 'simple-dropdown')) {
         		simpleDropdowns[i].classList.remove('open');
         	}
 		}

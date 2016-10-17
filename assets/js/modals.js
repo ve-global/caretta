@@ -28,7 +28,7 @@ Caretta.Modals = (function() {
 	*/
     TriggerCloseModal = (e) => {
         e.preventDefault();
-        let modal = FindAncestor(e.target, 'modal'),
+        let modal = Caretta.Helpers.FindAncestor(e.target, 'modal'),
         	overlay = document.getElementById('body-overlay');
         
         document.body.removeChild(overlay);
@@ -55,18 +55,7 @@ Caretta.Modals = (function() {
         for (let i = 0; i < closeModals.length; i++){
           	closeModals[i].addEventListener('click', TriggerCloseModal);
         }
-    },
-
-    /**
-	*** HELPER FUNCTION ***
-	* Get the parent with specific class
-	* el {object} 		- child element
-	* cls {string}		- parent class
-	*/
-	FindAncestor = (el, cls) => {
-	    while ((el = el.parentElement) && !el.classList.contains(cls));
-	    return el;
-	};
+    };
 
 
     return {
