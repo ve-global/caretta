@@ -5,6 +5,26 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        assemble: {
+            options: {
+                data: 'src/**/*.{json,yml}',
+                assets: 'assets/**',
+                partials: 'assets/markup/includes/**/*.hbs',
+                flatten: false,
+                layout: 'default.hbs',
+                layoutdir: 'assets/markup/layouts'
+            },
+            default: {
+                files: [{
+                        cwd: 'assets/markup/pages/',
+                        dest: 'public/html',
+                        expand: true,
+                        src: ['**/*.hbs']
+                    }]
+            }
+        },
+
         watch: {
             css: {
                 files: ['assets/scss/*.scss'],
@@ -121,6 +141,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('default', [
+        'assemble',
         'copy',
         //'eslint',
         //'sasslint',
@@ -131,4 +152,4 @@ module.exports = function (grunt) {
         'csso',
         'clean:temp'
     ]);
-};
+}
