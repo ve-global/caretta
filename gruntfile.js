@@ -36,7 +36,14 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src: 'assets/js/*.js',
+                src:
+                    ['assets/js/helpers.js',
+                    'assets/js/accordion.js',
+                    'assets/js/dropdown.js',
+                    'assets/js/modals.js',
+                    'assets/js/navigation.js',
+                    'assets/js/tabs.js',
+                    'assets/js/init.js'],
                 dest: 'assets/temp/js/scripts.concat.js'
             }
         },

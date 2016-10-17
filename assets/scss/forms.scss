@@ -43,31 +43,31 @@ textarea {
     padding: 10px 15px;
 }
 
-input[type=checkbox] {
-    border: 1px solid $grey-tabs;
-    display: inline-block;
-    font-size: 15px;
-    height: 15px;
-    line-height: 15px;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    position: relative;
-    vertical-align: text-top;
-    width: 15px;
-  -webkit-appearance: none;
-  -webkit-border-radius: 3px;
+input[type="checkbox"] {
+    opacity: 0;
+    z-index: 1;
+    height: 18px;
+    margin-top: 0px;
+    width: 18px;
+    cursor: pointer;
 }
 
-input[type=checkbox]:checked::after {
-    border-bottom: 2px solid #fff;
-    border-left: 2px solid #fff;
-    content: '';
-    height: 30%;
-    left: 15%;
+input[type="checkbox"] + label:before {
+    content: "";
+    display: inline-block;
     position: absolute;
-    top: 5%;
-    width: 60%;
-  -webkit-box-shadow: -1px 1px 0 rgba(0,0,0,0.8);
-  -webkit-transform: rotate(-45deg);
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+input[type="checkbox"]:checked + label:after {
+    content: "+";
 }
