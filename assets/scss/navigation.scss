@@ -9,7 +9,7 @@
 
 .navigation-list {
 	list-style: none;
-	padding: 0;
+	padding: 20px 0 0;
 
 	> li {
 
@@ -59,8 +59,12 @@
 
 			&.open {
 
-				> a:before {
-					content: '\2212';
+				> a {
+					background: $grey-active;
+
+					&:before {
+						content: '\2212';
+					}
 				}
 
 				ul {
