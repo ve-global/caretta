@@ -143,7 +143,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'assemble',
         'copy',
-        'eslint',
+        //'eslint',
         'sasslint',
         'concat',
         'babel',
