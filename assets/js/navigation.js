@@ -73,7 +73,7 @@ Caretta.Navigation = (function () {
          * Get navigation list from api
          */
         getNavigation = () => {
-            var xmlhttp = new XMLHttpRequest();
+            let xmlhttp = new XMLHttpRequest();
 
             xmlhttp.onreadystatechange = () => {
                 if (xmlhttp.readyState === XMLHttpRequest.DONE) {
@@ -90,6 +90,6 @@ Caretta.Navigation = (function () {
         };
 
     return {
-        GetNavigation: getNavigation
+        getNavigation: getNavigation
     };
 }());

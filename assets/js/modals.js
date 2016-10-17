@@ -26,9 +26,9 @@ Caretta.Modals = (function() {
 	* Close current modal
 	* e {object} 		- event
 	*/
-    TriggerCloseModal = (e) => {
+    triggerCloseModal = (e) => {
         e.preventDefault();
-        let modal = FindAncestor(e.target, 'modal'),
+        let modal = findAncestor(e.target, 'modal'),
         	overlay = document.getElementById('body-overlay');
         
         document.body.removeChild(overlay);
@@ -38,22 +38,22 @@ Caretta.Modals = (function() {
     /**
 	* Initialize click event for modals triggering
 	*/
-    InitModals = () => {
+    initModals = () => {
         let modals = document.querySelectorAll('[data-toggle="modal"]');
         
         for (let i = 0; i < modals.length; i++){
-          	modals[i].addEventListener('click', TriggerModal);
+          	modals[i].addEventListener('click', triggerModal);
         }
     },
 
     /**
 	* Initialize click event for closing modals
 	*/
-    InitCloseModals = () => {
+    initCloseModals = () => {
     	let closeModals = document.querySelectorAll('[data-dismiss="modal"]');
         
         for (let i = 0; i < closeModals.length; i++){
-          	closeModals[i].addEventListener('click', TriggerCloseModal);
+          	closeModals[i].addEventListener('click', triggerCloseModal);
         }
     },
 
@@ -63,14 +63,14 @@ Caretta.Modals = (function() {
 	* el {object} 		- child element
 	* cls {string}		- parent class
 	*/
-	FindAncestor = (el, cls) => {
+	findAncestor = (el, cls) => {
 	    while ((el = el.parentElement) && !el.classList.contains(cls));
 	    return el;
 	};
 
 
     return {
-        InitModals: InitModals,
-        InitCloseModals: InitCloseModals
+        initModals: initModals,
+        initCloseModals: initCloseModals
     };
 }());

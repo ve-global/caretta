@@ -11,7 +11,7 @@ Caretta.Dropdown = ( function () {
 	/**
 	* Close open dropdowns on click outside
 	*/
-	let CloseDropdowns = () => {
+	let closeDropdowns = () => {
 		document.onclick = function(e) {
 		    if(FindAncestor(e.target, 'simple-dropdown') === null) {
 		        let simpleDropdowns = document.getElementsByClassName('simple-dropdown');
@@ -29,7 +29,7 @@ Caretta.Dropdown = ( function () {
 	* el {object} 		- child element
 	* cls {string}		- parent class
 	*/
-	FindAncestor = (el, cls) => {
+	findAncestor = (el, cls) => {
 	    while ((el = el.parentElement) && !el.classList.contains(cls));
 	    return el;
 	},
@@ -38,11 +38,11 @@ Caretta.Dropdown = ( function () {
 	* Toggle dropdown parent class
 	* e {object} 		- event
 	*/
-	ToggleDropdown = (e) => {
+	toggleDropdown = (e) => {
 		let simpleDropdowns = document.getElementsByClassName('simple-dropdown');
 
         for(let i=0; i<simpleDropdowns.length; i++) {
-        	if(simpleDropdowns[i] !== FindAncestor(e.target, 'simple-dropdown')) {
+        	if(simpleDropdowns[i] !== findAncestor(e.target, 'simple-dropdown')) {
         		simpleDropdowns[i].classList.remove('open');
         	}
 		}
@@ -57,16 +57,16 @@ Caretta.Dropdown = ( function () {
 	/**
 	* Add click event to all dropdowns
 	*/
-	SetupSimpleDropdowns = () => {
+	setupSimpleDropdowns = () => {
 		let dropdowns = document.querySelectorAll('[data-toggle="dropdown"]');
 		
 		for(let i=0; i<dropdowns.length; i++) {
-			dropdowns[i].addEventListener('click', ToggleDropdown);
+			dropdowns[i].addEventListener('click', toggleDropdown);
 		}
 	}
 
 	return {
-		CloseDropdowns: CloseDropdowns,
-        SetupSimpleDropdowns: SetupSimpleDropdowns
+		closeDropdowns: closeDropdowns,
+        setupSimpleDropdowns: setupSimpleDropdowns
     };
 }());
