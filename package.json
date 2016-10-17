@@ -20,14 +20,18 @@
     "grunt-eslint": "^19.0.0",
     "grunt-sass": "^1.2.1",
     "grunt-sass-lint": "^0.2.0",
+    "grunt-assemble": "~0.5.0",
     "lite-server": "^2.2.2",
     "matchdep": "^1.0.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "grunt-assemble-sitemap": "^0.2.6"
+    },
   "scripts": {
     "build:watch": "grunt --watch",
     "build": "grunt",
     "start": "npm run build && concurrently \"grunt --watch\" \"lite-server\" ",
-    "customers": "cd assets/api/customers.europe && node server.js"
+    "customers-api": "cd assets/api/customers.europe && node server.js",
+    "navigation-api": "cd assets/api/navigation && node server.js"
   }
 }
