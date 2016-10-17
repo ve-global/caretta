@@ -124,7 +124,11 @@
         "after": true
       }
     ],
-    "space-after-keywords": [ 2, "always" ],
+    "keyword-spacing": [2, {"overrides": {
+        "if": {"after": true},
+        "for": {"after": true},
+        "while": {"after": true}
+    }}],
     "space-before-blocks": 2,
     "space-before-function-paren": 2,
     "spaced-comment": [ 2, "always" ],

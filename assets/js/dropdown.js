@@ -6,7 +6,7 @@
 
 var Caretta = Caretta || {};
 
-Caretta.Dropdown = (function () {
+Caretta.Dropdown = ( function () {
 
 	/**
 	* Close open dropdowns on click outside
