@@ -31,6 +31,7 @@
     "build:watch": "grunt --watch",
     "build": "grunt",
     "start": "npm run build && concurrently \"grunt --watch\" \"lite-server\" ",
-    "customers": "cd assets/api/customers.europe && node server.js"
+    "customers-api": "cd assets/api/customers.europe && node server.js",
+    "navigation-api": "cd assets/api/navigation && node server.js"
   }
 }
