@@ -17,6 +17,7 @@ Caretta.Init = () => {
     Caretta.Dropdown.closeDropdowns();
     Caretta.Dropdown.setupSimpleDropdowns();
     Caretta.Navigation.getNavigation();
+    Caretta.Helpers.equalHeights('equal-heights');
 };
 
 window.onload = Caretta.Init;

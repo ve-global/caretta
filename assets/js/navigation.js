@@ -80,7 +80,7 @@ Caretta.Navigation = (function () {
                     if (xmlhttp.status === 200) {
                         updateNavigation(xmlhttp.response);
                     } else {
-                        console.error('GetNavigation', xmlhttp.response);
+                        console.error('getNavigation', xmlhttp.response);
                     }
                 }
             };
