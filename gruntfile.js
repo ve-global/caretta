@@ -17,11 +17,11 @@ module.exports = function (grunt) {
             },
             default: {
                 files: [{
-                        cwd: 'assets/markup/pages/',
-                        dest: 'public/html',
-                        expand: true,
-                        src: ['**/*.hbs']
-                    }]
+                    cwd: 'assets/markup/pages/',
+                    dest: 'public/html',
+                    expand: true,
+                    src: ['**/*.hbs']
+                }]
             }
         },
 
@@ -152,4 +152,4 @@ module.exports = function (grunt) {
         'csso',
         'clean:temp'
     ]);
-}
+};

@@ -1,29 +1,45 @@
 /**
- *  VeCaretta Sections
- *  Date: 11/10/2016
+ *  VeCaretta Tabs
+ *  Date: 17/10/2016
  *  Caretta Framework
  */
-var Caretta = Caretta || {};
+'use strict';
 
-Caretta.Tabs = (function() {
+var Caretta;
 
-    var toggleActiveTab = function (event) {
-        event.preventDefault();
-        var actives = document.querySelectorAll('.active');
-        
-        for (var i = 0; i < actives.length; i++){
-          actives[i].className = actives[i].className.replace('active', '');
-        }
+Caretta = Caretta || {};
 
-        event.target.parentElement.className += ' active';
-        document.getElementById(event.target.href.split('#')[1]).className += ' active';
+Caretta.Tabs = (function () {
 
-    }
+    /**
+     * Toggles active tab
+     * event {event}      - Click event
+     */
+    let toggleActiveTab = (event) => {
+            let actives,
+                i;
 
-    var initTabs = function () {
-        var el = document.getElementById('nav-tab');
-        el.addEventListener('click', toggleActiveTab, false);
-    }
+            event.preventDefault();
+            actives = document.querySelectorAll('.active');
+
+            for (i = 0; i < actives.length; i++) {
+                actives[i].className = actives[i].className.replace('active', '');
+            }
+
+            event.target.parentElement.className += ' active';
+            document.getElementById(event.target.href.split('#')[1]).className += ' active';
+
+        },
+
+        /**
+         * Registers event listenter
+         */
+        initTabs = function () {
+            var el;
+
+            el = document.getElementById('nav-tab');
+            el.addEventListener('click', toggleActiveTab, false);
+        };
 
     return {
         initTabs: initTabs
