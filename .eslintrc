@@ -13,9 +13,8 @@
     "DOMPurify": true
   },
   "env": {
-    "browser": true,
-    "jquery": true,
-    "jasmine": true
+    es6: true,
+    browser: true
   },
   "ecmaFeatures": {
     "arrowFunctions": true,
