@@ -5,6 +5,7 @@
 *  3. Button disabled
 *  4. Button block
 *  5. Button icon
+*  6. Button ripple animation
 *
 ***/
 
@@ -22,7 +23,9 @@
     line-height: 1.42857143;
     margin-bottom: 0;
     outline: 0;
+    overflow: hidden;
     padding: 6px 12px;
+    position: relative;
     text-align: center;
     text-transform: uppercase;
     transition: all .3s ease-out;
@@ -92,4 +95,30 @@
 	    margin-top: 2px;
 	    vertical-align: top;
 	}
+}
+
+/************    6. Button ripple animation  ************/
+.btn {
+    &:after {
+        content: "";
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        display: block;
+        margin-left: -120%;
+        margin-top: -120%;
+        opacity: 0;
+        padding-left: 240%;
+        padding-top: 240%;
+        position: absolute;
+        transition: all 1s
+    }
+    
+    &:active:after {
+        margin-left: 0;
+        margin-top: 0;
+        opacity: 1;
+        padding-left: 0;
+        padding-top: 0;
+        transition: 0s
+    }
 }
