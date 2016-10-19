@@ -100,9 +100,9 @@
 /************    6. Button ripple animation  ************/
 .btn {
     &:after {
-        content: "";
         background: rgba(255, 255, 255, 0.3);
         border-radius: 50%;
+        content: "";
         display: block;
         margin-left: -120%;
         margin-top: -120%;
@@ -110,7 +110,7 @@
         padding-left: 240%;
         padding-top: 240%;
         position: absolute;
-        transition: all 1s
+        transition: all 1s;
     }
     
     &:active:after {
@@ -119,6 +119,6 @@
         opacity: 1;
         padding-left: 0;
         padding-top: 0;
-        transition: 0s
+        transition: 0s;
     }
 }
