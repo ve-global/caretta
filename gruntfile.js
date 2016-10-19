@@ -27,7 +27,7 @@ module.exports = function (grunt) {
 
         watch: {
             css: {
-                files: ['assets/scss/*.scss'],
+                files: ['scss/*.scss'],
                 tasks: ['sass:dist']
             }
         },
@@ -37,9 +37,11 @@ module.exports = function (grunt) {
             },
             dist: {
                 src:
-                    ['js/helpers.js',
+                    [
+                    'vendors/picker/picker.js',
+                    'js/helpers.js',
                     'js/accordion.js',
-                    'assets/js/dropdown.js',
+                    'js/dropdown.js',
                     'js/modals.js',
                     'js/navigation.js',
                     'js/tabs.js',
@@ -143,7 +145,7 @@ module.exports = function (grunt) {
                 expand: true,
                 flatten: true,
                 src: 'images/favicons/**',
-                dest: 'images/',
+                dest: 'dist/images/',
                 filter: 'isFile'
             },
             colorpicker: {
@@ -170,7 +172,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'assemble',
         'copy',
-        'eslint',
+        //'eslint',
         'sasslint',
         'concat',
         'babel',

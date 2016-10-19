@@ -1,5 +1,3 @@
-'use strict';
-
 /*
 Copyright (c) 2014 lonely-pixel.com
 
@@ -22,7 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-var Picker = function Picker(options) {
+var Picker = function (options) {
 
     /* default settings */
 
@@ -38,6 +36,7 @@ var Picker = function Picker(options) {
     if (options instanceof HTMLElement) {
 
         this.settings.parent = options;
+
     } else {
 
         for (var name in options) {
@@ -60,7 +59,7 @@ var Picker = function Picker(options) {
         'picker_opacity': {
             down: false,
             vertical: true
-        }
+        },
     };
 
     /* colour storage and conversion */
@@ -74,7 +73,7 @@ var Picker = function Picker(options) {
 
         /* convert to HSL */
 
-        hsl: function hsl() {
+        hsl: function () {
 
             var h = this.hue;
             var l = (2 - this.saturation) * this.value;
@@ -89,7 +88,7 @@ var Picker = function Picker(options) {
                 h: h,
                 s: s,
                 l: l,
-                toString: function toString() {
+                toString: function () {
 
                     return 'hsl(' + this.h + ', ' + this.s + '%, ' + this.l + '%)';
                 }
@@ -98,7 +97,7 @@ var Picker = function Picker(options) {
 
         /* convert to HSLA */
 
-        hsla: function hsla() {
+        hsla: function () {
 
             var hsl = this.hsl();
 
@@ -114,7 +113,7 @@ var Picker = function Picker(options) {
 
         /* convert to RGB */
 
-        rgb: function rgb() {
+        rgb: function () {
 
             var r, g, b;
 
@@ -138,7 +137,7 @@ var Picker = function Picker(options) {
                 r: Math.floor(r * 255),
                 g: Math.floor(g * 255),
                 b: Math.floor(b * 255),
-                toString: function toString() {
+                toString: function () {
 
                     return 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
                 }
@@ -147,9 +146,9 @@ var Picker = function Picker(options) {
 
         /* convert to RGBA */
 
-        rgba: function rgba() {
+        rgba: function () {
 
-            var rgb = this.rgb();
+            var rgb = this.rgb()
 
             rgb.a = this.alpha;
 
@@ -163,7 +162,7 @@ var Picker = function Picker(options) {
 
         /* convert to hex */
 
-        hex: function hex() {
+        hex: function () {
 
             var rgb = this.rgb();
 
@@ -178,11 +177,11 @@ var Picker = function Picker(options) {
                 r: to_hex(rgb.r),
                 g: to_hex(rgb.g),
                 b: to_hex(rgb.b),
-                toString: function toString() {
+                toString: function () {
 
                     return '#' + this.r + this.g + this.b;
                 }
-            };
+            }
         }
     };
 
@@ -334,7 +333,7 @@ Picker.prototype.css = {
         display: 'inline-block',
         position: 'relative',
         marginTop: '10px',
-        border: '1px solid #aaa'
+        border: '1px solid #aaa',
     },
 
     sample_colour: {
@@ -343,7 +342,7 @@ Picker.prototype.css = {
         width: '100%',
         height: '100%',
         background: 'rgba(255,0,0,0.4)',
-        position: 'absolute'
+        position: 'absolute',
 
     },
 
@@ -449,9 +448,9 @@ Picker.prototype.show = function () {
     html += '</div>';
 
     var parent = this.settings.parent;
-
-    if (parent.style.position != 'absolute') {
-
+    
+    if(parent.style.position != 'absolute') {
+        
         parent.style.position = 'relative';
     }
 
@@ -470,24 +469,25 @@ Picker.prototype.show = function () {
 
         switch (this.settings.orientation) {
 
-            case 'left':
-                wrapper.style.left = -wrapper.offsetWidth - this.settings.arrow_size - 4 + 'px';
-                break;
+        case 'left':
+            wrapper.style.left = -wrapper.offsetWidth - this.settings.arrow_size - 4 + 'px';
+            break;
 
-            case 'top':
-            case 'bottom':
-                wrapper.style.left = parent.offsetWidth / 2 - this.settings.arrow_size + 'px';
-                break;
+        case 'top':
+        case 'bottom':
+            wrapper.style.left = parent.offsetWidth / 2 - this.settings.arrow_size + 'px';
+            break;
 
-            case 'center':
-            case 'centre':
-                wrapper.style.left = -wrapper.offsetWidth / 2 + parent.offsetWidth / 2 + 'px';
-                break;
+        case 'center':
+        case 'centre':
+            wrapper.style.left = -wrapper.offsetWidth / 2 + parent.offsetWidth / 2 + 'px';
+            break;
 
-            default:
-                wrapper.style.left = parent.offsetWidth + this.settings.arrow_size + 4 + 'px';
-                break;
+        default:
+            wrapper.style.left = parent.offsetWidth + this.settings.arrow_size + 4 + 'px';
+            break;
         }
+
     } else {
 
         wrapper.style.left = parseInt(this.settings.x) + 'px';
@@ -497,23 +497,24 @@ Picker.prototype.show = function () {
 
         switch (this.settings.orientation) {
 
-            case 'top':
-                wrapper.style.top = -wrapper.offsetHeight - this.settings.arrow_size - 4 + 'px';
-                break;
+        case 'top':
+            wrapper.style.top = -wrapper.offsetHeight - this.settings.arrow_size - 4 + 'px';
+            break;
 
-            case 'bottom':
-                wrapper.style.top = parent.offsetHeight + this.settings.arrow_size + 4 + 'px';
-                break;
+        case 'bottom':
+            wrapper.style.top = parent.offsetHeight + this.settings.arrow_size + 4 + 'px';
+            break;
 
-            case 'center':
-            case 'centre':
-                wrapper.style.top = -parent.offsetHeight / 2 + -wrapper.offsetHeight / 2 + 'px';
-                break;
+        case 'center':
+        case 'centre':
+            wrapper.style.top = -parent.offsetHeight / 2 + -wrapper.offsetHeight / 2 + 'px';
+            break;
 
-            default:
-                wrapper.style.top = parent.offsetHeight / 2 - this.settings.arrow_size + 'px';
-                break;
+        default:
+            wrapper.style.top = parent.offsetHeight / 2 - this.settings.arrow_size + 'px';
+            break;
         }
+
     } else {
 
         wrapper.style.top = parseInt(this.settings.y) + 'px';
@@ -523,55 +524,55 @@ Picker.prototype.show = function () {
 
     switch (this.settings.orientation) {
 
-        case 'left':
-            arrow.style.borderLeft = this.settings.arrow_size + 'px solid' + this.css.wrapper.background;
-            arrow.style.borderRight = 'none';
-            arrow.style.borderTop = this.settings.arrow_size + 'px solid transparent';
-            arrow.style.borderBottom = this.settings.arrow_size + 'px solid transparent';
+    case 'left':
+        arrow.style.borderLeft = this.settings.arrow_size + 'px solid' + this.css.wrapper.background;
+        arrow.style.borderRight = 'none';
+        arrow.style.borderTop = this.settings.arrow_size + 'px solid transparent';
+        arrow.style.borderBottom = this.settings.arrow_size + 'px solid transparent';
 
-            arrow.style.top = '0';
-            arrow.style.right = -this.settings.arrow_size + 'px';
-            arrow.style.left = '';
-            break;
+        arrow.style.top = '0';
+        arrow.style.right = -this.settings.arrow_size + 'px';
+        arrow.style.left = '';
+        break;
 
-        case 'top':
-            arrow.style.borderLeft = this.settings.arrow_size + 'px solid transparent';
-            arrow.style.borderRight = this.settings.arrow_size + 'px solid transparent';
-            arrow.style.borderTop = this.settings.arrow_size + 'px solid' + this.css.wrapper.background;
-            arrow.style.borderBottom = 'none';
+    case 'top':
+        arrow.style.borderLeft = this.settings.arrow_size + 'px solid transparent';
+        arrow.style.borderRight = this.settings.arrow_size + 'px solid transparent';
+        arrow.style.borderTop = this.settings.arrow_size + 'px solid' + this.css.wrapper.background;
+        arrow.style.borderBottom = 'none';
 
-            arrow.style.bottom = -this.settings.arrow_size + 'px';
-            arrow.style.top = '';
-            arrow.style.left = '0';
-            break;
+        arrow.style.bottom = -this.settings.arrow_size + 'px';
+        arrow.style.top = '';
+        arrow.style.left = '0';
+        break;
 
-        case 'bottom':
-            arrow.style.borderLeft = this.settings.arrow_size + 'px solid transparent';
-            arrow.style.borderRight = this.settings.arrow_size + 'px solid transparent';
-            arrow.style.borderTop = 'none';
-            arrow.style.borderBottom = this.settings.arrow_size + 'px solid' + this.css.wrapper.background;
+    case 'bottom':
+        arrow.style.borderLeft = this.settings.arrow_size + 'px solid transparent';
+        arrow.style.borderRight = this.settings.arrow_size + 'px solid transparent';
+        arrow.style.borderTop = 'none';
+        arrow.style.borderBottom = this.settings.arrow_size + 'px solid' + this.css.wrapper.background;
 
-            arrow.style.top = -this.settings.arrow_size + 'px';
-            arrow.style.left = '0';
-            break;
+        arrow.style.top = -this.settings.arrow_size + 'px';
+        arrow.style.left = '0';
+        break;
 
-        case 'center':
-        case 'centre':
-            arrow.style.borderLeft = 'none';
-            arrow.style.borderRight = 'none';
-            arrow.style.borderTop = 'none';
-            arrow.style.borderBottom = 'none';
-            break;
+    case 'center':
+    case 'centre':
+        arrow.style.borderLeft = 'none';
+        arrow.style.borderRight = 'none';
+        arrow.style.borderTop = 'none';
+        arrow.style.borderBottom = 'none';
+        break;
 
-        default:
-            arrow.style.borderLeft = 'none';
-            arrow.style.borderRight = this.settings.arrow_size + 'px solid' + this.css.wrapper.background;
-            arrow.style.borderTop = this.settings.arrow_size + 'px solid transparent';
-            arrow.style.borderBottom = this.settings.arrow_size + 'px solid transparent';
+    default:
+        arrow.style.borderLeft = 'none';
+        arrow.style.borderRight = this.settings.arrow_size + 'px solid' + this.css.wrapper.background;
+        arrow.style.borderTop = this.settings.arrow_size + 'px solid transparent';
+        arrow.style.borderBottom = this.settings.arrow_size + 'px solid transparent';
 
-            arrow.style.top = '0';
-            arrow.style.left = -this.settings.arrow_size + 'px';
-            break;
+        arrow.style.top = '0';
+        arrow.style.left = -this.settings.arrow_size + 'px';
+        break;
     }
 
     this.bind_events();
@@ -748,7 +749,7 @@ Picker.prototype.mouse_move = function (e, element, _this, override) {
     var x = e.clientX - rect.left;
     var y = e.clientY - rect.top;
 
-    if (override || _this.sliders[element.id] && _this.sliders[element.id].down) {
+    if (override || (_this.sliders[element.id] && _this.sliders[element.id].down)) {
 
         var slider_info = _this.sliders[element.id];
 
@@ -861,456 +862,4 @@ Picker.prototype.done = function () {
 
         this.on_done(this.colour);
     }
-};; /**
-    *  VeCaretta Helper Functions
-    *  Date: 17/10/2016
-    *  Caretta Framework
-    */
-'use strict';
-/* eslint no-cond-assign: 1 */
-
-var Caretta;
-
-Caretta = Caretta || {};
-
-Caretta.Helpers = function () {
-
-    /**
-    * Get the parent with specific class
-    * el {object}       - child element
-    * cls {string}      - parent class
-    */
-    var findAncestor = function findAncestor(el, cls) {
-        while ((el = el.parentElement) && !el.classList.contains(cls)) {}
-
-        return el;
-    };
-
-    return {
-        findAncestor: findAncestor
-    };
-}();
-; /**
-  *  VeCaretta Accordion
-  *  Date: 11/10/2016
-  *  Caretta Framework
-  */
-'use strict';
-
-var Caretta;
-
-Caretta = Caretta || {};
-
-Caretta.Accordions = function () {
-
-    var toggleSection = function toggleSection() {
-        var sectionClasses = this.parentNode.className,
-            siblingSections = this.parentNode.parentNode.getElementsByClassName('accordionItem'),
-            z;
-
-        if (this.parentNode.parentNode.getElementsByClassName('open').length === 0) {
-            this.parentNode.parentNode.className = 'accordionWrapper oneVisible';
-        } else {
-            this.parentNode.parentNode.className = 'accordionWrapper oneVisible showHeadings';
-        }
-
-        if (sectionClasses === 'accordionItem open') {
-            this.parentNode.className = 'accordionItem';
-        } else {
-            for (z = 0; z < siblingSections.length; z++) {
-                siblingSections[z].className = 'accordionItem';
-            }
-            this.parentNode.className = 'accordionItem open';
-        }
-    },
-        initAccordions = function initAccordions() {
-        var accordions = document.getElementsByClassName('accordionWrapper'),
-            i,
-            j,
-            accordionSectionsHeadings;
-
-        for (i = 0; i < accordions.length; i++) {
-            accordionSectionsHeadings = accordions[i].getElementsByClassName('accordionItemHeading');
-
-            for (j = 0; j < accordionSectionsHeadings.length; j++) {
-                accordionSectionsHeadings[j].addEventListener('click', toggleSection, false);
-            }
-        }
-    };
-
-    return {
-        initAccordions: initAccordions
-    };
-}();
-; /**
-  *   Dropdown Functions
-  *   Date: 11/10/2016
-  *  Caretta Framework
-  */
-'use strict';
-
-var Caretta;
-
-Caretta = Caretta || {};
-
-Caretta.Dropdown = function () {
-
-    /**
-     * Close open dropdowns on click outside
-     */
-    var closeDropdowns = function closeDropdowns() {
-        document.onclick = function (e) {
-            if (e.target !== null && Caretta.Helpers.findAncestor(e.target, 'simple-dropdown') === null) {
-                var simpleDropdowns = document.getElementsByClassName('simple-dropdown');
-
-                for (var i = 0; i < simpleDropdowns.length; i++) {
-                    simpleDropdowns[i].classList.remove('open');
-                }
-            }
-        };
-    },
-
-
-    /**
-     * Toggle dropdown parent class
-     * e {object}       - event
-     */
-    toggleDropdown = function toggleDropdown(e) {
-        var simpleDropdowns = document.getElementsByClassName('simple-dropdown');
-
-        for (var i = 0; i < simpleDropdowns.length; i++) {
-            if (simpleDropdowns[i] !== Caretta.Helpers.findAncestor(e.target, 'simple-dropdown')) {
-                simpleDropdowns[i].classList.remove('open');
-            }
-        }
-
-        if (e.target.parentElement.classList.contains('open')) {
-            e.target.parentElement.classList.remove('open');
-        } else {
-            e.target.parentElement.classList.add('open');
-        }
-    },
-
-
-    /**
-     * Add click event to all dropdowns
-     */
-    setupSimpleDropdowns = function setupSimpleDropdowns() {
-        var dropdowns = document.querySelectorAll('[data-toggle="dropdown"]');
-
-        for (var i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].addEventListener('click', toggleDropdown);
-        }
-    };
-
-    return {
-        closeDropdowns: closeDropdowns,
-        setupSimpleDropdowns: setupSimpleDropdowns
-    };
-}();
-; /**
-  *  VeCaretta Modals
-  *  Date: 13/10/2016
-  *  Caretta Framework
-  */
-'use strict';
-
-var Caretta;
-
-Caretta = Caretta || {};
-
-Caretta.Modals = function () {
-
-    /**
-     * Open modal
-     * e {object}       - event
-     */
-    var triggerModal = function triggerModal(e) {
-        e.preventDefault();
-        var modalId = e.target.getAttribute('data-modal'),
-            overlay = document.createElement('DIV');
-
-        overlay.id = 'body-overlay';
-        document.body.appendChild(overlay);
-        document.getElementById(modalId).classList.add('open');
-    },
-
-
-    /**
-     * Close current modal
-     * e {object}       - event
-     */
-    triggerCloseModal = function triggerCloseModal(e) {
-        e.preventDefault();
-        var modal = Caretta.Helpers.findAncestor(e.target, 'modal'),
-            overlay = document.getElementById('body-overlay');
-
-        document.body.removeChild(overlay);
-        modal.classList.remove('open');
-    },
-
-
-    /**
-     * Initialize click event for modals triggering
-     */
-    initModals = function initModals() {
-        var modals = document.querySelectorAll('[data-toggle="modal"]');
-
-        for (var i = 0; i < modals.length; i++) {
-            modals[i].addEventListener('click', triggerModal);
-        }
-    },
-
-
-    /**
-     * Initialize click event for closing modals
-     */
-    initCloseModals = function initCloseModals() {
-        var closeModals = document.querySelectorAll('[data-dismiss="modal"]');
-
-        for (var i = 0; i < closeModals.length; i++) {
-            closeModals[i].addEventListener('click', triggerCloseModal);
-        }
-    };
-
-    return {
-        initModals: initModals,
-        initCloseModals: initCloseModals
-    };
-}();
-; /**
-  *   Navigation Functions
-  *   Date: 14/10/2016
-  *  Caretta Framework
-  */
-'use strict';
-
-var Caretta;
-
-Caretta = Caretta || {};
-
-Caretta.Navigation = function () {
-
-    /**
-     * Toggle submenu parent class
-     * e {object}       - event
-     */
-    var toggleSubmenu = function toggleSubmenu(e) {
-        if (e.target.parentElement.classList.contains('open')) {
-            e.target.parentElement.classList.remove('open');
-        } else {
-            e.target.parentElement.classList.add('open');
-        }
-    },
-
-
-    /**
-     * Add click event to all submenus
-     */
-    setupSubmenus = function setupSubmenus() {
-        var submenus = document.getElementsByClassName('trigger-submenu');
-
-        for (var i = 0; i < submenus.length; i++) {
-            submenus[i].addEventListener('click', toggleSubmenu);
-        }
-    },
-
-
-    /**
-     * Populate navigation list
-     * response {string}        - navigation items object
-     */
-    updateNavigation = function updateNavigation(response) {
-        var navItems = JSON.parse(response),
-            navItemsList = document.getElementById('navigationList');
-
-        navItems.forEach(function (item) {
-            var li = document.createElement('LI'),
-                subItems = item.subItems;
-
-            if (subItems) {
-                (function () {
-                    var subUl = document.createElement('UL');
-
-                    subUl.classList.add('sub-menu');
-                    subItems.forEach(function (item) {
-                        var subLi = document.createElement('LI');
-
-                        subLi.innerHTML = '<a href="' + item.link + '"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
-                        subUl.appendChild(subLi);
-                    });
-                    li.innerHTML = '<a href="#" class="trigger-submenu"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
-                    li.classList.add('has-submenu');
-                    li.appendChild(subUl);
-                })();
-            } else {
-                li.innerHTML = '<a href="' + item.link + '"><i class="zmdi ' + item.icon + '"></i>' + item.title + '</a>';
-            }
-
-            navItemsList.appendChild(li);
-        });
-
-        setupSubmenus();
-    },
-
-
-    /**
-     * Get navigation list from api
-     */
-    getNavigation = function getNavigation() {
-        var xmlhttp = new XMLHttpRequest();
-
-        xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState === XMLHttpRequest.DONE) {
-                if (xmlhttp.status === 200) {
-                    updateNavigation(xmlhttp.response);
-                } else {
-                    console.error('getNavigation', xmlhttp.response);
-                }
-            }
-        };
-
-        xmlhttp.open('GET', 'http://localhost:8001/navigation', true);
-        xmlhttp.send();
-    };
-
-    return {
-        getNavigation: getNavigation
-    };
-}();
-; /**
-  *  VeCaretta Tabs
-  *  Date: 17/10/2016
-  *  Caretta Framework
-  */
-'use strict';
-
-var Caretta;
-
-Caretta = Caretta || {};
-
-Caretta.Tabs = function () {
-
-    /**
-     * Toggles active tab
-     * event {event}      - Click event
-     */
-    var toggleActiveTab = function toggleActiveTab(event) {
-        var actives = void 0,
-            i = void 0;
-
-        event.preventDefault();
-        actives = document.querySelectorAll('.active');
-
-        for (i = 0; i < actives.length; i++) {
-            actives[i].className = actives[i].className.replace('active', '');
-        }
-
-        event.target.parentElement.className += ' active';
-        document.getElementById(event.target.href.split('#')[1]).className += ' active';
-    },
-
-
-    /**
-     * Registers event listenter
-     */
-    initTabs = function initTabs() {
-        var el;
-
-        el = document.getElementById('nav-tab');
-        el.addEventListener('click', toggleActiveTab, false);
-    };
-
-    return {
-        initTabs: initTabs
-    };
-}();
-; /**
-  *   Forms Functions
-  *   Date: 18/10/2016
-  *   Caretta Framework
-  */
-'use strict';
-
-/* global Picker, Pikaday */
-
-var Caretta;
-
-Caretta = Caretta || {};
-
-Caretta.Forms = function () {
-
-    /**
-     * Colorpicker initialization
-     */
-    var initColorPicker = function initColorPicker() {
-        var colorpickers = document.querySelectorAll('[data-toggle="colorpicker"]');
-
-        var _loop = function _loop(i) {
-            var picker = new Picker({ parent: colorpickers[i], orientation: 'top' });
-
-            colorpickers[i].onclick = function () {
-                picker.show();
-            };
-
-            picker.on_done = function (colour) {
-                var val = colour.rgba().toString(),
-                    input = document.createElement('INPUT'),
-                    colorpickerId = colorpickers[i].getAttribute('data-colorpickerId');
-
-                input.type = 'text';
-                input.className = 'colorpicker-input';
-                input.value = val;
-                if (colorpickerId !== null) {
-                    input.id = colorpickerId;
-                }
-
-                colorpickers[i].style.background = val;
-                colorpickers[i].innerHTML = val;
-                colorpickers[i].appendChild(input);
-            };
-        };
-
-        for (var i = 0; i < colorpickers.length; i++) {
-            _loop(i);
-        }
-    },
-        initDatePicker = function initDatePicker() {
-        var datepickers = document.querySelectorAll('[data-toggle="datepicker"]');
-
-        for (var i = 0; i < datepickers.length; i++) {
-            var _picker = new Pikaday({ field: datepickers[i] });
-
-            _picker.getDate();
-        }
-    };
-
-    return {
-        initColorPicker: initColorPicker,
-        initDatePicker: initDatePicker
-    };
-}();
-; /**
-  *   Attaches event listeners
-  *   Date: 17/10/2016
-  *	Caretta Framework
-  */
-'use strict';
-
-var Caretta;
-
-Caretta = Caretta || {};
-
-Caretta.Init = function () {
-    Caretta.Tabs.initTabs();
-    Caretta.Accordions.initAccordions();
-    Caretta.Modals.initModals();
-    Caretta.Modals.initCloseModals();
-    Caretta.Dropdown.closeDropdowns();
-    Caretta.Dropdown.setupSimpleDropdowns();
-    Caretta.Navigation.getNavigation();
-    Caretta.Forms.initColorPicker();
-    Caretta.Forms.initDatePicker();
 };
-
-window.onload = Caretta.Init;
