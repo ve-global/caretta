@@ -10,31 +10,31 @@
         <meta name="keywords" content="front, end, framework">
 
         <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="60x60" href="public/images/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="57x57" href="public/images/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="public/images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="public/images/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="public/images/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="public/images/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="public/images/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="public/images/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="public/images/apple-touch-icon-180x180.png">
-        <link rel="icon" type="image/png" href="public/images/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="public/images/android-chrome-192x192.png" sizes="192x192">
-        <link rel="icon" type="image/png" href="public/images/favicon-96x96.png" sizes="96x96">
-        <link rel="icon" type="image/png" href="public/images/favicon-16x16.png" sizes="16x16">
-        <link rel="manifest" href="public/images/manifest.json">
-        <link rel="mask-icon" href="public/images/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="60x60" href="dist/images/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="dist/images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="dist/images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="dist/images/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="dist/images/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="dist/images/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="dist/images/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="dist/images/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="dist/images/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="dist/images/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="dist/images/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="dist/images/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="dist/images/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="dist/images/manifest.json">
+        <link rel="mask-icon" href="dist/images/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="viewport" content="width=device-width">
-        <meta name="msapplication-TileImage" content="public/images/mstile-144x144.png">
+        <meta name="msapplication-TileImage" content="dist/images/mstile-144x144.png">
         <meta name="theme-color" content="#ffffff">
         <!-- /Favicon -->
 
         <!-- Styles -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=greek,latin-ext,vietnamese" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="public/css/caretta.min.css" rel="stylesheet" type="text/css" />
+        <link href="dist/css/caretta.min.css" rel="stylesheet" type="text/css" />
 
     </head>
     <body class="caretta">
@@ -88,31 +88,41 @@
          <!-- Grid System -->
          <h5>Grid system</h5>
          <div class="row flex-space">
-            <div class="col-full bg-white">
+            <div class="col-full bg-white text-center">
+               .col-full
             </div>
          </div>
          <div class="row flex-space">
-            <div class="col-half bg-white">
+            <div class="col-half bg-white text-center">
+               .col-half
             </div>
-            <div class="col-half bg-white">
-            </div>
-         </div>
-         <div class="row flex-space">
-            <div class="col-third bg-white">
-            </div>
-            <div class="col-third bg-white">
-            </div>
-            <div class="col-third bg-white">
+            <div class="col-half bg-white text-center">
+               .col-half
             </div>
          </div>
          <div class="row flex-space">
-            <div class="col-quart bg-white">
+            <div class="col-third bg-white text-center">
+               .col-third
             </div>
-            <div class="col-quart bg-white">
+            <div class="col-third bg-white text-center">
+               .col-third
             </div>
-            <div class="col-quart bg-white">
+            <div class="col-third bg-white text-center">
+               .col-third
             </div>
-            <div class="col-quart bg-white">
+         </div>
+         <div class="row flex-space">
+            <div class="col-quart bg-white text-center">
+               .col-quart
+            </div>
+            <div class="col-quart bg-white text-center">
+               .col-quart
+            </div>
+            <div class="col-quart bg-white text-center">
+               .col-quart
+            </div>
+            <div class="col-quart bg-white text-center">
+               .col-quart
             </div>
          </div>
          <!-- /Grid System -->         <hr>
@@ -575,11 +585,86 @@
             </div>
          </div>
          <!-- /Grids -->         <hr>
-         <!-- Equal Heights -->
-         <div class="equal-height" style="background: red">nas a interdum turpis. Sed efficitur congue</div>
+         <!-- Form Inputs -->
+         <h5>Form Inputs</h5>
+         <div class="row">
+            <div class="col-full bg-white">
+               <form name="demoForm" class="demo-form">
+                  <p>
+                     <label for="inputText">Input text</label>
+                     <input type="text" id="inputText" name="firstName" placeholder="Your name" />
+                  </p>
+                  <p>
+                     <label for="inputEmail">Input email</label>
+                     <input type="email" id="inputEmail" name="email" placeholder="Your email" />
+                  </p>
+                  <p>
+                     <label for="inputPassword">Input password</label>
+                     <input type="password" id="inputPassword" name="password" placeholder="Your password" />
+                  </p>
+                  <p>
+                     <label for="inputNumber">Input number</label>
+                     <input type="number" id="inputNumber" name="age" />
+                  </p>
+                  <p>
+                     <label for="inputFile">Input file</label>
+                     <span class="btn btn-default btn-file">Browse
+                        <input type="file" id="inputFile" name="cv" />
+                     </span>
+                  </p>
+                  <p>
+                     <label for="textarea">Textarea field</label>
+                     <textarea name="message" id="textarea" placeholder="Your message" rows="4" cols="25"></textarea>
+                  </p>
+                  <p>
+                     <label for="select">Select field</label>
+                     <select name="gender" id="select">
+                        <option value="">Your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                     </select>
+                  </p>
+                  <div class="m20-b">
+                     <span>Are you developer?</span>
+                     <div class="radio">
+                        <input type="radio" name="choose" id="yes" value="yes" />
+                        <label for="yes">Yes</label>
+                     </div>
+                     <div class="radio">
+                        <input type="radio" name="choose" id="no" value="no" />
+                        <label for="no">No</label>
+                     </div>
+                  </div>
+                  <div class="m20-b">
+                     <span>Your favourite colors</span>
+                     <div class="checkbox">
+                        <input type="checkbox" name="color" id="blue" value="blue" />
+                        <label for="blue">Blue</label>
+                     </div>
+                     <div class="checkbox">
+                        <input type="checkbox" name="color" id="red" value="red" />
+                        <label for="red">Red</label>
+                     </div>
+                     <div class="checkbox">
+                        <input type="checkbox" name="color" id="green" value="green" />
+                        <label for="green">Green</label>
+                     </div>
+                  </div>
+                  <div class="m20-b">
+                     <span>Colorpicker</span>
+                     <div class="colorpicker" data-toggle="colorpicker" data-colorpickerId="firstColor">
+                        Choose color
+                     </div>
+                  </div>
+                  <div class="m20-b">
+                     <span>Datepicker</span>
+                     <input type="text" data-toggle="datepicker" />
+                  </div>
+               </form>
+            </div>
+         </div>
+         <!-- /Form Inputs -->         <hr>
          
-         <div class="equal-height" style="background: green">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum, nunc eget efficitur sodales, ex nunc luctus tortor, ac accumsan ex augue sed dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In mattis id est non eleifend. Vestibulum ut gravida tellus. Morbi varius elit id nisi varius hendrerit. Maecenas a interdum turpis. Sed efficitur congue purus ac egestas. Pellentesque viverra mauris metus, ac consectetur nulla finibus at. Nam maximus rhoncus nunc, ac dignissim ligula gravida ut. Aliquam viverra placerat metus eu condimentum. Fusce porttitor nibh nec mi placerat, quis euismod justo mattis.</div>
-         <!-- /Equal Heights -->         
                                  <!--  ==============  -->
                                  <!--  === Footer ===  -->
                                  <!--  ==============  -->
@@ -619,7 +704,9 @@
          <!-- /Modals -->
 
         <!-- Add your site or application scripts here -->
-        <script src="public/js/scripts.min.js"></script>
+        <script src="dist/js/libs/picker.min.js"></script>
+        <script src="dist/js/libs/pikaday.js"></script>
+        <script src="dist/js/scripts.min.js"></script>
 
         <!-- Google Analytics -->
         <script>
