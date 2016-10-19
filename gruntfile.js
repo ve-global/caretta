@@ -10,14 +10,14 @@ module.exports = function (grunt) {
             options: {
                 data: 'src/**/*.{json,yml}',
                 assets: 'assets/**',
-                partials: 'assets/markup/includes/**/*.hbs',
+                partials: 'markup/includes/**/*.hbs',
                 flatten: false,
                 layout: 'default.hbs',
-                layoutdir: 'assets/markup/layouts'
+                layoutdir: 'markup/layouts'
             },
             default: {
                 files: [{
-                    cwd: 'assets/markup/pages/',
+                    cwd: 'markup/pages/',
                     dest: '',
                     expand: true,
                     src: ['**/*.hbs']
@@ -27,17 +27,18 @@ module.exports = function (grunt) {
 
         watch: {
             css: {
-                files: ['assets/scss/*.scss'],
+                files: ['scss/*.scss'],
                 tasks: ['sass:dist']
             }
         },
+        
         concat: {
             options: {
                 separator: ';'
             },
             dist: {
-                src: 'assets/js/*.js',
-                dest: 'assets/temp/js/scripts.concat.js'
+                src: 'js/*.js',
+                dest: 'temp/js/scripts.concat.js'
             }
         },
 
@@ -47,19 +48,19 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'assets/temp/js/scripts.es2015.js': 'assets/temp/js/scripts.concat.js'
+                    'dist/js/scripts.js': 'temp/js/scripts.concat.js'
                 }
             }
         },
 
         jasmine: {
             pivotal: {
-                src: 'assets/temp/js/scripts.es2015.js',
+                src: 'dist/js/scripts.js',
                 options: {
                     specs: [
-                        'assets/tests/spec/**/*.spec.js'
+                        'tests/spec/**/*.spec.js'
                     ],
-                    helpers: 'assets/tests/spec/**/*.helper.js',
+                    helpers: 'tests/spec/**/*.helper.js',
                     summary: false,
                     junit: {
                         path: 'junit'
@@ -74,15 +75,15 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             buildBower: {
-                src: 'assets/temp/js/scripts.es2015.js',
-                dest: 'public/js/scripts.min.js'
+                src: 'dist/js/scripts.js',
+                dest: 'dist/js/scripts.min.js'
             }
         },
 
         sass: {
             dist: {
                 files: {
-                    'assets/temp/css/caretta.css': 'assets/scss/caretta.scss'
+                    'dist/css/caretta.css': 'scss/caretta.scss'
                 }
             }
         },
@@ -90,25 +91,25 @@ module.exports = function (grunt) {
         csso: {
             dynamic_mappings: {
                 expand: true,
-                cwd: 'assets/temp/css',
+                cwd: 'dist/css',
                 src: ['*.css', '!*.min.css'],
-                dest: 'public/css',
+                dest: 'dist/css',
                 ext: '.min.css'
             }
         },
 
         clean: {
             temp: [
-                'assets/junit',
-                'assets/_tests',
+                'junit',
+                '_tests',
                 '.sass-cache',
-                'assets/temp',
+                'temp',
                 '.grunt'
             ]
         },
 
         sasslint: {
-            all: 'assets/scss/caretta.scss',
+            all: 'dist/caretta.scss',
             options: {
                 bundleExec: false,
                 config: '.scss-lint.yml'
@@ -118,7 +119,7 @@ module.exports = function (grunt) {
         eslint: {
             target: [
                 'gruntfile.js',
-                'assets/js/**/*.js'
+                'js/**/*.js'
             ]
         },
 
@@ -126,15 +127,15 @@ module.exports = function (grunt) {
             materialFonts: {
                 expand: true,
                 flatten: true,
-                src: 'assets/fonts/Material-Design-Iconic-Font/**',
-                dest: 'public/fonts/',
+                src: 'fonts/Material-Design-Iconic-Font/**',
+                dest: 'dist/fonts/',
                 filter: 'isFile'
             },
             favicons: {
                 expand: true,
                 flatten: true,
-                src: 'assets/images/favicons/**',
-                dest: 'public/images/',
+                src: 'images/favicons/**',
+                dest: 'dist/images/',
                 filter: 'isFile'
             }
         }
