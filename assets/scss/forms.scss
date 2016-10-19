@@ -1,20 +1,28 @@
 /***
 *
-*  Caretta Form Fields Style
+*  1. Caretta Form Fields Style
+*       1.1 General
+*       1.2 Custom Checkbox
+*       1.3 Custom Radio
+*       1.4 Custom File
+*       1.5 Colorpicker
+*       1.6 Datepicker
 *
 ***/
 
 @import 'vars';
 
+/******************   1.1 General  ******************/
 input[type="text"] {
 	background-color: $grey-input;
     border: 0;
     border-radius: 2px;
     box-shadow: none;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
     font-size: 13px;
     height: 40px;
-    min-width: 180px;
+    width: 180px;
     padding: 0 10px 0 15px;
 }
 
@@ -43,31 +51,135 @@ textarea {
     padding: 10px 15px;
 }
 
+/******************   1.2 Custom Checkbox  ******************/
+.checkbox {
+    box-sizing: border-box;
+    margin: 5px 0 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
 input[type="checkbox"] {
-    opacity: 0;
-    z-index: 1;
-    height: 18px;
-    margin-top: 0px;
-    width: 18px;
     cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    left: 1px;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    width: 14px;
+    z-index: 2;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    position: relative;
 }
 
 input[type="checkbox"] + label:before {
-    content: "";
+    background-color: $white;
+    border: 1px solid $grey-checkbox;
+    border-radius: 3px;
+    box-sizing: border-box;
+    content: '';
+    cursor: pointer;
     display: inline-block;
-    position: absolute;
-    width: 17px;
-    height: 17px;
+    height: 16px;
     left: 0;
     margin-left: -20px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background-color: #fff;
-    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    margin-top: -1px;
+    position: absolute;
+    width: 16px;
 }
 
 input[type="checkbox"]:checked + label:after {
-    content: "+";
+    content: '\f26b';
+    cursor: pointer;
+    font-family: Material-Design-Iconic-Font;
+    left: 0;
+    margin-left: -17px;
+    margin-top: 1px;
+    position: absolute;
+}
+
+/******************   1.3 Custom Radio  ******************/
+.radio {
+    @extend .checkbox;
+}
+
+input[type="radio"] {
+    @extend input[type="checkbox"];
+}
+
+input[type="radio"] + label {
+    display: inline-block;
+    position: relative;
+}
+
+input[type="radio"] + label:before {
+    background-color: $white;
+    border: 1px solid $grey-checkbox;
+    border-radius: 50px;
+    box-sizing: border-box;
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    left: 0;
+    margin-left: -20px;
+    margin-top: -1px;
+    position: absolute;
+    width: 16px;
+}
+
+input[type="radio"]:checked + label:after {
+    content: '\f26b';
+    cursor: pointer;
+    font-family: Material-Design-Iconic-Font;
+    left: 0;
+    margin-left: -17px;
+    margin-top: 1px;
+    position: absolute;
+}
+
+/******************   1.4 Custom File  ******************/
+.btn-file {
+    overflow: hidden;
+    position: relative;
+
+    input[type="file"] {
+        background: $white;
+        cursor: inherit;
+        display: block;
+        font-size: 100px;
+        height: 100%;
+        opacity: 0;
+        outline: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+/******************   1.5 Colorpicker  ******************/
+.colorpicker {
+    @extend input[type="text"];
+    background: $black;
+    color: $white;
+    display: inline-block;
+    line-height: 20px;
+    padding: 10px;
+    
+    input {
+        display: none;
+    }
+}
+
+/******************   1.6 Datepicker  ******************/
+.pika-single {
+    background: $white;
+    border-radius: 2px;
+    box-shadow: $shadow-btn;
+    padding: 5px;
 }

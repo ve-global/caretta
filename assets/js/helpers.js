@@ -4,6 +4,7 @@
 *	Caretta Framework
 */
 'use strict';
+/* eslint no-cond-assign: 1 */
 
 var Caretta;
 
@@ -16,15 +17,13 @@ Caretta.Helpers = (function () {
 	* el {object} 		- child element
 	* cls {string}		- parent class
 	*/
-    let FindAncestor = (el, cls) => {
-        while (!el.classList.contains(cls)) {
-            el = el.parentElement;
-        }
+    let findAncestor = (el, cls) => {
+        while ((el = el.parentElement) && !el.classList.contains(cls)) {}
 
         return el;
     };
 
     return {
-        FindAncestor: FindAncestor
+        findAncestor: findAncestor
     };
 }());

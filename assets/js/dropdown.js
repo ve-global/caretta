@@ -16,7 +16,7 @@ Caretta.Dropdown = (function () {
      */
     let closeDropdowns = () => {
             document.onclick = function (e) {
-                if (Caretta.Helpers.findAncestor(e.target, 'simple-dropdown') === null) {
+                if (e.target !== null && Caretta.Helpers.findAncestor(e.target, 'simple-dropdown') === null) {
                     let simpleDropdowns = document.getElementsByClassName('simple-dropdown');
 
                     for (let i = 0; i < simpleDropdowns.length; i++) {

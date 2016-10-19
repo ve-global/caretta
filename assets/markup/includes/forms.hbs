@@ -21,7 +21,9 @@
          </p>
          <p>
             <label for="inputFile">Input file</label>
-            <input type="file" id="inputFile" name="cv" />
+            <span class="btn btn-default btn-file">Browse
+               <input type="file" id="inputFile" name="cv" />
+            </span>
          </p>
          <p>
             <label for="textarea">Textarea field</label>
@@ -35,22 +37,42 @@
                <option value="female">Female</option>
             </select>
          </p>
-         <p>
+         <div class="m20-b">
             <span>Are you developer?</span>
-            <input type="radio" name="choose" id="yes" value="yes" />
-            <label for="yes">Yes</label>
-            <input type="radio" name="choose" id="no" value="no" />
-            <label for="no">No</label>
-         </p>
-         <p>
+            <div class="radio">
+               <input type="radio" name="choose" id="yes" value="yes" />
+               <label for="yes">Yes</label>
+            </div>
+            <div class="radio">
+               <input type="radio" name="choose" id="no" value="no" />
+               <label for="no">No</label>
+            </div>
+         </div>
+         <div class="m20-b">
             <span>Your favourite colors</span>
-            <input type="checkbox" name="color" id="blue" value="blue" />
-            <label for="blue">Blue</label>
-            <input type="checkbox" name="color" id="red" value="red" />
-            <label for="red">Red</label>
-            <input type="checkbox" name="color" id="green" value="green" />
-            <label for="green">Green</label>
-         </p>
+            <div class="checkbox">
+               <input type="checkbox" name="color" id="blue" value="blue" />
+               <label for="blue">Blue</label>
+            </div>
+            <div class="checkbox">
+               <input type="checkbox" name="color" id="red" value="red" />
+               <label for="red">Red</label>
+            </div>
+            <div class="checkbox">
+               <input type="checkbox" name="color" id="green" value="green" />
+               <label for="green">Green</label>
+            </div>
+         </div>
+         <div class="m20-b">
+            <span>Colorpicker</span>
+            <div class="colorpicker" data-toggle="colorpicker" data-colorpickerId="firstColor">
+               Choose color
+            </div>
+         </div>
+         <div class="m20-b">
+            <span>Datepicker</span>
+            <input type="text" data-toggle="datepicker" />
+         </div>
       </form>
    </div>
 </div>

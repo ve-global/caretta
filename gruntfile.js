@@ -43,6 +43,7 @@ module.exports = function (grunt) {
                     'assets/js/modals.js',
                     'assets/js/navigation.js',
                     'assets/js/tabs.js',
+                    'assets/js/forms.js',
                     'assets/js/init.js'],
                 dest: 'assets/temp/js/scripts.concat.js'
             }
@@ -125,7 +126,8 @@ module.exports = function (grunt) {
         eslint: {
             target: [
                 'gruntfile.js',
-                'assets/js/**/*.js'
+                'assets/js/**/*.js',
+                '!assets/js/libs/**/*.js'
             ]
         },
 
@@ -143,6 +145,24 @@ module.exports = function (grunt) {
                 src: 'assets/images/favicons/**',
                 dest: 'public/images/',
                 filter: 'isFile'
+            },
+            colorpicker: {
+                flatten: true,
+                files: [
+                    {
+                        src: 'assets/js/libs/picker.min.js',
+                        dest: 'public/js/libs/picker.min.js'
+                    }
+                ]
+            },
+            datepicker: {
+                flatten: true,
+                files: [
+                    {
+                        src: 'assets/js/libs/pikaday.js',
+                        dest: 'public/js/libs/pikaday.js'
+                    }
+                ]
             }
         }
     });
