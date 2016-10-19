@@ -182,4 +182,95 @@ input[type="radio"]:checked + label:after {
     border-radius: 2px;
     box-shadow: $shadow-btn;
     padding: 5px;
+
+    .pika-title {
+        position: relative;
+        text-align: center;
+
+        .pika-label {
+            background-color: $white;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            margin: 0;
+            overflow: hidden;
+            padding: 5px 3px;
+            position: relative;
+            z-index: 9999;
+
+            select {
+                cursor: pointer;
+                left: 0;
+                margin: 0;
+                opacity: 0;
+                position: absolute;
+                top: 5px;
+                z-index: 9998;
+            }
+        }
+
+        .pika-prev, .pika-next {
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+            display: block;
+            height: 30px;
+            outline: none;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            white-space: nowrap;
+            width: 10px;
+        }
+
+        .pika-prev {
+            float: left;
+
+            &:before {
+                content: '\f2f4';
+                font-family: Material-Design-Iconic-Font;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+        }
+
+        .pika-next {
+            float: right;
+
+            &:before {
+                content: '\f2f6';
+                font-family: Material-Design-Iconic-Font;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .pika-button {
+        border: 0;
+        background: $grey-input;
+        box-sizing: border-box;
+        color: $grey-text;
+        cursor: pointer;
+        display: block;
+        font-size: 12px;
+        line-height: 15px;
+        margin: 0.5px;
+        outline: none;
+        padding: 5px;
+        text-align: right;
+        width: 30px;
+
+        &:hover {
+            background: $grey-text;
+            color: $grey-input;
+        }
+    }
+
+    .is-today .pika-button {
+        background: $grey-text;
+        color: $grey-input;
+        font-weight: bold;
+    }
 }
