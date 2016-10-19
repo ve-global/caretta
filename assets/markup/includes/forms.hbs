@@ -1,0 +1,79 @@
+<!-- Form Inputs -->
+<h5>Form Inputs</h5>
+<div class="row">
+   <div class="col-full bg-white">
+      <form name="demoForm" class="demo-form">
+         <p>
+            <label for="inputText">Input text</label>
+            <input type="text" id="inputText" name="firstName" placeholder="Your name" />
+         </p>
+         <p>
+            <label for="inputEmail">Input email</label>
+            <input type="email" id="inputEmail" name="email" placeholder="Your email" />
+         </p>
+         <p>
+            <label for="inputPassword">Input password</label>
+            <input type="password" id="inputPassword" name="password" placeholder="Your password" />
+         </p>
+         <p>
+            <label for="inputNumber">Input number</label>
+            <input type="number" id="inputNumber" name="age" />
+         </p>
+         <p>
+            <label for="inputFile">Input file</label>
+            <span class="btn btn-default btn-file">Browse
+               <input type="file" id="inputFile" name="cv" />
+            </span>
+         </p>
+         <p>
+            <label for="textarea">Textarea field</label>
+            <textarea name="message" id="textarea" placeholder="Your message" rows="4" cols="25"></textarea>
+         </p>
+         <p>
+            <label for="select">Select field</label>
+            <select name="gender" id="select">
+               <option value="">Your gender</option>
+               <option value="male">Male</option>
+               <option value="female">Female</option>
+            </select>
+         </p>
+         <div class="m20-b">
+            <span>Are you developer?</span>
+            <div class="radio">
+               <input type="radio" name="choose" id="yes" value="yes" />
+               <label for="yes">Yes</label>
+            </div>
+            <div class="radio">
+               <input type="radio" name="choose" id="no" value="no" />
+               <label for="no">No</label>
+            </div>
+         </div>
+         <div class="m20-b">
+            <span>Your favourite colors</span>
+            <div class="checkbox">
+               <input type="checkbox" name="color" id="blue" value="blue" />
+               <label for="blue">Blue</label>
+            </div>
+            <div class="checkbox">
+               <input type="checkbox" name="color" id="red" value="red" />
+               <label for="red">Red</label>
+            </div>
+            <div class="checkbox">
+               <input type="checkbox" name="color" id="green" value="green" />
+               <label for="green">Green</label>
+            </div>
+         </div>
+         <div class="m20-b">
+            <span>Colorpicker</span>
+            <div class="colorpicker" data-toggle="colorpicker" data-colorpickerId="firstColor">
+               Choose color
+            </div>
+         </div>
+         <div class="m20-b">
+            <span>Datepicker</span>
+            <input type="text" data-toggle="datepicker" />
+         </div>
+      </form>
+   </div>
+</div>
+<!-- /Form Inputs -->

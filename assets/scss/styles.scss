@@ -34,3 +34,19 @@
 		margin-right: 0;
 	}
 }
+
+.demo-form {
+	
+	label {
+		display: block;
+	}
+}
+
+.m20-b {
+	margin-bottom: 20px;
+
+	> span {
+		display: block;
+		margin-bottom: 10px;
+	}
+}

@@ -10,22 +10,12 @@ var Caretta;
 Caretta = Caretta || {};
 
 Caretta.Modals = (function () {
-    /**
-     *** HELPER FUNCTION ***
-     * Get the parent with specific class
-     * el {object}      - child element
-     * cls {string}     - parent class
-     */
-    let findAncestor = (el, cls) => {
-            while ((el = el.parentElement) && !el.classList.contains(cls));
-            return el;
-        },
 
-        /**
-         * Open modal
-         * e {object}       - event
-         */
-        triggerModal = (e) => {
+    /**
+     * Open modal
+     * e {object}       - event
+     */
+    let triggerModal = (e) => {
             e.preventDefault();
             let modalId = e.target.getAttribute('data-modal'),
                 overlay = document.createElement('DIV');
@@ -41,7 +31,7 @@ Caretta.Modals = (function () {
          */
         triggerCloseModal = (e) => {
             e.preventDefault();
-            let modal = findAncestor(e.target, 'modal'),
+            let modal = Caretta.Helpers.findAncestor(e.target, 'modal'),
                 overlay = document.getElementById('body-overlay');
 
             document.body.removeChild(overlay);

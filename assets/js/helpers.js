@@ -4,33 +4,26 @@
  *  Caretta Framework
  */
 'use strict';
+/* eslint no-cond-assign: 1 */
 
 var Caretta;
 
 Caretta = Caretta || {};
 
-Caretta.Helpers = (function() {
-    /**
-     * Toggles active tab
-     * event {event}      - Click event
-     */
-    let equalHeights = (className) => {
-        let findClass = document.getElementsByClassName(className),
-        tallest = 0,
-        el,
-        eleHeight;
+Caretta.Helpers = (function () {
 
-        for (let i = 0; i < findClass.length; i++) {
-            el = findClass[i];
-            eleHeight = el.offsetHeight;
-            tallest = (eleHeight > tallest ? eleHeight : tallest); /* look up ternary operator if you dont know what this is */
-        }
-        for (let i = 0; i < findClass.length; i++) {
-            findClass[i].style.height = tallest + "px";
-        }
+    /**
+    * Get the parent with specific class
+    * el {object}       - child element
+    * cls {string}      - parent class
+    */
+    let findAncestor = (el, cls) => {
+        while ((el = el.parentElement) && !el.classList.contains(cls)) {}
+
+        return el;
     };
 
     return {
-        equalHeights: equalHeights
+        findAncestor: findAncestor
     };
 }());
