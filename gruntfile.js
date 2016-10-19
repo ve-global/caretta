@@ -18,7 +18,7 @@ module.exports = function (grunt) {
             default: {
                 files: [{
                     cwd: 'assets/markup/pages/',
-                    dest: 'public/html',
+                    dest: '',
                     expand: true,
                     src: ['**/*.hbs']
                 }]
