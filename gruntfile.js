@@ -37,7 +37,15 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src: 'js/*.js',
+                src:
+                    ['assets/js/helpers.js',
+                    'assets/js/accordion.js',
+                    'assets/js/dropdown.js',
+                    'assets/js/modals.js',
+                    'assets/js/navigation.js',
+                    'assets/js/tabs.js',
+                    'assets/js/forms.js',
+                    'assets/js/init.js'],
                 dest: 'temp/js/scripts.concat.js'
             }
         },
@@ -119,7 +127,8 @@ module.exports = function (grunt) {
         eslint: {
             target: [
                 'gruntfile.js',
-                'js/**/*.js'
+                'assets/js/**/*.js',
+                '!assets/js/libs/**/*.js'
             ]
         },
 
@@ -137,6 +146,24 @@ module.exports = function (grunt) {
                 src: 'images/favicons/**',
                 dest: 'dist/images/',
                 filter: 'isFile'
+            },
+            colorpicker: {
+                flatten: true,
+                files: [
+                    {
+                        src: 'assets/js/libs/picker.min.js',
+                        dest: 'public/js/libs/picker.min.js'
+                    }
+                ]
+            },
+            datepicker: {
+                flatten: true,
+                files: [
+                    {
+                        src: 'assets/js/libs/pikaday.js',
+                        dest: 'public/js/libs/pikaday.js'
+                    }
+                ]
             }
         }
     });
@@ -144,7 +171,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'assemble',
         'copy',
-        //'eslint',
+        'eslint',
         'sasslint',
         'concat',
         'babel',
