@@ -38,6 +38,7 @@ module.exports = function (grunt) {
             dist: {
                 src:
                     [
+                    'vendors/prettify/run_prettify.js',
                     'vendors/picker/picker.js',
                     'js/helpers.js',
                     'js/accordion.js',
@@ -147,24 +148,6 @@ module.exports = function (grunt) {
                 src: 'images/favicons/**',
                 dest: 'dist/images/',
                 filter: 'isFile'
-            },
-            colorpicker: {
-                flatten: true,
-                files: [
-                    {
-                        src: 'js/libs/picker.min.js',
-                        dest: 'dist/js/libs/picker.min.js'
-                    }
-                ]
-            },
-            datepicker: {
-                flatten: true,
-                files: [
-                    {
-                        src: 'js/libs/pikaday.js',
-                        dest: 'dist/js/libs/pikaday.js'
-                    }
-                ]
             }
         }
     });
