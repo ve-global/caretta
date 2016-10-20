@@ -163,6 +163,15 @@ module.exports = function (grunt) {
                         dest: 'public/js/libs/pikaday.js'
                     }
                 ]
+            },
+            codesnippet: {
+                flatten: true,
+                files: [
+                    {
+                        src: 'assets/js/libs/run_prettify.js',
+                        dest: 'public/js/libs/run_prettify.js'
+                    }
+                ]
             }
         }
     });

@@ -87,32 +87,74 @@
       <section class="main-application right-side">
          <!-- Grid System -->
          <h5>Grid system</h5>
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint lang-html">
+               &lt;div class="row"&gt;
+                  &lt;div class="col-full"&gt;&lt;/div&gt;
+               &lt;/div&gt;
+         
+               &lt;div class="row flex-space"&gt;
+                  &lt;div class="col-half"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="col-half"&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+         
+               &lt;div class="row flex-space"&gt;
+                  &lt;div class="col-third"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="col-third"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="col-third"&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+               
+               &lt;div class="row flex-space"&gt;
+                  &lt;div class="col-quart"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="col-quart"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="col-quart"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="col-quart"&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;</pre>
          <div class="row flex-space">
-            <div class="col-full bg-white">
+            <div class="col-full bg-white text-center">
+               .col-full
             </div>
          </div>
          <div class="row flex-space">
-            <div class="col-half bg-white">
+            <div class="col-half bg-white text-center">
+               .col-half
             </div>
-            <div class="col-half bg-white">
-            </div>
-         </div>
-         <div class="row flex-space">
-            <div class="col-third bg-white">
-            </div>
-            <div class="col-third bg-white">
-            </div>
-            <div class="col-third bg-white">
+            <div class="col-half bg-white text-center">
+               .col-half
             </div>
          </div>
          <div class="row flex-space">
-            <div class="col-quart bg-white">
+            <div class="col-third bg-white text-center">
+               .col-third
             </div>
-            <div class="col-quart bg-white">
+            <div class="col-third bg-white text-center">
+               .col-third
             </div>
-            <div class="col-quart bg-white">
+            <div class="col-third bg-white text-center">
+               .col-third
             </div>
-            <div class="col-quart bg-white">
+         </div>
+         <div class="row flex-space">
+            <div class="col-quart bg-white text-center">
+               .col-quart
+            </div>
+            <div class="col-quart bg-white text-center">
+               .col-quart
+            </div>
+            <div class="col-quart bg-white text-center">
+               .col-quart
+            </div>
+            <div class="col-quart bg-white text-center">
+               .col-quart
             </div>
          </div>
          <!-- /Grid System -->         <hr>
@@ -126,6 +168,15 @@
             <h5>This is heading 5</h5>
             <h6>This is heading 6</h6>
             <p>Stylized implementation of HTML's 'abbr' element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a 'title' attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover and to users of assistive technologies.</p>
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint lang-html">
+               &lt;p class="text-left"&gt;&lt;/p&gt;
+               &lt;p class="text-center"&gt;&lt;/p&gt;
+               &lt;p class="text-right"&gt;&lt;/p&gt;
+               &lt;p class="text-justify"&gt;&lt;/p&gt;
+               &lt;p class="text-lowercase"&gt;&lt;/p&gt;
+               &lt;p class="text-uppercase"&gt;&lt;/p&gt;
+               &lt;p class="text-capitalize"&gt;&lt;/p&gt;</pre>
             <p class="text-left">Left aligned text.</p>
             <p class="text-center">Center aligned text.</p>
             <p class="text-right">Right aligned text.</p>
@@ -269,11 +320,32 @@
          <hr>
          <!-- Errors -->
          <h5>Errors</h5>
+         <!--?prettify lang=html linenums=true?-->
+             <pre class="prettyprint lang-html">
+                 &lt;p class="error"&gt;&lt;/p&gt;
+                 &lt;p class="warning"&gt;&lt;/p&gt;</pre>
          <p class="error" >This is an error message</p>
          <p class="warning" >This is a warning message</p>
          <!-- /Errors -->         <hr>
-         !-- Alerts -->
+         <!-- Alerts -->
          <h5>Alerts</h5>
+         <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint lang-html">
+               &lt;div class="alert alert-success alert-dismissible" role="alert"&gt;
+                  &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;
+               &lt;/div&gt;
+         
+               &lt;div class="alert alert-info alert-dismissible" role="alert"&gt;
+                  &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;
+               &lt;/div&gt;
+         
+               &lt;div class="alert alert-error alert-dismissible" role="alert"&gt;
+                  &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;
+               &lt;/div&gt;
+               
+               &lt;div class="alert alert-warning alert-dismissible" role="alert"&gt;
+                  &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;
+               &lt;/div&gt;</pre>
          <div class="row">
             <div class="alert alert-success alert-dismissible" role="alert">Well done! You successfully read this important alert message.
                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
@@ -297,6 +369,22 @@
          <!-- /Alerts -->         <hr>
          <!-- Tabs -->
          <h5>Tabs</h5>
+         <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint lang-html">
+               &lt;div id="tabs-container" class="tabs-container"&gt;
+                  &lt;ul id="nav-tab" class="tabs-nav"&gt;
+                     &lt;li class="active"&gt;&lt;a href="#tab1"&gt;&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href="#tab2"&gt;&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href="#tab3"&gt;&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href="#tab4"&gt;&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                  &lt;div class="tab-content"&gt;
+                     &lt;div class="tab-pane active" id="tab1"&gt;&lt;/div&gt;
+                     &lt;div class="tab-pane" id="tab2"&gt;&lt;/div&gt;
+                     &lt;div class="tab-pane" id="tab3"&gt;&lt;/div&gt;
+                     &lt;div class="tab-pane" id="tab4"&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;</pre>
          <div id="tabs-container" class="tabs-container bg-white">
             <ul id="nav-tab" class="tabs-nav">
                <li class="active"><a href="#tab1">Tab 1</a></li>
@@ -324,6 +412,13 @@
          <!-- Buttons -->
          <div class="btn-demo">
             <h5>Generic buttons</h5>
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint lang-html">
+               &lt;button class="btn btn-default"&gt;&lt;/button&gt;
+               &lt;button class="btn btn-primary"&gt;&lt;/button&gt;
+               &lt;button class="btn btn-cancel"&gt;&lt;/button&gt;
+               &lt;button class="btn btn-success"&gt;&lt;/button&gt;
+               &lt;button class="btn btn-danger"&gt;&lt;/button&gt;</pre>
             <div class="row">
                <button class="btn btn-default">Default</button>
                <button class="btn btn-primary">Primary</button>
@@ -332,11 +427,22 @@
                <button class="btn btn-danger">Danger</button>
             </div>
             <h5>Button sizes</h5>
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint lang-html">
+               &lt;button class="btn btn-primary btn-large"&gt;&lt;/button&gt;
+               &lt;button class="btn btn-primary"&gt;&lt;/button&gt;</pre>
             <div class="row flex-center">
                <button class="btn btn-primary btn-large">Large</button>
                <button class="btn btn-primary">Default</button>
             </div>
             <h5>Disabled buttons</h5>
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint lang-html">
+               &lt;button class="btn btn-default" disabled="disabled"&gt;&lt;/button&gt;
+               &lt;button class="btn btn-primary" disabled="disabled"&gt;&lt;/button&gt;
+               &lt;button class="btn btn-cancel" disabled="disabled"&gt;&lt;/button&gt;
+               &lt;button class="btn btn-success" disabled="disabled"&gt;&lt;/button&gt;
+               &lt;button class="btn btn-danger" disabled="disabled"&gt;&lt;/button&gt;</pre>
             <div class="row">
                <button class="btn btn-default" disabled="disabled">Default</button>
                <button class="btn btn-primary" disabled="disabled">Primary</button>
@@ -345,6 +451,12 @@
                <button class="btn btn-danger" disabled="disabled">Danger</button>
             </div>
             <h5>Button icons</h5>
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint lang-html">
+               &lt;button class="btn btn-primary"&gt;&lt;i class="zmdi zmdi-search"&gt;&lt;/i&gt;&lt;/button&gt;
+               &lt;button class="btn btn-primary"&gt;&lt;i class="zmdi zmdi-more-vert"&gt;&lt;/i&gt;&lt;/button&gt;
+               &lt;button class="btn btn-primary"&gt;&lt;i class="zmdi zmdi-arrow-back"&gt;&lt;/i&gt;&lt;/button&gt;
+               &lt;button class="btn btn-primary"&gt;&lt;i class="zmdi zmdi-menu"&gt;&lt;/i&gt;&lt;/button&gt;</pre>
             <div class="row">
                <button class="btn btn-primary"><i class="zmdi zmdi-search"></i>Search</button>
                <button class="btn btn-primary"><i class="zmdi zmdi-more-vert"></i>More</button>
@@ -352,14 +464,26 @@
                <button class="btn btn-primary"><i class="zmdi zmdi-menu"></i>Menu</button>
             </div>
             <h5>Block buttons</h5>
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint lang-html">
+               &lt;button class="btn btn-default btn-block"&gt;&lt;/button&gt;
+               &lt;button class="btn btn-primary btn-block"&gt;&lt;/button&gt;</pre>
             <div class="row">
                <button class="btn btn-default btn-block">Default</button>
                <button class="btn btn-primary btn-block">Primary</button>
             </div>
          </div>
-         <!-- /Buttons -->         <hr>
+         <!-- /Buttons -->
+         <hr>
          <!-- Breadcrumbs -->
           <h5>Breadcrumbs</h5>
+          <!--?prettify lang=html linenums=true?-->
+             <pre class="prettyprint lang-html">
+                 &lt;ul class="breadcrumb"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="active"&gt;&lt;/li&gt;
+                 &lt;/ul&gt;</pre>
           <div class="row">
              <ul class="breadcrumb">
                 <li><a href="#">Displays</a></li>
@@ -370,6 +494,47 @@
           <!-- /Breadcrumbs -->         <hr>
          <!-- Tooltips -->
           <h5>Tooltips</h5>
+          <!--?prettify lang=html linenums=true?-->
+             <pre class="prettyprint lang-html">
+               &lt;div class="tooltip"&gt;
+                  &lt;button class="btn btn-default" data-toggle="tooltip"&gt;&lt;/button&gt;
+                  &lt;p class="tooltip-content"&gt;&lt;/p&gt;
+               &lt;/div&gt;
+               
+               &lt;div class="tooltip"&gt;
+                  &lt;button class="btn btn-default" data-toggle="tooltip"&gt;&lt;/button&gt;
+                  &lt;p class="tooltip-content top"&gt;&lt;/p&gt;
+               &lt;/div&gt;
+         
+               &lt;div class="tooltip"&gt;
+                  &lt;button class="btn btn-default" data-toggle="tooltip"&gt;&lt;/button&gt;
+                  &lt;p class="tooltip-content right"&gt;&lt;/p&gt;
+               &lt;/div&gt;
+         
+               &lt;div class="tooltip"&gt;
+                  &lt;button class="btn btn-default" data-toggle="tooltip"&gt;&lt;/button&gt;
+                  &lt;p class="tooltip-content left"&gt;&lt;/p&gt;
+               &lt;/div&gt;
+         
+               &lt;div class="tooltip"&gt;
+                  &lt;button class="btn btn-default" data-toggle="tooltip-click"&gt;&lt;/button&gt;
+                  &lt;p class="tooltip-content"&gt;&lt;/p&gt;
+               &lt;/div&gt;
+         
+               &lt;div class="tooltip"&gt;
+                  &lt;button class="btn btn-default" data-toggle="tooltip-click"&gt;&lt;/button&gt;
+                  &lt;p class="tooltip-content top"&gt;&lt;/p&gt;
+               &lt;/div&gt;
+         
+               &lt;div class="tooltip"&gt;
+                  &lt;button class="btn btn-default" data-toggle="tooltip-click"&gt;&lt;/button&gt;
+                  &lt;p class="tooltip-content right"&gt;&lt;/p&gt;
+               &lt;/div&gt;
+         
+               &lt;div class="tooltip"&gt;
+                  &lt;button class="btn btn-default" data-toggle="tooltip-click"&gt;&lt;/button&gt;
+                  &lt;p class="tooltip-content left"&gt;&lt;/p&gt;
+               &lt;/div&gt;</pre>
           <div class="row">
              <div class="tooltip">
                 <button class="btn btn-default" data-toggle="tooltip">Tooltip Hover</button>
@@ -406,6 +571,50 @@
           </div>
           <!-- /Tooltips -->         <hr>
          <!-- Accordion -->
+         <div class="row flex-space">
+            <div class="col-half">
+               <h5>Accordion</h5>
+               <!--?prettify lang=html linenums=true?-->
+               <pre class="prettyprint lang-html">
+                  &lt;div class="accordionWrapper"&gt;
+                     &lt;div class="accordionItem open"&gt;
+                        &lt;h2 class="accordionItemHeading"&gt;&lt;/h2&gt;
+                        &lt;div class="accordionItemContent"&gt;&lt;/div&gt;
+                     &lt;/div&gt;
+         
+                     &lt;div class="accordionItem"&gt;
+                        &lt;h2 class="accordionItemHeading"&gt;&lt;/h2&gt;
+                        &lt;div class="accordionItemContent"&gt;&lt;/div&gt;
+                     &lt;/div&gt;
+         
+                     &lt;div class="accordionItem"&gt;
+                        &lt;h2 class="accordionItemHeading"&gt;&lt;/h2&gt;
+                        &lt;div class="accordionItemContent"&gt;&lt;/div&gt;
+                     &lt;/div&gt;
+                  &lt;/div&gt;</pre>
+            </div>
+            <div class="col-half">
+               <h5>Accordion One Item Visible</h5>
+               <!--?prettify lang=html linenums=true?-->
+               <pre class="prettyprint lang-html">
+                  &lt;div class="accordionWrapper oneVisible"&gt;
+                     &lt;div class="accordionItem open"&gt;
+                        &lt;h2 class="accordionItemHeading"&gt;&lt;/h2&gt;
+                        &lt;div class="accordionItemContent"&gt;&lt;/div&gt;
+                     &lt;/div&gt;
+         
+                     &lt;div class="accordionItem"&gt;
+                        &lt;h2 class="accordionItemHeading"&gt;&lt;/h2&gt;
+                        &lt;div class="accordionItemContent"&gt;&lt;/div&gt;
+                     &lt;/div&gt;
+         
+                     &lt;div class="accordionItem"&gt;
+                        &lt;h2 class="accordionItemHeading"&gt;&lt;/h2&gt;
+                        &lt;div class="accordionItemContent"&gt;&lt;/div&gt;
+                     &lt;/div&gt;
+                  &lt;/div&gt;</pre>
+            </div>
+         </div>
          <div class="row flex-space">
             <div class="col-half bg-white">
                <div class="accordionWrapper">
@@ -475,6 +684,31 @@
          <!-- /Accordion -->         <hr>
           <!-- Modals -->
           <h5>Modals</h5>
+          <!--?prettify lang=html linenums=true?-->
+             <pre class="prettyprint lang-html">
+                 &lt;button class="btn btn-primary" data-toggle="modal" data-modal="modal"&gt;&lt;/button&gt;
+                 &lt;div id="modal" class="modal" role="dialog"&gt;
+                     &lt;div class="modal-content"&gt;
+                         &lt;div class="modal-header"&gt;
+                             &lt;button class="close" data-dismiss="modal"&gt;&times;&lt;/button&gt;
+                             &lt;h4 class="modal-title"&gt;&lt;/h4&gt;
+                         &lt;/div&gt;
+                         &lt;div class="modal-body"&gt;&lt;/div&gt;
+                         &lt;div class="modal-footer text-right"&gt;&lt;/div&gt;
+                     &lt;/div&gt;
+                 &lt;/div&gt;
+         
+                 &lt;button class="btn btn-primary" data-toggle="modal" data-modal="modalLarge"&gt;&lt;/button&gt;
+                 &lt;div id="modalLarge" class="modal modal-lg" role="dialog"&gt;
+                     &lt;div class="modal-content"&gt;
+                         &lt;div class="modal-header"&gt;
+                             &lt;button class="close" data-dismiss="modal"&gt;&times;&lt;/button&gt;
+                             &lt;h4 class="modal-title"&gt;&lt;/h4&gt;
+                         &lt;/div&gt;
+                         &lt;div class="modal-body"&gt;&lt;/div&gt;
+                         &lt;div class="modal-footer text-right"&gt;&lt;/div&gt;
+                     &lt;/div&gt;
+                 &lt;/div&gt;</pre>
           <div class="row btn-demo">
              <button class="btn btn-primary" data-toggle="modal" data-modal="modal">Open modal</button>
              <button class="btn btn-primary" data-toggle="modal" data-modal="modalLarge">Open large modal</button>
@@ -482,6 +716,13 @@
           <!-- /Modals -->         <hr>
          <!-- Preloader -->
          <h5>Preloader</h5>
+         <!--?prettify lang=html linenums=true?-->
+         <pre class="prettyprint lang-html">
+             &lt;div class="loader"&gt;
+                 &lt;svg class="circular" viewBox="25 25 50 50"&gt;
+                     &lt;circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/&gt;
+                 &lt;/svg&gt;
+            &lt;/div&gt;</pre>
          <div class="row">
             <div class="loader">
                <svg class="circular" viewBox="25 25 50 50">
@@ -491,6 +732,70 @@
          </div>
          <!-- /Preloader -->         <hr>
          <!-- Grids -->
+         <h5>Table</h5>
+         <!--?prettify lang=html linenums=true?-->
+         <pre class="prettyprint lang-html">
+            &lt;div class="caretta-grid-wrapper"&gt;
+               &lt;table class="caretta-grid"&gt;
+                  &lt;thead&gt;
+                     &lt;tr&gt;
+                        &lt;th&gt;&lt;/th&gt;
+                        &lt;th&gt;&lt;/th&gt;
+                        &lt;th&gt;&lt;i class="sortable"&gt;&lt;/i&gt;&lt;/th&gt;
+                        &lt;th&gt;&lt;/th&gt;
+                        &lt;th&gt;&lt;/th&gt;
+                     &lt;/tr&gt;
+                     &lt;tr&gt;
+                        &lt;th&gt;&lt;input type="text" &gt;&lt;/th&gt;
+                        &lt;th&gt;&lt;input type="text" &gt;&lt;/th&gt;
+                        &lt;th&gt;&lt;input type="text" &gt;&lt;/th&gt;
+                        &lt;th&gt;&lt;input type="text" &gt;&lt;/th&gt;
+                        &lt;th&gt;&lt;input type="text" &gt;&lt;/th&gt;
+                     &lt;/tr&gt;
+                  &lt;/thead&gt;
+                  &lt;tbody&gt;
+                     &lt;tr&gt;
+                        &lt;td&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;/td&gt;
+                     &lt;/tr&gt;
+                  &lt;/tbody&gt;
+               &lt;/table&gt;
+               
+               &lt;!-- Results Pagination --&gt;
+               &lt;div class="caretta-grid-pagination"&gt;
+                  &lt;ul class="caretta-grid-pages"&gt;
+                     &lt;li&gt;
+                        &lt;a href="#" title="Previous"&gt;&lt;/a&gt;
+                     &lt;/li&gt;
+                     &lt;li&gt;
+                        &lt;a class="active" href="#" title="Previous"&gt;1&lt;/a&gt;
+                     &lt;/li&gt;&lt;li&gt;
+                        &lt;a href="#" title="Previous"&gt;2&lt;/a&gt;
+                     &lt;/li&gt;&lt;li&gt;
+                        &lt;a href="#" title="Next"&gt;&lt;/a&gt;
+                     &lt;/li&gt;
+                  &lt;/ul&gt;
+               &lt;/div&gt;
+               
+               &lt;!-- Results Counter --&gt;
+               &lt;div class="caretta-grid-results"&gt;
+                  &lt;button class="active-results"&gt;
+                     &lt;span&gt;10&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;button&gt;
+                     &lt;span&gt;25&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;button&gt;
+                     &lt;span&gt;50&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;button&gt;
+                     &lt;span&gt;100&lt;/span&gt;
+                  &lt;/button&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;</pre>
          <div class="row">
             <div class="caretta-grid-wrapper">
                <table class="caretta-grid">
@@ -575,11 +880,103 @@
             </div>
          </div>
          <!-- /Grids -->         <hr>
-         <!-- Equal Heights -->
-         <div class="equal-height" style="background: red">nas a interdum turpis. Sed efficitur congue</div>
+         <!-- Form Inputs -->
+         <h5>Form Inputs</h5>
+         <!--?prettify lang=html linenums=true?-->
+         <pre class="prettyprint lang-html">
+            &lt;div class="radio"&gt;
+               &lt;input type="radio" name="choose" id="yes" value="yes" /&gt;
+               &lt;label for="yes"&gt;&lt;/label&gt;
+            &lt;/div&gt;
          
-         <div class="equal-height" style="background: green">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum, nunc eget efficitur sodales, ex nunc luctus tortor, ac accumsan ex augue sed dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In mattis id est non eleifend. Vestibulum ut gravida tellus. Morbi varius elit id nisi varius hendrerit. Maecenas a interdum turpis. Sed efficitur congue purus ac egestas. Pellentesque viverra mauris metus, ac consectetur nulla finibus at. Nam maximus rhoncus nunc, ac dignissim ligula gravida ut. Aliquam viverra placerat metus eu condimentum. Fusce porttitor nibh nec mi placerat, quis euismod justo mattis.</div>
-         <!-- /Equal Heights -->         
+            &lt;div class="checkbox"&gt;
+               &lt;input type="checkbox" name="color" id="green" value="green" /&gt;
+               &lt;label for="green"&gt;&lt;/label&gt;
+            &lt;/div&gt;
+         
+            &lt;div class="colorpicker" data-toggle="colorpicker" data-colorpickerId="firstColor"&gt;
+               Choose color
+            &lt;/div&gt;
+         
+            &lt;input type="text" data-toggle="datepicker" /&gt;</pre>
+         <div class="row">
+            <div class="col-full bg-white">
+               <form name="demoForm" class="demo-form">
+                  <p>
+                     <label for="inputText">Input text</label>
+                     <input type="text" id="inputText" name="firstName" placeholder="Your name" />
+                  </p>
+                  <p>
+                     <label for="inputEmail">Input email</label>
+                     <input type="email" id="inputEmail" name="email" placeholder="Your email" />
+                  </p>
+                  <p>
+                     <label for="inputPassword">Input password</label>
+                     <input type="password" id="inputPassword" name="password" placeholder="Your password" />
+                  </p>
+                  <p>
+                     <label for="inputNumber">Input number</label>
+                     <input type="number" id="inputNumber" name="age" />
+                  </p>
+                  <p>
+                     <label for="inputFile">Input file</label>
+                     <span class="btn btn-default btn-file">Browse
+                        <input type="file" id="inputFile" name="cv" />
+                     </span>
+                  </p>
+                  <p>
+                     <label for="textarea">Textarea field</label>
+                     <textarea name="message" id="textarea" placeholder="Your message" rows="4" cols="25"></textarea>
+                  </p>
+                  <p>
+                     <label for="select">Select field</label>
+                     <select name="gender" id="select">
+                        <option value="">Your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                     </select>
+                  </p>
+                  <div class="m20-b">
+                     <span>Are you developer?</span>
+                     <div class="radio">
+                        <input type="radio" name="choose" id="yes" value="yes" />
+                        <label for="yes">Yes</label>
+                     </div>
+                     <div class="radio">
+                        <input type="radio" name="choose" id="no" value="no" />
+                        <label for="no">No</label>
+                     </div>
+                  </div>
+                  <div class="m20-b">
+                     <span>Your favourite colors</span>
+                     <div class="checkbox">
+                        <input type="checkbox" name="color" id="blue" value="blue" />
+                        <label for="blue">Blue</label>
+                     </div>
+                     <div class="checkbox">
+                        <input type="checkbox" name="color" id="red" value="red" />
+                        <label for="red">Red</label>
+                     </div>
+                     <div class="checkbox">
+                        <input type="checkbox" name="color" id="green" value="green" />
+                        <label for="green">Green</label>
+                     </div>
+                  </div>
+                  <div class="m20-b">
+                     <span>Colorpicker</span>
+                     <div class="colorpicker" data-toggle="colorpicker" data-colorpickerId="firstColor">
+                        Choose color
+                     </div>
+                  </div>
+                  <div class="m20-b">
+                     <span>Datepicker</span>
+                     <input type="text" data-toggle="datepicker" />
+                  </div>
+               </form>
+            </div>
+         </div>
+         <!-- /Form Inputs -->         <hr>
+         
                                  <!--  ==============  -->
                                  <!--  === Footer ===  -->
                                  <!--  ==============  -->
@@ -619,6 +1016,9 @@
          <!-- /Modals -->
 
         <!-- Add your site or application scripts here -->
+        <script src="public/js/libs/picker.min.js"></script>
+        <script src="public/js/libs/pikaday.js"></script>
+        <script src="public/js/libs/run_prettify.js"></script>
         <script src="public/js/scripts.min.js"></script>
 
         <!-- Google Analytics -->

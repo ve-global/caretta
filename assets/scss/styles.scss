@@ -50,3 +50,11 @@
 		margin-bottom: 10px;
 	}
 }
+
+body pre.prettyprint {
+	background: $white;
+	border: none;
+	box-shadow: $shadow-btn;
+	margin-bottom: 5px;
+	padding: 5px;
+}
