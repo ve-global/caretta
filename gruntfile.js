@@ -39,7 +39,6 @@ module.exports = function (grunt) {
                 src:
                     [
                     'vendors/prettify/run_prettify.js',
-                    'vendors/pikaday/pikaday.js',
                     'vendors/picker/picker.js',
                     'js/helpers.js',
                     'js/accordion.js',

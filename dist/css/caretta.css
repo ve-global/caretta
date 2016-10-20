@@ -10307,6 +10307,13 @@ html {
     display: block;
     margin-bottom: 10px; }
 
+body pre.prettyprint {
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 5px;
+  padding: 5px; }
+
 /***
 *
 *  1. Caretta List Styles
