@@ -5134,6 +5134,7 @@ a {
 *  2. Caretta Standard Layouts
 *  3. Caretta Generics
 *       3.1 Coloration
+*       3.2 Hr
 *
 ***/
 /***
@@ -10127,7 +10128,7 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
     /******************    1.1.1 Caretta Logo  ******************/ }
     .caretta .caretta-header .caretta-logo {
       background-color: #273037;
@@ -10144,6 +10145,8 @@ html {
         padding: 0 10px 0 20px; }
         .caretta .caretta-header .caretta-logo a span {
           font-weight: 400; }
+        .caretta .caretta-header .caretta-logo a:hover, .caretta .caretta-header .caretta-logo a:focus, .caretta .caretta-header .caretta-logo a:active {
+          text-decoration: none; }
   .caretta main {
     padding-top: 70px;
     /******************    1.2.1 Caretta Main Navigation  ******************/
@@ -10199,6 +10202,12 @@ html {
 /******************    3.1. Coloration  ******************/
 .bg-white {
   background: #ffffff; }
+
+/******************    3.2. Hr  ******************/
+hr {
+  height: 1px;
+  border: 0;
+  background: #edecec; }
 
 /***
 *
@@ -10544,9 +10553,12 @@ ol {
   transition: all .3s ease-out;
   vertical-align: middle;
   white-space: nowrap; }
-  .btn:hover, .btn:focus {
+  .btn:hover, .btn:focus, .btn:active {
     opacity: 0.85;
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+  .btn:focus {
+    opacity: 0.6;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.3), 0 4px 15px 0 rgba(0, 0, 0, 0.28); }
 
 /******************    1. Generic buttons  ******************/
 .btn-default {

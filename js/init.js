@@ -12,6 +12,7 @@ Caretta = Caretta || {};
 Caretta.Init = () => {
     Caretta.Tabs.initTabs();
     Caretta.Accordions.initAccordions();
+    Caretta.Alerts.initCloseAlerts();
     Caretta.Modals.initModals();
     Caretta.Modals.initCloseModals();
     Caretta.Dropdown.closeDropdowns();
