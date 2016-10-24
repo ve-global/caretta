@@ -40,6 +40,7 @@ module.exports = function (grunt) {
                     [
                     'vendors/prettify/run_prettify.js',
                     'vendors/picker/picker.js',
+                    'js/alerts.js',
                     'js/helpers.js',
                     'js/accordion.js',
                     'js/dropdown.js',

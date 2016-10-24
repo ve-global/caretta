@@ -9,6 +9,7 @@
 *  2. Caretta Standard Layouts
 *  3. Caretta Generics
 *       3.1 Coloration
+*       3.2 Hr
 *
 ***/
 
@@ -50,7 +51,7 @@ html {
         position: fixed;
         top: 0;
         width: 100%;
-	    z-index: 2;
+	    z-index: 3;
 
         /******************    1.1.1 Caretta Logo  ******************/
         .caretta-logo {
@@ -71,6 +72,12 @@ html {
                 span {
                     font-weight: 400;
                 }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    text-decoration: none;
+                }
             }
         }
 	}
@@ -87,6 +94,7 @@ html {
             box-sizing: border-box;
             display: inline-block;
             height: 100%;
+            overflow-y: auto;
             position: fixed;
             z-index: 1;
             width: 268px;
@@ -158,4 +166,11 @@ html {
 /******************    3.1. Coloration  ******************/
 .bg-white {
     background: $white;
+}
+
+/******************    3.2. Hr  ******************/
+hr {
+	height: 1px;
+    border: 0;
+    background: $grey-light;
 }

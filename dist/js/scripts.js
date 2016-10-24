@@ -1183,10 +1183,76 @@ Picker.prototype.done = function () {
         this.on_done(this.colour);
     }
 };; /**
-    *  VeCaretta Helper Functions
-    *  Date: 17/10/2016
+    *  VeCaretta Alerts
+    *  Date: 13/10/2016
     *  Caretta Framework
     */
+'use strict';
+
+var Caretta;
+
+Caretta = Caretta || {};
+
+Caretta.Alerts = function () {
+    /**
+     * Create alert
+     * text {string}       - content of the alert
+     * type {string}       - type of the alert (success, info, error, warning)
+     */
+    var popupAlert = function popupAlert(text, type) {
+        var alert = document.createElement('DIV'),
+            closeBtn = document.createElement('BUTTON'),
+            closeIcon = document.createElement("SPAN");
+
+        closeIcon.setAttribute('aria-hidden', 'true');
+        closeIcon.appendChild(document.createTextNode('x'));
+        closeBtn.appendChild(closeIcon);
+        closeBtn.setAttribute('type', 'button');
+        closeBtn.setAttribute('data-dismiss', 'alert');
+        closeBtn.setAttribute('aria-label', 'Close');
+        closeBtn.className = 'close';
+        closeBtn.addEventListener('click', triggerCloseAlert);
+        alert.appendChild(document.createTextNode(text));
+        alert.appendChild(closeBtn);
+        alert.className = 'alert alert-' + type + ' alert-dismissible';
+        alert.setAttribute('role', 'alert');
+        document.body.appendChild(alert);
+    },
+
+
+    /**
+     * Close target alert
+     * e {object}       - event
+     */
+    triggerCloseAlert = function triggerCloseAlert(e) {
+        e.preventDefault();
+        var alert = Caretta.Helpers.findAncestor(e.target, 'alert');
+
+        alert.parentNode.removeChild(alert);
+    },
+
+
+    /**
+     * Initialize click event for already existing alerts
+     */
+    initCloseAlerts = function initCloseAlerts() {
+        var closeAlerts = document.querySelectorAll('[data-dismiss="alert"]');
+
+        for (var i = 0; i < closeAlerts.length; i++) {
+            closeAlerts[i].addEventListener('click', triggerCloseAlert);
+        }
+    };
+
+    return {
+        popupAlert: popupAlert,
+        initCloseAlerts: initCloseAlerts
+    };
+}();
+; /**
+  *  VeCaretta Helper Functions
+  *  Date: 17/10/2016
+  *  Caretta Framework
+  */
 'use strict';
 /* eslint no-cond-assign: 1 */
 
@@ -1625,6 +1691,7 @@ Caretta = Caretta || {};
 Caretta.Init = function () {
     Caretta.Tabs.initTabs();
     Caretta.Accordions.initAccordions();
+    Caretta.Alerts.initCloseAlerts();
     Caretta.Modals.initModals();
     Caretta.Modals.initCloseModals();
     Caretta.Dropdown.closeDropdowns();
