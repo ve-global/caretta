@@ -10656,11 +10656,11 @@ ol {
     .breadcrumb li.active a {
       color: #7C7C7C; }
       .breadcrumb li.active a:hover {
-        text-decoration: none;
-        cursor: default; }
+        cursor: default;
+        text-decoration: none; }
     .breadcrumb li.disabled a:hover {
-      text-decoration: none;
-      cursor: not-allowed; }
+      cursor: not-allowed;
+      text-decoration: none; }
   .breadcrumb > li + li:before {
     color: #A9A9A9;
     content: "/\00a0";
