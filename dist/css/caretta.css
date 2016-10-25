@@ -10811,8 +10811,6 @@ ol {
     display: none; }
   .accordionWrapper.oneVisible.showHeadings .accordionItem .accordionItemHeading {
     display: block; }
-  .accordionWrapper.oneVisible.showHeadings .accordionItem .accordionItemContent {
-    display: none; }
 
 /***
 *
