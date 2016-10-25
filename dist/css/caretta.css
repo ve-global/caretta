@@ -10653,8 +10653,14 @@ ol {
     display: inline-block; }
     .breadcrumb li a {
       color: #A9A9A9; }
-    .breadcrumb li.active {
+    .breadcrumb li.active a {
       color: #7C7C7C; }
+      .breadcrumb li.active a:hover {
+        text-decoration: none;
+        cursor: default; }
+    .breadcrumb li.disabled a:hover {
+      text-decoration: none;
+      cursor: not-allowed; }
   .breadcrumb > li + li:before {
     color: #A9A9A9;
     content: "/\00a0";

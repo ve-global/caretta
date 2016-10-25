@@ -21,8 +21,17 @@
     		color: $breadcrumb-color;
     	}
 
-    	&.active {
+    	&.active a {
     		color: $breadcrumb-active;
+
+			&:hover {
+				text-decoration: none;
+				cursor: default;
+			}
+    	}
+		&.disabled a:hover {
+    		text-decoration: none;
+			cursor: not-allowed;
     	}
 	}
 
