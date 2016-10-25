@@ -91,15 +91,10 @@
             }
         }
 
-        
-
         &.showHeadings {
             .accordionItem {
                 .accordionItemHeading {
                     display: block;
-                }
-                .accordionItemContent {
-                    display: none;
                 }
             }
         }
