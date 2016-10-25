@@ -69,11 +69,56 @@
                               <!--  ======================  -->
                               <nav class="main-navigation left-side">
                               	<ul id="navigationList" class="navigation-list">
+                                      <li>
+                                          <a href="#sectionGridSystem"><i class="zmdi zmdi-view-quilt"></i>Grid System</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionTypography"><i class="zmdi zmdi-format-size"></i>Typography</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionLists"><i class="zmdi zmdi-format-list-bulleted"></i>Lists</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionLinks"><i class="zmdi zmdi-link"></i>Links</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionErrors"><i class="zmdi zmdi-alert-triangle"></i>Errors</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionAlerts"><i class="zmdi zmdi-alert-circle-o"></i>Alerts</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionTabs"><i class="zmdi zmdi-tab"></i>Tabs</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionButtons"><i class="zmdi zmdi-layers"></i>Buttons</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionBreadcrumbs"><i class="zmdi zmdi-swap"></i>Breadcrumbs</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionTooltips"><i class="zmdi zmdi-help-outline"></i>Tooltips</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionAccordions"><i class="zmdi zmdi-view-agenda"></i>Accordions</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionModals"><i class="zmdi zmdi-window-restore"></i>Modals</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionPreloader"><i class="zmdi zmdi-hourglass-alt"></i>Preloader</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionTables"><i class="zmdi zmdi-grid"></i>Tables</a>
+                                      </li>
+                                      <li>
+                                          <a href="#sectionFormInputs"><i class="zmdi zmdi-check-square"></i>Form Inputs</a>
+                                      </li>
                					</ul>
                               </nav>
       <section class="main-application right-side">
          <!-- Grid System -->
-         <h5>Grid system</h5>
+         <h5 id="sectionGridSystem">Grid system</h5>
             <!--?prettify lang=html linenums=true?-->
             <pre class="prettyprint lang-html">
                &lt;div class="row"&gt;
@@ -146,7 +191,7 @@
          </div>
          <!-- /Grid System -->         <hr>
          <!-- Typography -->
-         <h5>Headings</h5>
+         <h5 id="sectionTypography">Typography</h5>
          <div id="typography">
             <h1>This is heading 1</h1>
             <h2>This is heading 2</h2>
@@ -174,7 +219,7 @@
          </div>
          <!--Typography -->         <hr>
          <!--Lists -->
-         <h5>Lists</h5>
+         <h5 id="sectionLists">Lists</h5>
          <div class="row flex-space">
             <div class="col-third bg-white">
                <ul>
@@ -301,12 +346,11 @@
          </div>
          <!--/Lists -->         <hr>
          <!-- Links -->
-         <h5>Links</h5>
+         <h5 id="sectionLinks">Links</h5>
          <a href="#" title="This is a link">This is a link</a>
-         <!-- /Links -->
-         <hr>
+         <!-- /Links -->         <hr>
          <!-- Errors -->
-         <h5>Errors</h5>
+         <h5 id="sectionErrors">Errors</h5>
          <!--?prettify lang=html linenums=true?-->
              <pre class="prettyprint lang-html">
                  &lt;p class="error"&gt;&lt;/p&gt;
@@ -315,7 +359,7 @@
          <p class="warning" >This is a warning message</p>
          <!-- /Errors -->         <hr>
          <!-- Alerts -->
-         <h5>Alerts</h5>
+         <h5 id="sectionAlerts">Alerts</h5>
          <!--?prettify lang=html linenums=true?-->
             <pre class="prettyprint lang-html">
                &lt;div class="alert alert-success alert-dismissible" role="alert"&gt;
@@ -355,7 +399,7 @@
          </div>
          <!-- /Alerts -->         <hr>
          <!-- Tabs -->
-         <h5>Tabs</h5>
+         <h5 id="sectionTabs">Tabs</h5>
          <!--?prettify lang=html linenums=true?-->
             <pre class="prettyprint lang-html">
                &lt;div id="tabs-container" class="tabs-container"&gt;
@@ -398,7 +442,7 @@
          <!-- /Tabs -->         <hr>
          <!-- Buttons -->
          <div class="btn-demo">
-            <h5>Generic buttons</h5>
+            <h5 id="sectionButtons">Generic buttons</h5>
             <!--?prettify lang=html linenums=true?-->
             <pre class="prettyprint lang-html">
                &lt;button class="btn btn-default"&gt;&lt;/button&gt;
@@ -463,7 +507,7 @@
          <!-- /Buttons -->
          <hr>
          <!-- Breadcrumbs -->
-          <h5>Breadcrumbs</h5>
+          <h5 id="sectionBreadcrumbs">Breadcrumbs</h5>
           <!--?prettify lang=html linenums=true?-->
              <pre class="prettyprint lang-html">
                  &lt;ul class="breadcrumb"&gt;
@@ -480,7 +524,7 @@
           </div>
           <!-- /Breadcrumbs -->         <hr>
          <!-- Tooltips -->
-          <h5>Tooltips</h5>
+          <h5 id="sectionTooltips">Tooltips</h5>
           <!--?prettify lang=html linenums=true?-->
              <pre class="prettyprint lang-html">
                &lt;div class="tooltip"&gt;
@@ -560,7 +604,7 @@
          <!-- Accordion -->
          <div class="row flex-space">
             <div class="col-half">
-               <h5>Accordion</h5>
+               <h5 id="sectionAccordions">Accordion</h5>
                <!--?prettify lang=html linenums=true?-->
                <pre class="prettyprint lang-html">
                   &lt;div class="accordionWrapper"&gt;
@@ -670,7 +714,7 @@
          </div>
          <!-- /Accordion -->         <hr>
           <!-- Modals -->
-          <h5>Modals</h5>
+          <h5 id="sectionModals">Modals</h5>
           <!--?prettify lang=html linenums=true?-->
              <pre class="prettyprint lang-html">
                  &lt;button class="btn btn-primary" data-toggle="modal" data-modal="modal"&gt;&lt;/button&gt;
@@ -702,7 +746,7 @@
           </div>
           <!-- /Modals -->         <hr>
          <!-- Preloader -->
-         <h5>Preloader</h5>
+         <h5 id="sectionPreloader">Preloader</h5>
          <!--?prettify lang=html linenums=true?-->
          <pre class="prettyprint lang-html">
              &lt;div class="loader"&gt;
@@ -719,7 +763,7 @@
          </div>
          <!-- /Preloader -->         <hr>
          <!-- Grids -->
-         <h5>Table</h5>
+         <h5 id="sectionTables">Tables</h5>
          <!--?prettify lang=html linenums=true?-->
          <pre class="prettyprint lang-html">
             &lt;div class="caretta-grid-wrapper"&gt;
@@ -868,7 +912,7 @@
          </div>
          <!-- /Grids -->         <hr>
          <!-- Form Inputs -->
-         <h5>Form Inputs</h5>
+         <h5 id="sectionFormInputs">Form Inputs</h5>
          <!--?prettify lang=html linenums=true?-->
          <pre class="prettyprint lang-html">
             &lt;div class="radio"&gt;

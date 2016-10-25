@@ -10157,6 +10157,7 @@ html {
       box-sizing: border-box;
       display: inline-block;
       height: 100%;
+      overflow-y: auto;
       position: fixed;
       z-index: 1;
       width: 268px; }
