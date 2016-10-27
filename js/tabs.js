@@ -38,7 +38,9 @@ Caretta.Tabs = (function () {
             var el;
 
             el = document.getElementById('nav-tab');
-            el.addEventListener('click', toggleActiveTab, false);
+            if(el) {
+                el.addEventListener('click', toggleActiveTab, false);
+            }
         };
 
     return {
