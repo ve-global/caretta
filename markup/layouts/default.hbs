@@ -40,7 +40,15 @@
          {{> forms}}
          <hr>
          {{> footer }}
+         <hr>
+         {{> navigation }}
       </section>
+
+      <script id="navigation-hbs" type="text/x-handlebars-template">
+         {{#each navItems}}
+            <li>{{ title }}</li>
+         {{/each}}
+      </script>
       
    </main>
          {{> modals_popup}}

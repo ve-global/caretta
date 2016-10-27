@@ -39,7 +39,6 @@
     </head>
     <body class="caretta">
    
-                           
    <!--  ==============  -->
    <!--  === Header ===  -->
    <!--  ==============  -->
@@ -347,7 +346,7 @@
          <!--/Lists -->         <hr>
          <!-- Links -->
          <h5 id="sectionLinks">Links</h5>
-         <a href="#sectionLinks" title="This is a link">This is a link</a>
+         <a href="#" title="This is a link">This is a link</a>
          <!-- /Links -->         <hr>
          <!-- Errors -->
          <h5 id="sectionErrors">Errors</h5>
@@ -763,7 +762,7 @@
          </div>
          <!-- /Preloader -->         <hr>
          <!-- Grids -->
-         <h5 id="sectionTables">Table</h5>
+         <h5 id="sectionTables">Tables</h5>
          <!--?prettify lang=html linenums=true?-->
          <pre class="prettyprint lang-html">
             &lt;div class="caretta-grid-wrapper"&gt;
@@ -1012,6 +1011,9 @@
                                  <!--  === Footer ===  -->
                                  <!--  ==============  -->
                                  <footer class="caretta-footer"> &copy; <span class="current-year">2016</span> - Ve Interactive</footer>
+         <hr>
+         
+         
       </section>
       
    </main>
@@ -1049,6 +1051,24 @@
         <!-- Add your site or application scripts here -->
         <script src="vendors/pikaday/pikaday.js"></script>
         <script src="dist/js/scripts.min.js"></script>
+                           
+        <script id="navigationHbs" type="text/x-handlebars-template">
+          {{#each navItems}}
+            <li class="{{#if subItems}}has-submenu{{/if}}">
+              <a href="{{link}}"><i class="zmdi {{icon}}"></i>{{title}}</a>
+              {{#if subItems}}
+                <ul class="sub-menu">
+                  {{#each subItems}}
+                    <li><a href="{{link}}"><i class="zmdi {{icon}}"></i>{{title}}</a></li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </li>
+          {{/each}}
+        </script>
+
+        <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+        <script src="js/hbs.js"></script>
 
     </body>
 </html>
