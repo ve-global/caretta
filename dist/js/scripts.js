@@ -1360,6 +1360,7 @@ Caretta.Dropdown = function () {
      * e {object}       - event
      */
     toggleDropdown = function toggleDropdown(e) {
+        e.preventDefault();
         var simpleDropdowns = document.getElementsByClassName('simple-dropdown');
 
         for (var i = 0; i < simpleDropdowns.length; i++) {
