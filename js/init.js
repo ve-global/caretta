@@ -17,7 +17,6 @@ Caretta.Init = () => {
     Caretta.Modals.initCloseModals();
     Caretta.Dropdown.closeDropdowns();
     Caretta.Dropdown.setupSimpleDropdowns();
-    Caretta.Navigation.getNavigation();
     Caretta.Forms.initColorPicker();
     Caretta.Forms.initDatePicker();
 };

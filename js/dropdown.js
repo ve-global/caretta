@@ -31,6 +31,7 @@ Caretta.Dropdown = (function () {
          * e {object}       - event
          */
         toggleDropdown = (e) => {
+            e.preventDefault();
             let simpleDropdowns = document.getElementsByClassName('simple-dropdown');
 
             for (let i = 0; i < simpleDropdowns.length; i++) {
