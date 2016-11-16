@@ -32,18 +32,19 @@ Caretta.Dropdown = (function () {
          */
         toggleDropdown = (e) => {
             e.preventDefault();
-            let simpleDropdowns = document.getElementsByClassName('simple-dropdown');
+            let simpleDropdowns = document.getElementsByClassName('simple-dropdown'),
+                divParrent = Caretta.Helpers.findAncestor(e.target, 'simple-dropdown');
 
             for (let i = 0; i < simpleDropdowns.length; i++) {
-                if (simpleDropdowns[i] !== Caretta.Helpers.findAncestor(e.target, 'simple-dropdown')) {
+                if (simpleDropdowns[i] !== divParrent) {
                     simpleDropdowns[i].classList.remove('open');
                 }
             }
 
-            if (e.target.parentElement.classList.contains('open')) {
-                e.target.parentElement.classList.remove('open');
+            if (divParrent.classList.contains('open')) {
+                divParrent.classList.remove('open');
             } else {
-                e.target.parentElement.classList.add('open');
+                divParrent.classList.add('open');
             }
         },
 
