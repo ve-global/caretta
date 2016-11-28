@@ -31,7 +31,7 @@ Caretta.Modals = (function () {
          */
         triggerCloseModal = (e) => {
             e.preventDefault();
-            let modal = Caretta.Helpers.findAncestor(e.target, 'modal'),
+            let modal = Caretta.Helpers.findAncestor(e.target, 'caretta-modal'),
                 overlay = document.getElementById('body-overlay');
 
             document.body.removeChild(overlay);
@@ -42,7 +42,7 @@ Caretta.Modals = (function () {
          * Initialize click event for modals triggering
          */
         initModals = () => {
-            let modals = document.querySelectorAll('[data-toggle="modal"]');
+            let modals = document.querySelectorAll('[caretta-toggle="modal"]');
 
             for (let i = 0; i < modals.length; i++) {
                 modals[i].addEventListener('click', triggerModal);
@@ -53,7 +53,7 @@ Caretta.Modals = (function () {
          * Initialize click event for closing modals
          */
         initCloseModals = () => {
-            let closeModals = document.querySelectorAll('[data-dismiss="modal"]');
+            let closeModals = document.querySelectorAll('[caretta-dismiss="modal"]');
 
             for (let i = 0; i < closeModals.length; i++) {
                 closeModals[i].addEventListener('click', triggerCloseModal);

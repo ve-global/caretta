@@ -6,10 +6,10 @@
 
 @import 'vars';
 
-.tooltip {
+.caretta-tooltip {
 	position: relative;
 
-	.tooltip-content {
+	.caretta-tooltip-content {
 	    background: $white;
 	    border-radius: 3px;
 	    box-shadow: $shadow-btn;
@@ -78,8 +78,8 @@
 	  	}
 	}
 
-	button[data-toggle="tooltip"]:hover + .tooltip-content,
-	button[data-toggle="tooltip-click"]:focus + .tooltip-content {
+	button[caretta-toggle="tooltip"]:hover + .caretta-tooltip-content,
+	button[caretta-toggle="tooltip-click"]:focus + .caretta-tooltip-content {
 	  	display: block;
 	}
 }

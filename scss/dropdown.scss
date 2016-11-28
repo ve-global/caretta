@@ -7,10 +7,10 @@
 @import 'vars';
 
 /******************    1. Simple dropdown  ******************/
-.simple-dropdown {
+.caretta-dropdown {
 	position: relative;
 
-	.dropdown-content {
+	.caretta-dropdown-content {
 	    background-color: $white;
 	    box-shadow: 0 6px 12px rgba(0,0,0,.175);
 	    display: none;
@@ -63,7 +63,7 @@
 
 	&.open {
 
-		.dropdown-content {
+		.caretta-dropdown-content {
 			display: block;
 		}
 	}

@@ -11,7 +11,7 @@
 
 @import 'vars';
 
-.btn {
+.caretta-btn {
     border: 0;
     border-radius: 2px;
     box-shadow: $shadow-btn;
@@ -46,30 +46,30 @@
 }
 
 /******************    1. Generic buttons  ******************/
-.btn-default {
+.caretta-btn-default {
 	background-color: $white;
 	color: $grey-text;
 }
 
-.btn-primary {
+.caretta-btn-primary {
     background-color: $btn-primary;
 }
 
-.btn-cancel {
+.caretta-btn-cancel {
 	background-color: $btn-cancel;
 }
 
-.btn-success {
+.caretta-btn-success {
 	background-color: $green;
 }
 
-.btn-danger {
+.caretta-btn-danger {
 	background-color: $red;
 }
 
 /******************    2. Button sizes  ******************/
 
-.btn-large {
+.caretta-btn-large {
     font-size: 17px;
     line-height: 1.3333333;
 	padding: 10px 16px;
@@ -77,21 +77,21 @@
 
 /******************    3. Button disabled  ******************/
 
-.btn[disabled] {
+.caretta-btn[disabled] {
 	cursor: not-allowed;
     opacity: 0.65;
 }
 
 /******************    4. Button block  ******************/
 
-.btn-block {
+.caretta-btn-block {
 	display: block;
     width: 100%;
 }
 
 /******************    5. Button icon  ******************/
 
-.btn {
+.caretta-btn {
 
 	i {
 	    display: inline-block;
@@ -104,7 +104,7 @@
 }
 
 /************    6. Button ripple animation  ************/
-.btn {
+.caretta-btn {
     &:after {
         background: rgba(255, 255, 255, 0.3);
         border-radius: 50%;

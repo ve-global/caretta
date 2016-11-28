@@ -1199,19 +1199,18 @@ Caretta.Alerts = function () {
     var popupAlert = function popupAlert(text, type) {
         var alert = document.createElement('DIV'),
             closeBtn = document.createElement('BUTTON'),
-            closeIcon = document.createElement("SPAN");
+            closeIcon = document.createElement('SPAN');
 
         closeIcon.setAttribute('aria-hidden', 'true');
         closeIcon.appendChild(document.createTextNode('x'));
         closeBtn.appendChild(closeIcon);
         closeBtn.setAttribute('type', 'button');
-        closeBtn.setAttribute('data-dismiss', 'alert');
-        closeBtn.setAttribute('aria-label', 'Close');
+        closeBtn.setAttribute('caretta-dismiss', 'alert');
         closeBtn.className = 'close';
         closeBtn.addEventListener('click', triggerCloseAlert);
         alert.appendChild(document.createTextNode(text));
         alert.appendChild(closeBtn);
-        alert.className = 'alert alert-' + type + ' alert-dismissible';
+        alert.className = 'caretta-alert caretta-alert-' + type + ' caretta-alert-dismissible';
         alert.setAttribute('role', 'alert');
         document.body.appendChild(alert);
     },
@@ -1223,7 +1222,7 @@ Caretta.Alerts = function () {
      */
     triggerCloseAlert = function triggerCloseAlert(e) {
         e.preventDefault();
-        var alert = Caretta.Helpers.findAncestor(e.target, 'alert');
+        var alert = Caretta.Helpers.findAncestor(e.target, 'caretta-alert');
 
         alert.parentNode.removeChild(alert);
     },
@@ -1233,7 +1232,7 @@ Caretta.Alerts = function () {
      * Initialize click event for already existing alerts
      */
     initCloseAlerts = function initCloseAlerts() {
-        var closeAlerts = document.querySelectorAll('[data-dismiss="alert"]');
+        var closeAlerts = document.querySelectorAll('[caretta-dismiss="alert"]');
 
         for (var i = 0; i < closeAlerts.length; i++) {
             closeAlerts[i].addEventListener('click', triggerCloseAlert);
@@ -1289,32 +1288,32 @@ Caretta.Accordions = function () {
 
     var toggleSection = function toggleSection() {
         var sectionClasses = this.parentNode.className,
-            siblingSections = this.parentNode.parentNode.getElementsByClassName('accordionItem'),
+            siblingSections = this.parentNode.parentNode.getElementsByClassName('caretta-accordionItem'),
             z;
 
         if (this.parentNode.parentNode.getElementsByClassName('open').length === 0) {
-            this.parentNode.parentNode.className = 'accordionWrapper oneVisible';
+            this.parentNode.parentNode.className = 'caretta-accordionWrapper oneVisible';
         } else {
-            this.parentNode.parentNode.className = 'accordionWrapper oneVisible showHeadings';
+            this.parentNode.parentNode.className = 'caretta-accordionWrapper oneVisible showHeadings';
         }
 
-        if (sectionClasses === 'accordionItem open') {
-            this.parentNode.className = 'accordionItem';
+        if (sectionClasses === 'caretta-accordionItem open') {
+            this.parentNode.className = 'caretta-accordionItem';
         } else {
             for (z = 0; z < siblingSections.length; z++) {
-                siblingSections[z].className = 'accordionItem';
+                siblingSections[z].className = 'caretta-accordionItem';
             }
-            this.parentNode.className = 'accordionItem open';
+            this.parentNode.className = 'caretta-accordionItem open';
         }
     },
         initAccordions = function initAccordions() {
-        var accordions = document.getElementsByClassName('accordionWrapper'),
+        var accordions = document.getElementsByClassName('caretta-accordionWrapper'),
             i,
             j,
             accordionSectionsHeadings;
 
         for (i = 0; i < accordions.length; i++) {
-            accordionSectionsHeadings = accordions[i].getElementsByClassName('accordionItemHeading');
+            accordionSectionsHeadings = accordions[i].getElementsByClassName('caretta-accordionItemHeading');
 
             for (j = 0; j < accordionSectionsHeadings.length; j++) {
                 accordionSectionsHeadings[j].addEventListener('click', toggleSection, false);
@@ -1344,8 +1343,8 @@ Caretta.Dropdown = function () {
      */
     var closeDropdowns = function closeDropdowns() {
         document.onclick = function (e) {
-            if (e.target !== null && Caretta.Helpers.findAncestor(e.target, 'simple-dropdown') === null) {
-                var simpleDropdowns = document.getElementsByClassName('simple-dropdown');
+            if (e.target !== null && Caretta.Helpers.findAncestor(e.target, 'caretta-dropdown') === null) {
+                var simpleDropdowns = document.getElementsByClassName('caretta-dropdown');
 
                 for (var i = 0; i < simpleDropdowns.length; i++) {
                     simpleDropdowns[i].classList.remove('open');
@@ -1361,8 +1360,8 @@ Caretta.Dropdown = function () {
      */
     toggleDropdown = function toggleDropdown(e) {
         e.preventDefault();
-        var simpleDropdowns = document.getElementsByClassName('simple-dropdown'),
-            divParrent = Caretta.Helpers.findAncestor(e.target, 'simple-dropdown');
+        var simpleDropdowns = document.getElementsByClassName('caretta-dropdown'),
+            divParrent = Caretta.Helpers.findAncestor(e.target, 'caretta-dropdown');
 
         for (var i = 0; i < simpleDropdowns.length; i++) {
             if (simpleDropdowns[i] !== divParrent) {
@@ -1382,7 +1381,7 @@ Caretta.Dropdown = function () {
      * Add click event to all dropdowns
      */
     setupSimpleDropdowns = function setupSimpleDropdowns() {
-        var dropdowns = document.querySelectorAll('[data-toggle="dropdown"]');
+        var dropdowns = document.querySelectorAll('[caretta-toggle="dropdown"]');
 
         for (var i = 0; i < dropdowns.length; i++) {
             dropdowns[i].addEventListener('click', toggleDropdown);
@@ -1428,7 +1427,7 @@ Caretta.Modals = function () {
      */
     triggerCloseModal = function triggerCloseModal(e) {
         e.preventDefault();
-        var modal = Caretta.Helpers.findAncestor(e.target, 'modal'),
+        var modal = Caretta.Helpers.findAncestor(e.target, 'caretta-modal'),
             overlay = document.getElementById('body-overlay');
 
         document.body.removeChild(overlay);
@@ -1440,7 +1439,7 @@ Caretta.Modals = function () {
      * Initialize click event for modals triggering
      */
     initModals = function initModals() {
-        var modals = document.querySelectorAll('[data-toggle="modal"]');
+        var modals = document.querySelectorAll('[caretta-toggle="modal"]');
 
         for (var i = 0; i < modals.length; i++) {
             modals[i].addEventListener('click', triggerModal);
@@ -1452,7 +1451,7 @@ Caretta.Modals = function () {
      * Initialize click event for closing modals
      */
     initCloseModals = function initCloseModals() {
-        var closeModals = document.querySelectorAll('[data-dismiss="modal"]');
+        var closeModals = document.querySelectorAll('[caretta-dismiss="modal"]');
 
         for (var i = 0; i < closeModals.length; i++) {
             closeModals[i].addEventListener('click', triggerCloseModal);
@@ -1532,7 +1531,7 @@ Caretta.Forms = function () {
      * Colorpicker initialization
      */
     var initColorPicker = function initColorPicker() {
-        var colorpickers = document.querySelectorAll('[data-toggle="colorpicker"]');
+        var colorpickers = document.querySelectorAll('[caretta-toggle="colorpicker"]');
 
         var _loop = function _loop(i) {
             var picker = new Picker({ parent: colorpickers[i], orientation: 'top' });
@@ -1564,7 +1563,7 @@ Caretta.Forms = function () {
         }
     },
         initDatePicker = function initDatePicker() {
-        var datepickers = document.querySelectorAll('[data-toggle="datepicker"]');
+        var datepickers = document.querySelectorAll('[caretta-toggle="datepicker"]');
 
         for (var i = 0; i < datepickers.length; i++) {
             var _picker = new Pikaday({ field: datepickers[i] });

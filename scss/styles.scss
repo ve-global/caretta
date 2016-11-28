@@ -5,7 +5,7 @@
 ***/
 @import 'vars';
 
-.simple-dropdown {
+.caretta-dropdown {
 	padding: 25px;
 
 	>a {
@@ -16,21 +16,21 @@
 
 .customer-dropdown {
 
-	.dropdown-content {
+	.caretta-dropdown-content {
 		width: 350px;
 	}
 }
 
 .btn-demo {
-	.btn {
+	.caretta-btn {
 		margin-right: 15px;
 	}
 }
 
-.tooltip {
+.caretta-tooltip {
 	margin-right: 15px;
 
-	.btn {
+	.caretta-btn {
 		margin-right: 0;
 	}
 }
