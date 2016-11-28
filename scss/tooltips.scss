@@ -78,8 +78,8 @@
 	  	}
 	}
 
-	button[data-toggle="tooltip"]:hover + .tooltip-content,
-	button[data-toggle="tooltip-click"]:focus + .tooltip-content {
+	button[caretta-toggle="tooltip"]:hover + .tooltip-content,
+	button[caretta-toggle="tooltip-click"]:focus + .tooltip-content {
 	  	display: block;
 	}
 }

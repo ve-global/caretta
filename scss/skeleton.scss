@@ -121,7 +121,7 @@ html {
 }
 
 /******************    2. Caretta Standard Layouts  ******************/
-.row {
+.caretta-row {
     align-items: flex-start;
     display: flex;
     padding-top: 20px;
@@ -164,7 +164,7 @@ html {
 /******************    3. Caretta Generics  ******************/
 
 /******************    3.1. Coloration  ******************/
-.bg-white {
+.caretta-bg-white {
     background: $white;
 }
 

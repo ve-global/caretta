@@ -9,12 +9,12 @@
 @import 'vars';
 /******************    1. Caretta Tabs  ******************/
 
-.tabs-container {
+.caretta-tabs-container {
     margin: 10px 0 20px 0;
     width: 100%;
     /******************    1.1 Tabs Menu  ******************/
     
-    .tabs-nav {
+    .caretta-tabs-nav {
         box-shadow: 0 -2px 0 0  $grey-underline inset;
         box-sizing: border-box;
         list-style: none;

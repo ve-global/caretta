@@ -18,19 +18,18 @@ Caretta.Alerts = (function () {
     let popupAlert = (text, type) => {
             let alert = document.createElement('DIV'),
                 closeBtn = document.createElement('BUTTON'),
-                closeIcon = document.createElement("SPAN");
+                closeIcon = document.createElement('SPAN');
 
             closeIcon.setAttribute('aria-hidden', 'true');
             closeIcon.appendChild(document.createTextNode('x'));
             closeBtn.appendChild(closeIcon);
             closeBtn.setAttribute('type', 'button');
-            closeBtn.setAttribute('data-dismiss', 'alert');
-            closeBtn.setAttribute('aria-label', 'Close');
+            closeBtn.setAttribute('caretta-dismiss', 'alert');
             closeBtn.className = 'close';
             closeBtn.addEventListener('click', triggerCloseAlert);
             alert.appendChild(document.createTextNode(text));
             alert.appendChild(closeBtn);
-            alert.className = 'alert alert-' + type + ' alert-dismissible';
+            alert.className = 'caretta-alert caretta-alert-' + type + ' caretta-alert-dismissible';
             alert.setAttribute('role', 'alert');
             document.body.appendChild(alert);
         },
@@ -41,7 +40,7 @@ Caretta.Alerts = (function () {
          */
         triggerCloseAlert = (e) => {
             e.preventDefault();
-            let alert = Caretta.Helpers.findAncestor(e.target, 'alert');
+            let alert = Caretta.Helpers.findAncestor(e.target, 'caretta-alert');
 
             alert.parentNode.removeChild(alert);
         },
@@ -50,7 +49,7 @@ Caretta.Alerts = (function () {
          * Initialize click event for already existing alerts
          */
         initCloseAlerts = () => {
-            let closeAlerts = document.querySelectorAll('[data-dismiss="alert"]');
+            let closeAlerts = document.querySelectorAll('[caretta-dismiss="alert"]');
 
             for (let i = 0; i < closeAlerts.length; i++) {
                 closeAlerts[i].addEventListener('click', triggerCloseAlert);

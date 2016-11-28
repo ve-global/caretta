@@ -17,7 +17,7 @@ Caretta.Forms = (function () {
      * Colorpicker initialization
      */
     let initColorPicker = () => {
-            let colorpickers = document.querySelectorAll('[data-toggle="colorpicker"]');
+            let colorpickers = document.querySelectorAll('[caretta-toggle="colorpicker"]');
 
             for (let i = 0; i < colorpickers.length; i++) {
                 let picker = new Picker({ parent: colorpickers[i], orientation: 'top' });
@@ -46,7 +46,7 @@ Caretta.Forms = (function () {
         },
 
         initDatePicker = () => {
-            let datepickers = document.querySelectorAll('[data-toggle="datepicker"]');
+            let datepickers = document.querySelectorAll('[caretta-toggle="datepicker"]');
 
             for (let i = 0; i < datepickers.length; i++) {
                 let picker = new Pikaday({ field: datepickers[i] });

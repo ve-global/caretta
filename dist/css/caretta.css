@@ -5089,28 +5089,28 @@ p {
   color: #ff9800; }
 
 /******************   1.1.3 Helpers  ******************/
-.text-left {
+.caretta-text-left {
   text-align: left; }
 
-.text-center {
+.caretta-text-center {
   text-align: center; }
 
-.text-right {
+.caretta-text-right {
   text-align: right; }
 
-.text-justify {
+.caretta-text-justify {
   text-align: justify; }
 
-.text-nowrap {
+.caretta-nowrap {
   white-space: nowrap; }
 
-.text-lowercase {
+.caretta-text-lowercase {
   text-transform: lowercase; }
 
-.text-uppercase {
+.caretta-text-uppercase {
   text-transform: uppercase; }
 
-.text-capitalize {
+.caretta-text-capitalize {
   text-transform: capitalize; }
 
 /******************    1.2 Links  ******************/
@@ -10176,32 +10176,32 @@ html {
       text-align: right; }
 
 /******************    2. Caretta Standard Layouts  ******************/
-.row {
+.caretta-row {
   align-items: flex-start;
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px; }
-  .row.flex-space {
+  .caretta-row.flex-space {
     justify-content: space-between; }
-  .row.flex-stretch {
+  .caretta-row.flex-stretch {
     align-items: stretch; }
-  .row.flex-center {
+  .caretta-row.flex-center {
     align-items: center; }
-  .row > * {
+  .caretta-row > * {
     box-sizing: border-box;
     padding: 10px; }
-  .row .col-full {
+  .caretta-row .col-full {
     width: 100%; }
-  .row .col-half {
+  .caretta-row .col-half {
     width: 49%; }
-  .row .col-third {
+  .caretta-row .col-third {
     width: 32%; }
-  .row .col-quart {
+  .caretta-row .col-quart {
     width: 23%; }
 
 /******************    3. Caretta Generics  ******************/
 /******************    3.1. Coloration  ******************/
-.bg-white {
+.caretta-bg-white {
   background: #ffffff; }
 
 /******************    3.2. Hr  ******************/
@@ -10228,9 +10228,9 @@ hr {
 /****************** 1.2 Colors ******************/
 /****************** 1.2.1 Box Shadows ******************/
 /******************    1. Simple dropdown  ******************/
-.simple-dropdown {
+.caretta-dropdown {
   position: relative; }
-  .simple-dropdown .dropdown-content {
+  .caretta-dropdown .caretta-dropdown-content {
     background-color: #ffffff;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     display: none;
@@ -10247,7 +10247,7 @@ hr {
     text-align: left;
     top: 95%;
     z-index: 1000; }
-    .simple-dropdown .dropdown-content a {
+    .caretta-dropdown .caretta-dropdown-content a {
       box-sizing: border-box;
       color: #333333;
       display: inline-block;
@@ -10256,12 +10256,12 @@ hr {
       overflow-x: hidden;
       padding: 12px 20px;
       width: 100%; }
-      .simple-dropdown .dropdown-content a:hover {
+      .caretta-dropdown .caretta-dropdown-content a:hover {
         background-color: #ecf9ff; }
-    .simple-dropdown .dropdown-content ul {
+    .caretta-dropdown .caretta-dropdown-content ul {
       list-style: none;
       padding: 0; }
-    .simple-dropdown .dropdown-content .dropdown-header {
+    .caretta-dropdown .caretta-dropdown-content .dropdown-header {
       border-bottom: 1px solid #333333;
       color: #333333;
       font-size: 13px;
@@ -10271,7 +10271,7 @@ hr {
       text-align: center;
       text-transform: uppercase;
       width: 100%; }
-  .simple-dropdown.open .dropdown-content {
+  .caretta-dropdown.open .caretta-dropdown-content {
     display: block; }
 
 /***
@@ -10291,13 +10291,13 @@ hr {
 /****************** 1.1 Font Families ******************/
 /****************** 1.2 Colors ******************/
 /****************** 1.2.1 Box Shadows ******************/
-.simple-dropdown {
+.caretta-dropdown {
   padding: 25px; }
-  .simple-dropdown > a {
+  .caretta-dropdown > a {
     color: #ffffff;
     font-size: 14px; }
 
-.customer-dropdown .dropdown-content {
+.customer-dropdown .caretta-dropdown-content {
   width: 350px; }
 
 .btn-demo .btn {
@@ -10401,12 +10401,12 @@ ol {
 /****************** 1.2 Colors ******************/
 /****************** 1.2.1 Box Shadows ******************/
 /******************    1. Caretta Alerts  ******************/
-.alert {
+.caretta-alert {
   border-radius: 2px;
   font-size: 13px;
   padding: 15px 35px 10px 30px; }
 
-.alert-dismissible .close {
+.caretta-alert-dismissible .close {
   background: transparent;
   border: 0;
   color: inherit;
@@ -10423,25 +10423,25 @@ ol {
   top: -5px; }
 
 /******************    1.1 Success  ******************/
-.alert-success {
+.caretta-alert-success {
   background-color: rgba(76, 175, 80, 0.7);
   border-color: transparent;
   color: #ffffff; }
 
 /******************    1.2 Warning  ******************/
-.alert-warning {
+.caretta-alert-warning {
   background-color: rgba(255, 193, 7, 0.7);
   border-color: transparent;
   color: #ffffff; }
 
 /******************    1.3 Error  ******************/
-.alert-error {
+.caretta-alert-error {
   background-color: rgba(244, 67, 54, 0.7);
   border-color: transparent;
   color: #ffffff; }
 
 /******************    1.4 info  ******************/
-.alert-info {
+.caretta-alert-info {
   background-color: rgba(33, 150, 243, 0.7);
   border-color: transparent;
   color: #ffffff; }
@@ -10738,8 +10738,8 @@ ol {
         margin-top: -3px;
         left: -10px;
         top: 50%; }
-  .tooltip button[data-toggle="tooltip"]:hover + .tooltip-content,
-  .tooltip button[data-toggle="tooltip-click"]:focus + .tooltip-content {
+  .tooltip button[caretta-toggle="tooltip"]:hover + .tooltip-content,
+  .tooltip button[caretta-toggle="tooltip-click"]:focus + .tooltip-content {
     display: block; }
 
 /***
