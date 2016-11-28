@@ -10300,12 +10300,12 @@ hr {
 .customer-dropdown .caretta-dropdown-content {
   width: 350px; }
 
-.btn-demo .btn {
+.btn-demo .caretta-btn {
   margin-right: 15px; }
 
-.tooltip {
+.caretta-tooltip {
   margin-right: 15px; }
-  .tooltip .btn {
+  .caretta-tooltip .caretta-btn {
     margin-right: 0; }
 
 .demo-form label {
@@ -10466,12 +10466,12 @@ ol {
 /****************** 1.2 Colors ******************/
 /****************** 1.2.1 Box Shadows ******************/
 /******************    1. Caretta Tabs  ******************/
-.tabs-container {
+.caretta-tabs-container {
   margin: 10px 0 20px 0;
   width: 100%;
   /******************    1.1 Tabs Menu  ******************/
   /******************    1.2 Tabs Content  ******************/ }
-  .tabs-container .tabs-nav {
+  .caretta-tabs-container .caretta-tabs-nav {
     box-shadow: 0 -2px 0 0 #eeeeee inset;
     box-sizing: border-box;
     list-style: none;
@@ -10480,19 +10480,19 @@ ol {
     position: relative;
     white-space: nowrap;
     width: 100%; }
-    .tabs-container .tabs-nav > li {
+    .caretta-tabs-container .caretta-tabs-nav > li {
       display: inline-block;
       vertical-align: top; }
-      .tabs-container .tabs-nav > li a {
+      .caretta-tabs-container .caretta-tabs-nav > li a {
         color: #7a7a7a;
         display: block;
         font-weight: 500;
         padding: 15px;
         position: relative;
         text-transform: uppercase; }
-        .tabs-container .tabs-nav > li a:hover {
+        .caretta-tabs-container .caretta-tabs-nav > li a:hover {
           text-decoration: none; }
-        .tabs-container .tabs-nav > li a:after {
+        .caretta-tabs-container .caretta-tabs-nav > li a:after {
           bottom: 0;
           content: "";
           height: 2px;
@@ -10501,15 +10501,15 @@ ol {
           transform: scale(0);
           transition: all 250ms ease 0s;
           width: 100%; }
-      .tabs-container .tabs-nav > li.active a {
+      .caretta-tabs-container .caretta-tabs-nav > li.active a {
         color: #000000; }
-        .tabs-container .tabs-nav > li.active a:after {
+        .caretta-tabs-container .caretta-tabs-nav > li.active a:after {
           background: #2196f3;
           transform: scale(1); }
-  .tabs-container .tab-pane {
+  .caretta-tabs-container .tab-pane {
     display: none;
     padding: 20px 10px 10px 10px; }
-    .tabs-container .tab-pane.active {
+    .caretta-tabs-container .tab-pane.active {
       display: block; }
 
 /***
@@ -10534,7 +10534,7 @@ ol {
 /****************** 1.1 Font Families ******************/
 /****************** 1.2 Colors ******************/
 /****************** 1.2.1 Box Shadows ******************/
-.btn {
+.caretta-btn {
   border: 0;
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
@@ -10554,48 +10554,48 @@ ol {
   transition: all .3s ease-out;
   vertical-align: middle;
   white-space: nowrap; }
-  .btn:hover, .btn:focus, .btn:active {
+  .caretta-btn:hover, .caretta-btn:focus, .caretta-btn:active {
     opacity: 0.85;
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
-  .btn:focus {
+  .caretta-btn:focus {
     opacity: 0.6;
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.3), 0 4px 15px 0 rgba(0, 0, 0, 0.28); }
 
 /******************    1. Generic buttons  ******************/
-.btn-default {
+.caretta-btn-default {
   background-color: #ffffff;
   color: #333333; }
 
-.btn-primary {
+.caretta-btn-primary {
   background-color: #2196f3; }
 
-.btn-cancel {
+.caretta-btn-cancel {
   background-color: #607d8b; }
 
-.btn-success {
+.caretta-btn-success {
   background-color: #00bcd4; }
 
-.btn-danger {
+.caretta-btn-danger {
   background-color: #f44336; }
 
 /******************    2. Button sizes  ******************/
-.btn-large {
+.caretta-btn-large {
   font-size: 17px;
   line-height: 1.3333333;
   padding: 10px 16px; }
 
 /******************    3. Button disabled  ******************/
-.btn[disabled] {
+.caretta-btn[disabled] {
   cursor: not-allowed;
   opacity: 0.65; }
 
 /******************    4. Button block  ******************/
-.btn-block {
+.caretta-btn-block {
   display: block;
   width: 100%; }
 
 /******************    5. Button icon  ******************/
-.btn i {
+.caretta-btn i {
   display: inline-block;
   font-size: 15px;
   line-height: 100%;
@@ -10604,7 +10604,7 @@ ol {
   vertical-align: top; }
 
 /************    6. Button ripple animation  ************/
-.btn:after {
+.caretta-btn:after {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   content: "";
@@ -10617,7 +10617,7 @@ ol {
   position: absolute;
   transition: all 1s; }
 
-.btn:active:after {
+.caretta-btn:active:after {
   margin-left: 0;
   margin-top: 0;
   opacity: 1;
@@ -10642,26 +10642,26 @@ ol {
 /****************** 1.1 Font Families ******************/
 /****************** 1.2 Colors ******************/
 /****************** 1.2.1 Box Shadows ******************/
-.breadcrumb {
+.caretta-breadcrumb {
   border-bottom: 1px solid #E5E5E5;
   display: block;
   list-style: none;
   margin-bottom: 18px;
   padding: 8px 20px;
   width: 100%; }
-  .breadcrumb li {
+  .caretta-breadcrumb li {
     display: inline-block; }
-    .breadcrumb li a {
+    .caretta-breadcrumb li a {
       color: #A9A9A9; }
-    .breadcrumb li.active a {
+    .caretta-breadcrumb li.active a {
       color: #7C7C7C; }
-      .breadcrumb li.active a:hover {
+      .caretta-breadcrumb li.active a:hover {
         cursor: default;
         text-decoration: none; }
-    .breadcrumb li.disabled a:hover {
+    .caretta-breadcrumb li.disabled a:hover {
       cursor: not-allowed;
       text-decoration: none; }
-  .breadcrumb > li + li:before {
+  .caretta-breadcrumb > li + li:before {
     color: #A9A9A9;
     content: "/\00a0";
     padding: 0 5px; }
@@ -10683,9 +10683,9 @@ ol {
 /****************** 1.1 Font Families ******************/
 /****************** 1.2 Colors ******************/
 /****************** 1.2.1 Box Shadows ******************/
-.tooltip {
+.caretta-tooltip {
   position: relative; }
-  .tooltip .tooltip-content {
+  .caretta-tooltip .caretta-tooltip-content {
     background: #ffffff;
     border-radius: 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
@@ -10696,7 +10696,7 @@ ol {
     padding: 5px;
     position: absolute;
     z-index: 9; }
-    .tooltip .tooltip-content:before {
+    .caretta-tooltip .caretta-tooltip-content:before {
       content: "";
       height: 0;
       border-bottom: 5px solid #ffffff;
@@ -10706,20 +10706,20 @@ ol {
       position: absolute;
       top: -5px;
       width: 0; }
-    .tooltip .tooltip-content.top {
+    .caretta-tooltip .caretta-tooltip-content.top {
       bottom: 100%; }
-      .tooltip .tooltip-content.top:before {
+      .caretta-tooltip .caretta-tooltip-content.top:before {
         bottom: -5px;
         border-bottom: 0;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         border-top: 5px solid #ffffff;
         top: auto; }
-    .tooltip .tooltip-content.left {
+    .caretta-tooltip .caretta-tooltip-content.left {
       margin-top: 0;
       right: 100%;
       top: 20%; }
-      .tooltip .tooltip-content.left:before {
+      .caretta-tooltip .caretta-tooltip-content.left:before {
         border-bottom: 5px solid transparent;
         border-left: 5px solid #ffffff;
         border-top: 5px solid transparent;
@@ -10727,19 +10727,19 @@ ol {
         margin-top: -3px;
         right: -10px;
         top: 50%; }
-    .tooltip .tooltip-content.right {
+    .caretta-tooltip .caretta-tooltip-content.right {
       margin-top: 0;
       left: 100%;
       top: 20%; }
-      .tooltip .tooltip-content.right:before {
+      .caretta-tooltip .caretta-tooltip-content.right:before {
         border-bottom: 5px solid transparent;
         border-right: 5px solid #ffffff;
         border-top: 5px solid transparent;
         margin-top: -3px;
         left: -10px;
         top: 50%; }
-  .tooltip button[caretta-toggle="tooltip"]:hover + .tooltip-content,
-  .tooltip button[caretta-toggle="tooltip-click"]:focus + .tooltip-content {
+  .caretta-tooltip button[caretta-toggle="tooltip"]:hover + .caretta-tooltip-content,
+  .caretta-tooltip button[caretta-toggle="tooltip-click"]:focus + .caretta-tooltip-content {
     display: block; }
 
 /***
@@ -10764,7 +10764,7 @@ ol {
 /****************** 1.2 Colors ******************/
 /****************** 1.2.1 Box Shadows ******************/
 /******************    1. Caretta Accordion  ******************/
-.accordionWrapper {
+.caretta-accordionWrapper {
   background-color: #ffffff;
   float: left;
   margin-bottom: 20px;
@@ -10772,13 +10772,13 @@ ol {
   width: 100%;
   /******************    1.1 Accordion Section  ******************/
   /******************    1.1.3 Accordion With One Active Element  ******************/ }
-  .accordionWrapper .accordionItem {
+  .caretta-accordionWrapper .caretta-accordionItem {
     box-sizing: border-box;
     float: left;
     width: 100%;
     /******************    1.1.1 Accordion Section Title  ******************/
     /******************    1.1.2 Accordion Section Content  ******************/ }
-    .accordionWrapper .accordionItem .accordionItemHeading {
+    .caretta-accordionWrapper .caretta-accordionItem .caretta-accordionItemHeading {
       border-bottom: 1px solid #eeeeee;
       color: #000000;
       cursor: pointer;
@@ -10788,35 +10788,35 @@ ol {
       font-weight: 500;
       padding: 10px 15px 10px 0;
       width: 100%; }
-      .accordionWrapper .accordionItem .accordionItemHeading span {
+      .caretta-accordionWrapper .caretta-accordionItem .caretta-accordionItemHeading span {
         display: inline-block; }
-        .accordionWrapper .accordionItem .accordionItemHeading span:before {
+        .caretta-accordionWrapper .caretta-accordionItem .caretta-accordionItemHeading span:before {
           content: '';
           font-family: "Material-Design-Iconic-Font";
           padding-right: 5px; }
-    .accordionWrapper .accordionItem.open .accordionItemHeading {
+    .caretta-accordionWrapper .caretta-accordionItem.open .caretta-accordionItemHeading {
       border-color: #2196f3; }
-      .accordionWrapper .accordionItem.open .accordionItemHeading span {
+      .caretta-accordionWrapper .caretta-accordionItem.open .caretta-accordionItemHeading span {
         display: inline-block;
         padding: 10px 15px 10px 0; }
-        .accordionWrapper .accordionItem.open .accordionItemHeading span:before {
+        .caretta-accordionWrapper .caretta-accordionItem.open .caretta-accordionItemHeading span:before {
           content: '\f2ea'; }
-    .accordionWrapper .accordionItem.open .accordionItemContent {
+    .caretta-accordionWrapper .caretta-accordionItem.open .caretta-accordionItemContent {
       height: auto;
       padding: 10px; }
-    .accordionWrapper .accordionItem .accordionItemContent {
+    .caretta-accordionWrapper .caretta-accordionItem .caretta-accordionItemContent {
       box-sizing: border-box;
       float: left;
       height: 0;
       overflow: hidden;
       width: 100%; }
-  .accordionWrapper.oneVisible .accordionItem .accordionItemContent {
+  .caretta-accordionWrapper.oneVisible .caretta-accordionItem .caretta-accordionItemContent {
     display: none; }
-  .accordionWrapper.oneVisible .accordionItem.open .accordionItemContent {
+  .caretta-accordionWrapper.oneVisible .caretta-accordionItem.open .caretta-accordionItemContent {
     display: block; }
-  .accordionWrapper.oneVisible .accordionItem:not(.open) .accordionItemHeading {
+  .caretta-accordionWrapper.oneVisible .caretta-accordionItem:not(.open) .caretta-accordionItemHeading {
     display: none; }
-  .accordionWrapper.oneVisible.showHeadings .accordionItem .accordionItemHeading {
+  .caretta-accordionWrapper.oneVisible.showHeadings .caretta-accordionItem .caretta-accordionItemHeading {
     display: block; }
 
 /***
@@ -10838,7 +10838,7 @@ ol {
 /****************** 1.2 Colors ******************/
 /****************** 1.2.1 Box Shadows ******************/
 /******************    1. Caretta Modals  ******************/
-.modal {
+.caretta-modal {
   background: #ffffff;
   border-radius: 3px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
@@ -10850,19 +10850,19 @@ ol {
   top: 10%;
   width: 600px;
   z-index: 99; }
-  .modal.open {
+  .caretta-modal.open {
     display: block; }
-  .modal .modal-content {
+  .caretta-modal .caretta-modal-content {
     position: relative; }
-    .modal .modal-content .modal-header {
+    .caretta-modal .caretta-modal-content .caretta-modal-header {
       border-bottom: 1px solid #edecec;
       padding: 10px; }
-    .modal .modal-content .modal-body {
+    .caretta-modal .caretta-modal-content .caretta-modal-body {
       padding: 10px; }
-    .modal .modal-content .modal-footer {
+    .caretta-modal .caretta-modal-content .caretta-modal-footer {
       border-top: 1px solid #edecec;
       padding: 10px; }
-    .modal .modal-content .close {
+    .caretta-modal .caretta-modal-content .close {
       background: none;
       border: none;
       cursor: pointer;
@@ -10871,7 +10871,7 @@ ol {
       position: absolute;
       right: 10px;
       top: 10px; }
-  .modal.modal-lg {
+  .caretta-modal.caretta-modal-lg {
     margin-left: -450px;
     width: 900px; }
 
@@ -11003,10 +11003,10 @@ input[type="radio"]:checked + label:after {
   position: absolute; }
 
 /******************   1.4 Custom File  ******************/
-.btn-file {
+.caretta-btn-file {
   overflow: hidden;
   position: relative; }
-  .btn-file input[type="file"] {
+  .caretta-btn-file input[type="file"] {
     background: #ffffff;
     cursor: inherit;
     display: block;

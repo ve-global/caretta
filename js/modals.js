@@ -31,7 +31,7 @@ Caretta.Modals = (function () {
          */
         triggerCloseModal = (e) => {
             e.preventDefault();
-            let modal = Caretta.Helpers.findAncestor(e.target, 'modal'),
+            let modal = Caretta.Helpers.findAncestor(e.target, 'caretta-modal'),
                 overlay = document.getElementById('body-overlay');
 
             document.body.removeChild(overlay);
