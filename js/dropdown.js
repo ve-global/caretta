@@ -57,10 +57,24 @@ Caretta.Dropdown = (function () {
             for (let i = 0; i < dropdowns.length; i++) {
                 dropdowns[i].addEventListener('click', toggleDropdown);
             }
+        },
+
+        /**
+         * Add click event to dynamic added dropdowns
+         */
+        setupDynamicAddedSimpleDropdowns = () => {
+            document.querySelector('body').addEventListener('click', function(event) {
+                let carettaToggle = event.target.attributes.carettaToggle;
+
+                if (carettaToggle !== undefined && carettaToggle.value === 'dropdown') {
+                    toggleDropdown(event);
+                }
+            });
         };
 
     return {
         closeDropdowns: closeDropdowns,
-        setupSimpleDropdowns: setupSimpleDropdowns
+        setupSimpleDropdowns: setupSimpleDropdowns,
+        setupDynamicAddedSimpleDropdowns: setupDynamicAddedSimpleDropdowns
     };
 }());

@@ -1386,11 +1386,26 @@ Caretta.Dropdown = function () {
         for (var i = 0; i < dropdowns.length; i++) {
             dropdowns[i].addEventListener('click', toggleDropdown);
         }
+    },
+
+
+    /**
+     * Add click event to dynamic added dropdowns
+     */
+    setupDynamicAddedSimpleDropdowns = function setupDynamicAddedSimpleDropdowns() {
+        document.querySelector('body').addEventListener('click', function (event) {
+            var carettaToggle = event.target.attributes.carettaToggle;
+
+            if (carettaToggle !== undefined && carettaToggle.value === 'dropdown') {
+                toggleDropdown(event);
+            }
+        });
     };
 
     return {
         closeDropdowns: closeDropdowns,
-        setupSimpleDropdowns: setupSimpleDropdowns
+        setupSimpleDropdowns: setupSimpleDropdowns,
+        setupDynamicAddedSimpleDropdowns: setupDynamicAddedSimpleDropdowns
     };
 }();
 ; /**
@@ -1596,6 +1611,7 @@ Caretta.Init = function () {
     Caretta.Modals.initCloseModals();
     Caretta.Dropdown.closeDropdowns();
     Caretta.Dropdown.setupSimpleDropdowns();
+    Caretta.Dropdown.setupDynamicAddedSimpleDropdowns();
     Caretta.Forms.initColorPicker();
     Caretta.Forms.initDatePicker();
 };
