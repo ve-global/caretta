@@ -58,10 +58,38 @@ Caretta.Modals = (function () {
             for (let i = 0; i < closeModals.length; i++) {
                 closeModals[i].addEventListener('click', triggerCloseModal);
             }
+        },
+
+        /**
+         * Add click event to dynamic added dropdowns
+         */
+        setupDynamicAddedModals = () => {
+            document.querySelector('body').addEventListener('click', function(event) {
+                let carettaToggle = event.target.attributes.carettaToggle;
+
+                if (carettaToggle !== undefined && carettaToggle.value === 'modal') {
+                    triggerModal(event);
+                }
+            });
+        },
+
+        /**
+         * Add click event to dynamic added dropdowns
+         */
+        setupDynamicAddedCloseModals = () => {
+            document.querySelector('body').addEventListener('click', function(event) {
+                let carettaDismiss = event.target.attributes.carettaDismiss;
+
+                if (carettaDismiss !== undefined && carettaDismiss.value === 'modal') {
+                    triggerCloseModal(event);
+                }
+            });
         };
 
     return {
         initModals: initModals,
-        initCloseModals: initCloseModals
+        initCloseModals: initCloseModals,
+        setupDynamicAddedModals: setupDynamicAddedModals,
+        setupDynamicAddedCloseModals: setupDynamicAddedCloseModals
     };
 }());

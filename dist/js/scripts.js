@@ -1471,11 +1471,41 @@ Caretta.Modals = function () {
         for (var i = 0; i < closeModals.length; i++) {
             closeModals[i].addEventListener('click', triggerCloseModal);
         }
+    },
+
+
+    /**
+     * Add click event to dynamic added dropdowns
+     */
+    setupDynamicAddedModals = function setupDynamicAddedModals() {
+        document.querySelector('body').addEventListener('click', function (event) {
+            var carettaToggle = event.target.attributes.carettaToggle;
+
+            if (carettaToggle !== undefined && carettaToggle.value === 'modal') {
+                triggerModal(event);
+            }
+        });
+    },
+
+
+    /**
+     * Add click event to dynamic added dropdowns
+     */
+    setupDynamicAddedCloseModals = function setupDynamicAddedCloseModals() {
+        document.querySelector('body').addEventListener('click', function (event) {
+            var carettaDismiss = event.target.attributes.carettaDismiss;
+
+            if (carettaDismiss !== undefined && carettaDismiss.value === 'modal') {
+                triggerCloseModal(event);
+            }
+        });
     };
 
     return {
         initModals: initModals,
-        initCloseModals: initCloseModals
+        initCloseModals: initCloseModals,
+        setupDynamicAddedModals: setupDynamicAddedModals,
+        setupDynamicAddedCloseModals: setupDynamicAddedCloseModals
     };
 }();
 ; /**
@@ -1609,6 +1639,8 @@ Caretta.Init = function () {
     Caretta.Alerts.initCloseAlerts();
     Caretta.Modals.initModals();
     Caretta.Modals.initCloseModals();
+    Caretta.Modals.setupDynamicAddedModals();
+    Caretta.Modals.setupDynamicAddedCloseModals();
     Caretta.Dropdown.closeDropdowns();
     Caretta.Dropdown.setupSimpleDropdowns();
     Caretta.Dropdown.setupDynamicAddedSimpleDropdowns();
