@@ -54,10 +54,24 @@ Caretta.Alerts = (function () {
             for (let i = 0; i < closeAlerts.length; i++) {
                 closeAlerts[i].addEventListener('click', triggerCloseAlert);
             }
+        },
+
+        /**
+         * Initialize click event for already existing alerts
+         */
+        initDynamicCloseAlerts = () => {
+            document.querySelector('body').addEventListener('click', function(event) {
+                let carettaDismiss = event.target.attributes.carettaDismiss;
+
+                if (carettaDismiss !== undefined && carettaDismiss.value === 'alert') {
+                    triggerCloseAlert(event);
+                }
+            });
         };
 
     return {
         popupAlert: popupAlert,
-        initCloseAlerts: initCloseAlerts
+        initCloseAlerts: initCloseAlerts,
+        initDynamicCloseAlerts: initDynamicCloseAlerts
     };
 }());

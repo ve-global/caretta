@@ -1237,11 +1237,26 @@ Caretta.Alerts = function () {
         for (var i = 0; i < closeAlerts.length; i++) {
             closeAlerts[i].addEventListener('click', triggerCloseAlert);
         }
+    },
+
+
+    /**
+     * Initialize click event for already existing alerts
+     */
+    initDynamicCloseAlerts = function initDynamicCloseAlerts() {
+        document.querySelector('body').addEventListener('click', function (event) {
+            var carettaDismiss = event.target.attributes.carettaDismiss;
+
+            if (carettaDismiss !== undefined && carettaDismiss.value === 'alert') {
+                triggerCloseAlert(event);
+            }
+        });
     };
 
     return {
         popupAlert: popupAlert,
-        initCloseAlerts: initCloseAlerts
+        initCloseAlerts: initCloseAlerts,
+        initDynamicCloseAlerts: initDynamicCloseAlerts
     };
 }();
 ; /**
@@ -1637,6 +1652,7 @@ Caretta.Init = function () {
     Caretta.Tabs.initTabs();
     Caretta.Accordions.initAccordions();
     Caretta.Alerts.initCloseAlerts();
+    Caretta.Alerts.initDynamicCloseAlerts();
     Caretta.Modals.initModals();
     Caretta.Modals.initCloseModals();
     Caretta.Modals.setupDynamicAddedModals();

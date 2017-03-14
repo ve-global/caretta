@@ -13,6 +13,7 @@ Caretta.Init = () => {
     Caretta.Tabs.initTabs();
     Caretta.Accordions.initAccordions();
     Caretta.Alerts.initCloseAlerts();
+    Caretta.Alerts.initDynamicCloseAlerts();
     Caretta.Modals.initModals();
     Caretta.Modals.initCloseModals();
     Caretta.Modals.setupDynamicAddedModals();
