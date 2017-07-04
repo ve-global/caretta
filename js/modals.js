@@ -21,7 +21,12 @@ Caretta.Modals = (function () {
                 overlay = document.createElement('DIV');
 
             overlay.id = 'body-overlay';
-            document.body.appendChild(overlay);
+
+            let existingOverlays = document.getElementById('body-overlay');
+            if (!existingOverlays) {
+                document.body.appendChild(overlay);
+            }
+
             document.getElementById(modalId).classList.add('open');
         },
 
@@ -64,7 +69,7 @@ Caretta.Modals = (function () {
          * Add click event to dynamic added dropdowns
          */
         setupDynamicAddedModals = () => {
-            document.querySelector('body').addEventListener('click', function(event) {
+            document.querySelector('body').addEventListener('click', function (event) {
                 let carettaToggle = event.target.attributes.carettaToggle;
 
                 if (carettaToggle !== undefined && carettaToggle.value === 'modal') {
@@ -77,7 +82,7 @@ Caretta.Modals = (function () {
          * Add click event to dynamic added dropdowns
          */
         setupDynamicAddedCloseModals = () => {
-            document.querySelector('body').addEventListener('click', function(event) {
+            document.querySelector('body').addEventListener('click', function (event) {
                 let carettaDismiss = event.target.attributes.carettaDismiss;
 
                 if (carettaDismiss !== undefined && carettaDismiss.value === 'modal') {
