@@ -21,7 +21,11 @@ Caretta.Modals = (function () {
                 overlay = document.createElement('DIV');
 
             overlay.id = 'body-overlay';
-            document.body.appendChild(overlay);
+
+            let existingOverlays = document.getElementById('body-overlay');
+            if (!existingOverlays) {
+                document.body.appendChild(overlay);
+            }
             document.getElementById(modalId).classList.add('open');
             document.getElementById(modalId).focus();
         },
