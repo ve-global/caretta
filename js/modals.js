@@ -28,6 +28,7 @@ Caretta.Modals = (function () {
             }
 
             document.getElementById(modalId).classList.add('open');
+            document.getElementById(modalId).focus();
         },
 
         /**

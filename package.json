@@ -1,6 +1,6 @@
 {
   "name": "caretta",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Ve Interactive Ltd",
   "private": true,
   "devDependencies": {
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "grunt-assemble-sitemap": "^0.2.6"
-    },
+  },
   "scripts": {
     "build:watch": "grunt --watch",
     "build": "grunt",
