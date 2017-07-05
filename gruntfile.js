@@ -36,8 +36,7 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src:
-                    [
+                src: [
                     'vendors/prettify/run_prettify.js',
                     'vendors/picker/picker.js',
                     'js/alerts.js',
@@ -48,7 +47,8 @@ module.exports = function (grunt) {
                     'js/navigation.js',
                     'js/tabs.js',
                     'js/forms.js',
-                    'js/init.js'],
+                    'js/init.js'
+                ],
                 dest: 'temp/js/scripts.concat.js'
             }
         },
