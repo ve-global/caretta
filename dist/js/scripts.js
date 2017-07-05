@@ -1449,7 +1449,11 @@ Caretta.Modals = function () {
             overlay = document.createElement('DIV');
 
         overlay.id = 'body-overlay';
-        document.body.appendChild(overlay);
+
+        var existingOverlays = document.getElementById('body-overlay');
+        if (!existingOverlays) {
+            document.body.appendChild(overlay);
+        }
         document.getElementById(modalId).classList.add('open');
         document.getElementById(modalId).focus();
     },
@@ -1526,11 +1530,12 @@ Caretta.Modals = function () {
         setupDynamicAddedModals: setupDynamicAddedModals,
         setupDynamicAddedCloseModals: setupDynamicAddedCloseModals
     };
-}();; /**
-      *  VeCaretta Tabs
-      *  Date: 17/10/2016
-      *  Caretta Framework
-      */
+}();
+; /**
+  *  VeCaretta Tabs
+  *  Date: 17/10/2016
+  *  Caretta Framework
+  */
 'use strict';
 
 var Caretta;
