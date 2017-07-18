@@ -44,6 +44,7 @@ module.exports = function (grunt) {
                     'js/accordion.js',
                     'js/dropdown.js',
                     'js/modals.js',
+                    'js/sidePanels.js',
                     'js/navigation.js',
                     'js/tabs.js',
                     'js/forms.js',

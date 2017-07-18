@@ -106,6 +106,9 @@
                                           <a href="#sectionModals"><i class="zmdi zmdi-window-restore"></i>Modals</a>
                                       </li>
                                       <li>
+                                          <a href="#sectionSidePanel"><i class="zmdi zmdi-window-restore"></i>Side Panel</a>
+                                      </li>
+                                      <li>
                                           <a href="#sectionPreloader"><i class="zmdi zmdi-hourglass-alt"></i>Preloader</a>
                                       </li>
                                       <li>
@@ -747,6 +750,23 @@
              <button class="caretta-btn caretta-btn-primary" caretta-toggle="modal" data-modal="modalLarge">Open large modal</button>
           </div>
           <!-- /Modals -->         <hr>
+         <!-- Side Panel -->
+             <h5 id="sectionSidePanel">Side Panel</h5>
+             <!--?prettify lang=html linenums=true?-->
+                 <pre class="prettyprint lang-html">
+                     &lt;div id="sidePanelWrapper" class="right-hide side-panel-overlay"&gt;
+                     &lt;div id="sidePanel" class="custom-scroll right-hide side-panel-section"&gt;
+                         &lt;h3 class="text-left"&gt;
+                             &lt;i class="zmdi zmdi-close zmdi-hc-fw" caretta-dismiss="sidePanel" data-side-panel="sidePanel"&gt;&lt;/i&gt;
+                             &lt;span id="sidePanelTitle"&gt;&lt;/span&gt;
+                         &lt;/h3&gt;
+                         
+                     &lt;/div&gt;
+                 &lt;/div&gt;</pre>
+             <div class="caretta-row btn-demo">
+                 <button class="caretta-btn caretta-btn-primary" caretta-toggle="sidePanel" data-side-panel="sidePanel" data-title="Default Title">Show panel</button>
+             </div>
+         <!-- /Side Panel -->         <hr>
          <!-- Preloader -->
          <h5 id="sectionPreloader">Preloader</h5>
          <!--?prettify lang=html linenums=true?-->
@@ -1046,7 +1066,18 @@
               </div>
            </div>
          </div>
-         <!-- /Modals -->
+         <!-- /Modals -->         <hr>
+         <!-- Side Panel -->
+         <div id="sidePanelWrapper" class="right-hide side-panel-overlay">
+             <div id="sidePanel" class="custom-scroll right-hide side-panel-section">
+                 <h3 class="text-left">
+                     <i class="zmdi zmdi-close zmdi-hc-fw" caretta-dismiss="sidePanel" data-side-panel="sidePanel"></i>
+                     <span id="sidePanelTitle"></span>
+                 </h3>
+                 
+             </div>
+         </div>
+         <!-- /Side Panel -->
 
         <!-- Add your site or application scripts here -->
         <script src="vendors/pikaday/pikaday.js"></script>

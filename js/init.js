@@ -18,6 +18,8 @@ Caretta.Init = () => {
     Caretta.Modals.initCloseModals();
     Caretta.Modals.setupDynamicAddedModals();
     Caretta.Modals.setupDynamicAddedCloseModals();
+    Caretta.SidePanels.initSidePanels();
+    Caretta.SidePanels.initCloseSidePanels();
     Caretta.Dropdown.closeDropdowns();
     Caretta.Dropdown.setupSimpleDropdowns();
     Caretta.Dropdown.setupDynamicAddedSimpleDropdowns();
