@@ -10,51 +10,18 @@ var Caretta;
 Caretta = Caretta || {};
 
 Caretta.SidePanels = (function () {
-    /**
-    * Opens panel/ Add overlay/ Disables links
-    */
-    let openSidePanel = () => {
-            $('#uploadFontPanelWrapper').addClass('inactive');
-            $('#uploadFontPanel').removeClass('right-hide').parent().removeClass('right-hide').css('z-index', 101);
-            $('.left-panel').css('z-index', 7);
-            $('a').bind('click.disableNav', function () {
-                return false;
-            });
-        },
 
-        /**
-        * Closes panel/ Remove overlay/ Re-enables links
-        */
-        closeSidePanel = () => {
-            $('a').unbind('click.disableNav');
-            $('#uploadFontPanel').addClass('right-hide').parent().addClass('right-hide');
-            setTimeout(function () {
-                $('#uploadFontPanel').parent().css('z-index', 1);
-            }, 600);
-            $('.left-panel').css('z-index', 9);
-            $('#uploadFontPanelWrapper').removeClass('inactive');
-        },
-
-        /**
-        * Right hand side panel init
-        */
-        initSidePanel = () => {
-            if ($('#preContent').hasClass('invalid-form')) {
-                openPanel();
+        initSidePanels = () => {
+            let sidePanels = document.querySelectorAll('[caretta-toggle="sidePanel"]');
+            for (let i = 0; i < sidePanels.length; i++) {
+                sidePanels[i].addEventListener('click', triggerSidePanel);
             }
 
-            $('#uploadFont').on('click', function (e) {
-                e.preventDefault();
-                openPanel();
-                e.stopPropagation();
-            });
-
-            $('#uploadFontPanel h3 i').on('click', function () {
-                closePanel();
-            });
+            let closeSidePanels = document.querySelectorAll('[caretta-dismiss="sidePanel"]');
+            for (let i = 0; i < closeSidePanels.length; i++) {
+                closeSidePanels[i].addEventListener('click', triggerCloseSidePanel);
+            }
         },
-
-        /** ------------------------------------------------------------------------------------------- */
 
         triggerSidePanel = (e) => {
             e.preventDefault();
@@ -91,31 +58,11 @@ Caretta.SidePanels = (function () {
             sidePanelWrapper.classList.remove('inactive');
             sidePanelWrapper.classList.add('right-hide');
             sidePanel.classList.add('right-hide');
-        },
-
-        initSidePanels = () => {
-            let sidePanels = document.querySelectorAll('[caretta-toggle="sidePanel"]');
-
-            for (let i = 0; i < sidePanels.length; i++) {
-                sidePanels[i].addEventListener('click', triggerSidePanel);
-            }
-        },
-        
-        initCloseSidePanels = () => {
-            let closeSidePanels = document.querySelectorAll('[caretta-dismiss="sidePanel"]');
-
-            for (let i = 0; i < closeSidePanels.length; i++) {
-                closeSidePanels[i].addEventListener('click', triggerCloseSidePanel);
-            }
         };
 
     return {
-        // initSidePanel: initSidePanel,
-        // openSidePanel: openSidePanel,
-        // closeSidePanel: closeSidePanel,
+        initSidePanels: initSidePanels,
         triggerSidePanel: triggerSidePanel,
         triggerCloseSidePanel: triggerCloseSidePanel,
-        initSidePanels: initSidePanels,
-        initCloseSidePanels: initCloseSidePanels
     };
 }());
