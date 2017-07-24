@@ -1544,7 +1544,7 @@ Caretta = Caretta || {};
 
 Caretta.SidePanels = function () {
 
-    initSidePanels = function initSidePanels() {
+    var initSidePanels = function initSidePanels() {
         var sidePanels = document.querySelectorAll('[caretta-toggle="sidePanel"]');
         for (var i = 0; i < sidePanels.length; i++) {
             sidePanels[i].addEventListener('click', triggerSidePanel);
@@ -1554,7 +1554,8 @@ Caretta.SidePanels = function () {
         for (var _i = 0; _i < closeSidePanels.length; _i++) {
             closeSidePanels[_i].addEventListener('click', triggerCloseSidePanel);
         }
-    }, triggerSidePanel = function triggerSidePanel(e) {
+    },
+        triggerSidePanel = function triggerSidePanel(e) {
         e.preventDefault();
         var sidePanelId = e.target.getAttribute('data-side-panel');
         var title = e.target.getAttribute('data-title');
@@ -1574,9 +1575,10 @@ Caretta.SidePanels = function () {
         var sidePanelWrapper = sidePanel.parentElement;
         sidePanelWrapper.classList.add('inactive');
         sidePanelWrapper.classList.remove('right-hide');
-        sidePanelWrapper.style.zIndex = "101";
+        // sidePanelWrapper.style.zIndex = "101";
         sidePanel.classList.remove('right-hide');
-    }, triggerCloseSidePanel = function triggerCloseSidePanel(e) {
+    },
+        triggerCloseSidePanel = function triggerCloseSidePanel(e) {
         e.preventDefault();
         var sidePanelId = e.target.getAttribute('data-side-panel');
         var sidePanel = document.getElementById(sidePanelId);

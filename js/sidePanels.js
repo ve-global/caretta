@@ -11,7 +11,7 @@ Caretta = Caretta || {};
 
 Caretta.SidePanels = (function () {
 
-        initSidePanels = () => {
+        var initSidePanels = () => {
             let sidePanels = document.querySelectorAll('[caretta-toggle="sidePanel"]');
             for (let i = 0; i < sidePanels.length; i++) {
                 sidePanels[i].addEventListener('click', triggerSidePanel);
@@ -43,7 +43,6 @@ Caretta.SidePanels = (function () {
             let sidePanelWrapper = sidePanel.parentElement;
             sidePanelWrapper.classList.add('inactive');
             sidePanelWrapper.classList.remove('right-hide');
-            sidePanelWrapper.style.zIndex = "101";
             sidePanel.classList.remove('right-hide');
         },
 
