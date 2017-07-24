@@ -1532,6 +1532,71 @@ Caretta.Modals = function () {
     };
 }();
 ; /**
+  *  VeCaretta SidePanels
+  *  Date: 17/10/2017
+  *  Caretta Framework
+  */
+'use strict';
+
+var Caretta;
+
+Caretta = Caretta || {};
+
+Caretta.SidePanels = function () {
+
+    var initSidePanels = function initSidePanels() {
+        var sidePanels = document.querySelectorAll('[caretta-toggle="sidePanel"]');
+        for (var i = 0; i < sidePanels.length; i++) {
+            sidePanels[i].addEventListener('click', triggerSidePanel);
+        }
+
+        var closeSidePanels = document.querySelectorAll('[caretta-dismiss="sidePanel"]');
+        for (var _i = 0; _i < closeSidePanels.length; _i++) {
+            closeSidePanels[_i].addEventListener('click', triggerCloseSidePanel);
+        }
+    },
+        triggerSidePanel = function triggerSidePanel(e) {
+        e.preventDefault();
+        var sidePanelId = e.target.getAttribute('data-side-panel');
+        var title = e.target.getAttribute('data-title');
+
+        var overlay = document.createElement('DIV');
+        overlay.id = 'body-overlay';
+
+        var existingOverlays = document.getElementById('body-overlay');
+        if (!existingOverlays) {
+            document.body.appendChild(overlay);
+        }
+
+        var sidePanelTitle = document.getElementById('sidePanelTitle');
+        sidePanelTitle.innerText = title;
+
+        var sidePanel = document.getElementById(sidePanelId);
+        var sidePanelWrapper = sidePanel.parentElement;
+        sidePanelWrapper.classList.add('inactive');
+        sidePanelWrapper.classList.remove('right-hide');
+        sidePanel.classList.remove('right-hide');
+    },
+        triggerCloseSidePanel = function triggerCloseSidePanel(e) {
+        e.preventDefault();
+        var sidePanelId = e.target.getAttribute('data-side-panel');
+        var sidePanel = document.getElementById(sidePanelId);
+        var sidePanelWrapper = sidePanel.parentElement;
+        var overlay = document.getElementById('body-overlay');
+
+        document.body.removeChild(overlay);
+        sidePanelWrapper.classList.remove('inactive');
+        sidePanelWrapper.classList.add('right-hide');
+        sidePanel.classList.add('right-hide');
+    };
+
+    return {
+        initSidePanels: initSidePanels,
+        triggerSidePanel: triggerSidePanel,
+        triggerCloseSidePanel: triggerCloseSidePanel
+    };
+}();
+; /**
   *  VeCaretta Tabs
   *  Date: 17/10/2016
   *  Caretta Framework
@@ -1665,6 +1730,7 @@ Caretta.Init = function () {
     Caretta.Modals.initCloseModals();
     Caretta.Modals.setupDynamicAddedModals();
     Caretta.Modals.setupDynamicAddedCloseModals();
+    Caretta.SidePanels.initSidePanels();
     Caretta.Dropdown.closeDropdowns();
     Caretta.Dropdown.setupSimpleDropdowns();
     Caretta.Dropdown.setupDynamicAddedSimpleDropdowns();

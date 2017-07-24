@@ -1,0 +1,55 @@
+@import 'vars';
+
+.side-panel-overlay {
+    bottom: 0;
+    position: fixed;
+    right: -200%;
+    top: 70px;
+    width: calc(100% + 250px);
+    z-index: 101;
+
+    &.inactive {
+        right: 0;
+    }
+
+    .side-panel-section {
+        background-color: $white;
+        bottom: 0;
+        box-shadow: -3px 0 0 $light-shadow;
+        position: fixed;
+        right: 0;
+        top: 70px;
+        transition: .7s;
+        width: 400px;
+        z-index: 9;
+
+        &.right-hide {
+            right: -405px;
+        }
+
+        h3 {
+            background-color: $side-panel-head;
+            color: $white;
+            font-family: $roboto;
+            font-size: 17px;
+            font-weight: 400;
+            margin-top: 0;
+            padding: 25px 15px 20px;
+            position: relative;
+
+            i {
+                cursor: pointer;
+                font-size: 22px;
+                font-weight: 700;
+                margin-right: 5px;
+                padding: 10px;
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        label.mid-input {
+            line-height: 40px;
+        }
+    }
+}

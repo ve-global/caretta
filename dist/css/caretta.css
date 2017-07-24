@@ -11295,6 +11295,59 @@ ol {
 
 /***
 *
+*  1. Caretta Style Variables
+*       1.1 Font Families
+*       1.2 Colors
+*       	1.2.1 Box Shadows Colours
+*
+***/
+/****************** 1. Caretta Style Variables ******************/
+/****************** 1.1 Font Families ******************/
+/****************** 1.2 Colors ******************/
+/****************** 1.2.1 Box Shadows ******************/
+.side-panel-overlay {
+  bottom: 0;
+  position: fixed;
+  right: -200%;
+  top: 70px;
+  width: calc(100% + 250px);
+  z-index: 101; }
+  .side-panel-overlay.inactive {
+    right: 0; }
+  .side-panel-overlay .side-panel-section {
+    background-color: #ffffff;
+    bottom: 0;
+    box-shadow: -3px 0 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    right: 0;
+    top: 70px;
+    transition: .7s;
+    width: 400px;
+    z-index: 9; }
+    .side-panel-overlay .side-panel-section.right-hide {
+      right: -405px; }
+    .side-panel-overlay .side-panel-section h3 {
+      background-color: #607d8b;
+      color: #ffffff;
+      font-family: "Roboto", sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      margin-top: 0;
+      padding: 25px 15px 20px;
+      position: relative; }
+      .side-panel-overlay .side-panel-section h3 i {
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 700;
+        margin-right: 5px;
+        padding: 10px;
+        position: relative;
+        top: 2px; }
+    .side-panel-overlay .side-panel-section label.mid-input {
+      line-height: 40px; }
+
+/***
+*
 *  1. Caretta Form Fields Style
 *       1.1 General
 *       1.2 Custom Checkbox
