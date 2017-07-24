@@ -1543,56 +1543,18 @@ var Caretta;
 Caretta = Caretta || {};
 
 Caretta.SidePanels = function () {
-    /**
-    * Opens panel/ Add overlay/ Disables links
-    */
-    var openSidePanel = function openSidePanel() {
-        $('#uploadFontPanelWrapper').addClass('inactive');
-        $('#uploadFontPanel').removeClass('right-hide').parent().removeClass('right-hide').css('z-index', 101);
-        $('.left-panel').css('z-index', 7);
-        $('a').bind('click.disableNav', function () {
-            return false;
-        });
-    },
 
-
-    /**
-    * Closes panel/ Remove overlay/ Re-enables links
-    */
-    closeSidePanel = function closeSidePanel() {
-        $('a').unbind('click.disableNav');
-        $('#uploadFontPanel').addClass('right-hide').parent().addClass('right-hide');
-        setTimeout(function () {
-            $('#uploadFontPanel').parent().css('z-index', 1);
-        }, 600);
-        $('.left-panel').css('z-index', 9);
-        $('#uploadFontPanelWrapper').removeClass('inactive');
-    },
-
-
-    /**
-    * Right hand side panel init
-    */
-    initSidePanel = function initSidePanel() {
-        if ($('#preContent').hasClass('invalid-form')) {
-            openPanel();
+    initSidePanels = function initSidePanels() {
+        var sidePanels = document.querySelectorAll('[caretta-toggle="sidePanel"]');
+        for (var i = 0; i < sidePanels.length; i++) {
+            sidePanels[i].addEventListener('click', triggerSidePanel);
         }
 
-        $('#uploadFont').on('click', function (e) {
-            e.preventDefault();
-            openPanel();
-            e.stopPropagation();
-        });
-
-        $('#uploadFontPanel h3 i').on('click', function () {
-            closePanel();
-        });
-    },
-
-
-    /** ------------------------------------------------------------------------------------------- */
-
-    triggerSidePanel = function triggerSidePanel(e) {
+        var closeSidePanels = document.querySelectorAll('[caretta-dismiss="sidePanel"]');
+        for (var _i = 0; _i < closeSidePanels.length; _i++) {
+            closeSidePanels[_i].addEventListener('click', triggerCloseSidePanel);
+        }
+    }, triggerSidePanel = function triggerSidePanel(e) {
         e.preventDefault();
         var sidePanelId = e.target.getAttribute('data-side-panel');
         var title = e.target.getAttribute('data-title');
@@ -1614,8 +1576,7 @@ Caretta.SidePanels = function () {
         sidePanelWrapper.classList.remove('right-hide');
         sidePanelWrapper.style.zIndex = "101";
         sidePanel.classList.remove('right-hide');
-    },
-        triggerCloseSidePanel = function triggerCloseSidePanel(e) {
+    }, triggerCloseSidePanel = function triggerCloseSidePanel(e) {
         e.preventDefault();
         var sidePanelId = e.target.getAttribute('data-side-panel');
         var sidePanel = document.getElementById(sidePanelId);
@@ -1626,30 +1587,12 @@ Caretta.SidePanels = function () {
         sidePanelWrapper.classList.remove('inactive');
         sidePanelWrapper.classList.add('right-hide');
         sidePanel.classList.add('right-hide');
-    },
-        initSidePanels = function initSidePanels() {
-        var sidePanels = document.querySelectorAll('[caretta-toggle="sidePanel"]');
-
-        for (var i = 0; i < sidePanels.length; i++) {
-            sidePanels[i].addEventListener('click', triggerSidePanel);
-        }
-    },
-        initCloseSidePanels = function initCloseSidePanels() {
-        var closeSidePanels = document.querySelectorAll('[caretta-dismiss="sidePanel"]');
-
-        for (var i = 0; i < closeSidePanels.length; i++) {
-            closeSidePanels[i].addEventListener('click', triggerCloseSidePanel);
-        }
     };
 
     return {
-        // initSidePanel: initSidePanel,
-        // openSidePanel: openSidePanel,
-        // closeSidePanel: closeSidePanel,
-        triggerSidePanel: triggerSidePanel,
-        triggerCloseSidePanel: triggerCloseSidePanel,
         initSidePanels: initSidePanels,
-        initCloseSidePanels: initCloseSidePanels
+        triggerSidePanel: triggerSidePanel,
+        triggerCloseSidePanel: triggerCloseSidePanel
     };
 }();
 ; /**
@@ -1787,7 +1730,6 @@ Caretta.Init = function () {
     Caretta.Modals.setupDynamicAddedModals();
     Caretta.Modals.setupDynamicAddedCloseModals();
     Caretta.SidePanels.initSidePanels();
-    Caretta.SidePanels.initCloseSidePanels();
     Caretta.Dropdown.closeDropdowns();
     Caretta.Dropdown.setupSimpleDropdowns();
     Caretta.Dropdown.setupDynamicAddedSimpleDropdowns();
