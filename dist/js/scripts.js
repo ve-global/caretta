@@ -1575,7 +1575,6 @@ Caretta.SidePanels = function () {
         var sidePanelWrapper = sidePanel.parentElement;
         sidePanelWrapper.classList.add('inactive');
         sidePanelWrapper.classList.remove('right-hide');
-        // sidePanelWrapper.style.zIndex = "101";
         sidePanel.classList.remove('right-hide');
     },
         triggerCloseSidePanel = function triggerCloseSidePanel(e) {
